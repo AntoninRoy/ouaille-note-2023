@@ -1,0 +1,101 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 30px);
+    margin : auto;
+    margin-bottom : 20px;
+  }
+  .griditem {
+    width: calc((100% / 1) - (1 - 1) *  15px / 1 );
+    margin-top: 15px;
+    position: relative;
+    border: 5px solid #e3245b;
+  
+  }
+  .griditem:not(:nth-child(2n)) {
+     margin-right : 0;
+  
+  }
+  
+  
+  .griditem .groupname{
+    position: absolute;
+    right: 0px;
+    top: 0px; 
+     bottom: initial;
+  text-align: right;
+    color: white;
+    pointer-events: none;
+    transition: .1s ease-in-out;
+      opacity: 1;
+    padding : 10px;
+    width: 100%;
+    font-family: 'Crunold';
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+  }
+  
+  .griditem .hour{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index : 1;
+    color: white;
+    pointer-events: none;
+    transition: .1s ease-in-out;
+      opacity: 1;
+    width: 100%;
+    text-align: center;
+    font-family: 'Crunold';
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    background-color: #000000ab;  
+    padding: 15px;
+}
+.griditem .decrouvrir{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index : 1;
+    color: red;
+    pointer-events: none;
+    transition: .1s ease-in-out;
+      opacity: 1;
+    width: 100%;
+    text-align: left;
+    font-family: 'Crunold';
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+      
+    padding: 15px;
+}
+
+
+  
+  
+  
+
+  
+  @media (min-width: 850px) {
+      
+  
+  
+     .griditem:nth-child(n) {
+       width: calc((100% / 2) - (2 - 1) * 15px / 2 );
+       margin-right: 15px;
+    } 
+    .griditem:nth-child(2n) {
+        margin-right : 0;
+     } 
+    
+
+  }
+  
+  .griditem:before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+  }

@@ -1,0 +1,365 @@
+.card-page-container {
+  margin: 100px auto;
+  max-width: 500px;
+  padding-bottom: 100px;
+}
+
+.card {
+  font-size: 164px;
+  width: 300px;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 0 2px hsl(0deg 0% 0% / 0.075),
+    0 0 4px hsl(0deg 0% 0% / 0.075), 0 0 8px hsl(0deg 0% 0% / 0.075),
+    0 0 16px hsl(0deg 0% 0% / 0.075);
+  transform-origin: 10% 60%;
+}
+
+.card-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: -120px;
+}
+
+.splash {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  clip-path: path(
+    "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
+  );
+}
+
+.fond {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: black;
+}
+
+.test {
+  background-color: black !important;
+  color: white;
+}
+
+.bleu1 {
+  background: url("/images/fond/FondBleuAvecNoir1.webp") no-repeat;
+  background-size: auto 100% !important;
+}
+.bleu2 {
+  background: url("/images/fond/FondBleuAvecNoir2.webp") no-repeat;
+  background-size: auto 110% !important;
+}
+
+.rouge1 {
+  background: url("/images/fond/FondRougeAvecNoir1.webp") no-repeat;
+  background-size: auto 115% !important;
+}
+
+.rouge2 {
+  background: url("/images/fond/FondRougeAvecNoir2.webp") no-repeat;
+  background-size: auto 115% !important;
+}
+
+.from-left {
+  background-position-x: -500vh;
+}
+
+.from-right {
+  background-position-x: 100vh;
+}
+
+.image-container > div {
+  height: 50vw;
+  position: relative;
+}
+
+.bleu1 .image-artiste,
+.bleu2 .image-artiste {
+  border: 5px solid #e3245b !important;
+  border-radius: 50% !important;
+}
+.rouge1 .image-artiste,
+.rouge2 .image-artiste {
+  border: 5px solid #16b9eb !important;
+  border-radius: 50% !important;
+}
+
+.artistes-container {
+  font-family: "Crunold";
+  display: grid;
+  grid-template-columns: 100vw;
+  justify-content: center;
+  background-color: black;
+}
+
+.programme-title {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: #e3245b;
+  background-color: black;
+  border-bottom: 1px solid black;
+  font-family: "Crunold";
+  padding: 15px 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .artistes-container {
+    padding: 0 15vh;
+    grid-template-columns: 35vw 35vw;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  /* .bleu1, .bleu2, .rouge1, .rouge2 {
+    background: none;
+  } */
+}
+
+.artiste-title {
+  width: 100%;
+  position: relative;
+  top: 60%;
+  font-size: 2em;
+  padding-left: 50%;
+  line-height: 35px;
+  opacity: 0;
+}
+
+.artiste-date {
+  opacity: 0;
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+  font-size: 40px;
+  line-height: 35px;
+  text-align: center;
+  top: 200px;
+  font-family: "Bebas-Neue";
+}
+
+.bleu1 .artiste-date,
+.bleu2 .artiste-date {
+  color: #e3245b;
+}
+.rouge1 .artiste-date,
+.rouge2 .artiste-date {
+  color: #16b9eb;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(4deg);
+  }
+  10% {
+    transform: rotate(0eg);
+  }
+  15% {
+    transform: rotate(-4deg);
+  }
+  20%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.logo-container {
+  animation: tilt-shaking 1s infinite;
+}
+
+.billetterie-link {
+  float: left;
+  position: fixed;
+  top: calc(100vh - 175px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -53px;
+
+  font-family: "Crunold";
+  background-color: #e3245b;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 15px;
+  color: white;
+  z-index: 10;
+
+  transform: rotate(-90deg);
+}
+.billetterie-link svg {
+  margin-left: 10px;
+}
+
+.double-arrow {
+  display: flex;
+  justify-content: center;
+  font-size: 150px;
+  color: #00000023;
+  animation: clignote 2s infinite;
+}
+.video {
+  background-color: black;
+}
+.video span {
+  font-size: 30px;
+  line-height: 30px;
+  /* margin-bottom: 10px; */
+  font-family: "Crunold";
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+  /* padding: 15px
+px
+; */
+  /* background-color: #16b9eb; */
+  margin: 10px;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  /* margin-bottom: -20px; */
+}
+@media screen and (min-width: 800px) {
+  .video {
+    padding: 0 200px;
+  }
+}
+
+@keyframes clignote {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+  color: white;
+  position: absolute;
+  right: 5px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.menu-container {
+  background-color: #000000ab;
+  height: 50vh;
+  position: absolute;
+  width: 100vw;
+  z-index: 2;
+  font-family: Bebas-Neue;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 5px 5px;
+  top: -50vh;
+}
+.menu-item {
+  height: 100%;
+  display: flex;
+  padding: 10px 20px;
+  line-height: 100%;
+  font-size: 40px;
+  color: white;
+  margin: 0;
+  flex-direction: row;
+  align-items: center;
+}
+.menu svg {
+  font-size: 50px;
+  background-color: #e3245b;
+  padding: 10px;
+  border-radius: 30%;
+}
+
+.background-red {
+  background-color: #e3245b;
+  background-position: bottom right;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .text-container {
+    flex-direction: row;
+    align-items: center;
+
+  }
+}
+
+
+.texte {
+  opacity: 0;
+  width: calc(100% - 60px);
+  color: black;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  margin: 30px;
+  padding: 4px 10px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: linear-gradient(to right, black 4px, transparent 4px) 0 0,
+    linear-gradient(to bottom, black 4px, transparent 4px) 0 0;
+
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  /* https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders */
+}
+
+
+.texte span {
+  font-family: "Bebas-Neue";
+  font-size: 30px;
+}
+
+.mentions {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.mentions h2 {
+  font-weight: bold;
+  font-family: "Crunold";
+}
+
+.decouvrir {
+  width: 105px;
+  position: relative;
+  font-size: 15px;
+  margin-left: 50%;
+  padding-right: 0px;
+  line-height: 25px;
+  background-color: #e3245b;
+  border-radius: 10px;
+  opacity: 0.7;
+  color: white;
+  font-family: "Crunold";
+  transform: translateX(-50px);
+  padding-left: 10px;
+  top: 20px;
+  cursor: pointer;
+}

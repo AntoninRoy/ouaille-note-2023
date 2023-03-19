@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Crunold';
+    src: url('Crunold-Regular.eot');
+    src: local('Crunold Regular'), local('Crunold-Regular'),
+        url('Crunold-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Crunold-Regular.woff2') format('woff2'),
+        url('Crunold-Regular.woff') format('woff'),
+        url('Crunold-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Crunold Dingbats';
+    src: url('Crunold-Dingbats.eot');
+    src: local('Crunold Dingbats'), local('Crunold-Dingbats'),
+        url('Crunold-Dingbats.eot?#iefix') format('embedded-opentype'),
+        url('Crunold-Dingbats.woff2') format('woff2'),
+        url('Crunold-Dingbats.woff') format('woff'),
+        url('Crunold-Dingbats.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Crunold Oblique';
+    src: url('Crunold-Oblique.eot');
+    src: local('Crunold Oblique'), local('Crunold-Oblique'),
+        url('Crunold-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('Crunold-Oblique.woff2') format('woff2'),
+        url('Crunold-Oblique.woff') format('woff'),
+        url('Crunold-Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

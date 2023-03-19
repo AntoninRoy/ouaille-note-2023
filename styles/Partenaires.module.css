@@ -1,0 +1,83 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin : auto;
+    margin-bottom : 20px;
+    padding : 0 30px;
+  }
+  .griditem {
+    width: calc((100% / 2) - (2 - 1) *  15px / 2 );
+    margin-top: 15px;
+    height : 200px;
+    position: relative;
+    
+  }
+  .griditem:not(:nth-child(2n)) {
+     margin-right : 15px;
+  }
+  .picture {
+    height : 200px
+  }
+  
+  
+  
+  
+  
+  
+  @media (min-width: 550px) {
+  
+    .griditem:nth-child(n) {
+       width: calc((100% / 3) - (3 - 1) * 15px / 3 );
+       margin-right: 15px;
+    } 
+    
+    .griditem:nth-child(3n){
+      margin-right : 0;
+    }
+  
+  
+   
+  }
+  @media (min-width: 700px) {
+  
+  
+    .griditem:nth-child(n) {
+       width: calc((100% / 4) - (4 - 1) * 15px / 4 );
+       margin-right: 15px;
+    } 
+    
+    .griditem:nth-child(4n){
+      margin-right : 0;
+    }
+  
+  }
+  
+  @media (min-width: 950px) {
+      
+  
+  
+     .griditem:nth-child(n) {
+       width: calc((100% / 5) - (5 - 1) * 15px / 5 );
+       margin-right: 15px;
+    } 
+    
+    .griditem:nth-child(5n){
+      margin-right : 0;
+    }
+    .grid {
+      max-width : 1200px
+    }
+  }
+  
+  .griditem:before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+  }
+  
+  .picture > div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
