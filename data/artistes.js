@@ -116,7 +116,7 @@ export const artistes = [
     backgroundPositionX: "-100px",
     backgroundPositionY: "-150px",
     image: {
-      src: "/images/artistes/pijama.png",
+      src: "/images/artistes/pijama.jpg",
       blurDataURL: "/images/artistes/2THblur.jpg",
       alt: "Artiste Ouaille Note PIJAMA",
     },
