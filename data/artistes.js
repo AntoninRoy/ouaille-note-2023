@@ -4,12 +4,12 @@ export const artistes = [
     backgroundPositionX: "-300px",
     backgroundPositionY: "-50px",
     image: {
-      src: "/images/artistes/nophoto.jpg",
+      src: "/images/artistes/hilight.jpg",
       blurDataURL: "/images/artistes/2THblur.jpg",
       alt: "Artiste Ouaille Note HILIGHT TRIBE",
     },
     name: "HILIGHT TRIBE",
-    date: "SAMEDI 9 SEPTEMBRE 2023",
+    date: "VENDREDI 8 SEPTEMBRE 2023",
   },
   {
     className: "bleu1 from-right test",
@@ -21,7 +21,7 @@ export const artistes = [
       alt: "Artiste Ouaille Note 2TH",
     },
     name: "2TH",
-    date: "SAMEDI 9 SEPTEMBRE 2023",
+    date: "VENDREDI 8 SEPTEMBRE 2023",
   },
 
   {
@@ -79,7 +79,7 @@ export const artistes = [
     backgroundPositionX: "-200px",
     backgroundPositionY: "-50px",
     image: {
-      src: "/images/artistes/nophoto.jpg",
+      src: "/images/artistes/tetra.jpg",
       blurDataURL: "/images/artistes/2THblur.jpg",
       alt: "Artiste Ouaille Note TETRA HYDROK",
     },
@@ -91,7 +91,7 @@ export const artistes = [
     backgroundPositionX: "-200px",
     backgroundPositionY: "-50px",
     image: {
-      src: "/images/artistes/nophoto.jpg",
+      src: "/images/artistes/47ter.jpg",
       blurDataURL: "/images/artistes/2THblur.jpg",
       alt: "Artiste Ouaille Note 47TER",
     },
@@ -104,7 +104,7 @@ export const artistes = [
     backgroundPositionX: "-200px",
     backgroundPositionY: "-50px",
     image: {
-      src: "/images/artistes/nophoto.jpg",
+      src: "/images/artistes/volodia.jpg",
       blurDataURL: "/images/artistes/2THblur.jpg",
       alt: "Artiste Ouaille Note Volodia",
     },
@@ -128,7 +128,7 @@ export const artistes = [
     backgroundPositionX: "-100px",
     backgroundPositionY: "-150px",
     image: {
-      src: "/images/artistes/nophoto.jpg",
+      src: "/images/artistes/pfel.jpg",
       blurDataURL: "/images/artistes/2THblur.jpg",
       alt: "Artiste Ouaille Note PFEL&GREEM",
     },

@@ -25,18 +25,18 @@ export default function Home() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <>
-          {inView && (
-            <div className="billetterie-link">
-              <Link href="/billetterie">
-                billetterie <TiTicket />
-              </Link>
-            </div>
-          )}
+          <div className="billetterie-link">
+            <Link href="/billetterie">
+              billetterie
+            </Link>
+          </div>
 
           <div
             style={{
               height: "100vh",
-              backgroundColor: "#16b9eb",
+              background:
+                "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(22,185,235,1) 70%)",
+
               display: "flex",
               flexDirection: "column",
               width: "100vw",
@@ -82,14 +82,37 @@ export default function Home() {
                 width: "100%",
                 textAlign: "center",
                 fontFamily: "Bebas-Neue",
-                fontSize: "40px",
                 color: "#e3245b",
                 height: "5vh",
               }}
             >
-              8-9 SEPTEMBRE 2023
-              <br/>
-              VASLES 79
+              <span
+                style={{
+                  fontSize: "50px",
+                  fontFamily: "Crunold",
+                  fontWeight: "400",
+                  fontStyle: "normal",
+                  margin: "0",
+                  color: "#e3245b",
+                }}
+              >
+                VASLES 79
+              </span>
+              <br />
+
+              <span
+                style={{
+                  fontSize: "40px",
+                  fontFamily: "Bebas-Neue",
+                  fontWeight: "700",
+                  margin: "0",
+                  lineHeight: "25px",
+                  color: "#fff",
+                }}
+              >
+                8-9 SEPTEMBRE 2023
+              </span>
+              <br />
             </div>
             <div className="double-arrow" style={{ height: "20vh" }}>
               <RiArrowDownSLine />

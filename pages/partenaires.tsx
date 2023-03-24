@@ -18,6 +18,10 @@ export default function Billetterie() {
       nom: "Region Aquitaine Limousin Poitou-Charentes",
     },
     {
+      path: "nouvelleAquitaine.jpg",
+      nom: "Région de la Nouvelle Aquitaine",
+    },
+    {
       path: "terredefestivals.jpg",
       nom: "Terre de festivals Deux sèvres",
     },
@@ -60,13 +64,15 @@ export default function Billetterie() {
       path: "nouvellerepublique.png",
       nom: "La nouvelle République",
     },
+    {
+      path: "paysdegatine.jpg",
+      nom: "Pays de gatine",
+    },
 
-    // {
-    //   path: "pulsar.jpg",
-    //   nom: "Radio Pulsar",
-    // },
-  
-
+    {
+      path: "pulsar.jpg",
+      nom: "Radio Pulsar",
+    },
   ];
   const privees = [
     {
@@ -81,7 +87,7 @@ export default function Billetterie() {
       path: "ca.jpg",
       nom: "Crédit Agricole",
     },
-    
+
     {
       path: "spar.jpg",
       nom: "SPAR Vasles",
@@ -106,7 +112,7 @@ export default function Billetterie() {
       path: "moutonvillage.png",
       nom: "Mouton Village",
     },
-  {
+    {
       path: "guimick.jpg",
       nom: "GUIMICK Media",
     },
@@ -154,7 +160,7 @@ export default function Billetterie() {
       path: "hydrozone.png",
       nom: "Hydrozone",
     },
-    
+
     {
       path: "bevin.jpg",
       nom: "BE & VIN",
@@ -178,7 +184,7 @@ export default function Billetterie() {
     {
       path: "westwood.jpg",
       nom: "West wood Tiny",
-    },    
+    },
     {
       path: "corpsetesprit.jpeg",
       nom: "Corps Et Esprit Institut",
@@ -191,25 +197,21 @@ export default function Billetterie() {
       path: "russeill.jpg",
       nom: "Russeil Chauffage",
     },
-    
+
     {
       path: "GROUPEACTIVE.png",
       nom: "Groupe Active",
     },
 
-    // {
-    //   path: "diffart.jpg",
-    //   nom: "Diffart",
-    // },
-    // {
-    //   path: "david.jpg",
-    //   nom: "Boucherie David",
-    // },
-    // {
-    //   path: "csc.png",
-    //   nom: "CSC Pays Ménigoutais",
-    // },
+    {
+      path: "diffart.jpg",
+      nom: "Diffart",
+    },
 
+    {
+      path: "csc.png",
+      nom: "CSC Pays Ménigoutais",
+    },
   ];
   return (
     <>
