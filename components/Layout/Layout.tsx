@@ -145,7 +145,7 @@ export default function Layout(props : {title : string, description : string, pa
           content={`${props.pageName} Musique, Ouaille Note 2023, Festival, Été 2023, à Vasles 79340 Deux-Sèvres`}
         />
 
-        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Menu/>
       {props.children}
