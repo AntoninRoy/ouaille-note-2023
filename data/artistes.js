@@ -1,6 +1,6 @@
 export const artistes = [
   {
-    className: "from-left test rouge1",
+    className: "from-left test bleu2",
     backgroundPositionX: "-300px",
     backgroundPositionY: "-50px",
     image: {
@@ -23,9 +23,21 @@ export const artistes = [
     name: "2TH",
     date: "VENDREDI 8 SEPTEMBRE 2023",
   },
-
   {
     className: "from-right test rouge2",
+    backgroundPositionX: "-200px",
+    backgroundPositionY: "-50px",
+    image: {
+      src: "/images/artistes/tetra.jpg",
+      blurDataURL: "/images/artistes/2THblur.jpg",
+      alt: "Artiste Ouaille Note TETRA HYDROK",
+    },
+    name: "TETRA HYDROK",
+    date: "SAMEDI 9 SEPTEMBRE 2023",
+  },
+
+  {
+    className: "from-right test bleu2",
     backgroundPositionX: "-100px",
     backgroundPositionY: "-150px",
     image: {
@@ -74,18 +86,7 @@ export const artistes = [
     date: "VENDREDI 8 SEPTEMBRE 2023",
   },
 
-  {
-    className: "from-right test bleu2",
-    backgroundPositionX: "-200px",
-    backgroundPositionY: "-50px",
-    image: {
-      src: "/images/artistes/tetra.jpg",
-      blurDataURL: "/images/artistes/2THblur.jpg",
-      alt: "Artiste Ouaille Note TETRA HYDROK",
-    },
-    name: "TETRA HYDROK",
-    date: "SAMEDI 9 SEPTEMBRE 2023",
-  },
+
   {
     className: "from-right test rouge1",
     backgroundPositionX: "-200px",
@@ -100,7 +101,7 @@ export const artistes = [
   },
 
   {
-    className: "from-right test bleu2",
+    className: "from-right test rouge2",
     backgroundPositionX: "-200px",
     backgroundPositionY: "-50px",
     image: {
@@ -112,7 +113,7 @@ export const artistes = [
     date: "SAMEDI 9 SEPTEMBRE 2023",
   },
   {
-    className: "from-right test rouge2",
+    className: "from-right test rouge1",
     backgroundPositionX: "-100px",
     backgroundPositionY: "-150px",
     image: {
