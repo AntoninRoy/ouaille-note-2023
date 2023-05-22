@@ -13,8 +13,8 @@ import Link from "next/link";
 
 export default function Home() {
   const description =
-    "Le 9 et 10 septembre 2023, rendez-vous à Vasles (79), dans les Deux-Sèvres pour la 9ème édition du Festival Ouaille'Note ?.";
-  const title = "Festival Ouaille Note | Vasles (79) | 9 et 10 septembre 2023";
+    "Le 8 et 9 septembre 2023, rendez-vous à Vasles (79), dans les Deux-Sèvres pour la 9ème édition du Festival Ouaille'Note ?.";
+  const title = "Festival Ouaille Note | Vasles (79) | 8 et 9 septembre 2023";
   const pageName = "Accueil";
 
   const divRef = createRef<HTMLDivElement>();
