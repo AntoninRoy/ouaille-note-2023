@@ -4,4 +4,4 @@ Allow: /
 
 # Block all crawlers for /accounts
 User-agent: *
-Disallow: /BenneEtVole
+Disallow: /benevole
