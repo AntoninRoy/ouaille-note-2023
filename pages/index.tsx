@@ -26,9 +26,7 @@ export default function Home() {
       <Layout description={description} title={title} pageName={pageName}>
         <>
           <div className="billetterie-link">
-            <Link href="/billetterie">
-              billetterie
-            </Link>
+            <Link href="/billetterie">billetterie</Link>
           </div>
 
           <div
@@ -120,6 +118,10 @@ export default function Home() {
           </div>
 
           <div className="general-container">
+            <video controls width="100%">
+              <source src="/v3.mp4" type="video/mp4" />
+            </video>
+
             <div className="text-container">
               <motion.div
                 className="texte"

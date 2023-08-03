@@ -303,10 +303,8 @@ px
   .text-container {
     flex-direction: row;
     align-items: center;
-
   }
 }
-
 
 .texte {
   opacity: 0;
@@ -329,7 +327,6 @@ px
   /* https://stackoverflow.com/questions/14387690/how-can-i-show-only-corner-borders */
 }
 
-
 .texte span {
   font-family: "Bebas-Neue";
   font-size: 30px;
@@ -341,9 +338,25 @@ px
   display: flex;
   flex-direction: column;
 }
-.mentions h2 {
+.contact {
+  justify-content: flex-start;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.mentions h2,
+.contact h2 {
   font-weight: bold;
   font-family: "Crunold";
+}
+
+.contact input, .contact textarea {
+  border: grey 1px solid;
+  background-color: #efe8e8;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 .decouvrir {
