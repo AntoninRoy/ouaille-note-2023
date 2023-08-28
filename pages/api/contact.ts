@@ -5,21 +5,22 @@ type Data = {
   name: string;
 };
 
-import nodemailer from "nodemailer";
+import nodemailer, { TransportOptions } from "nodemailer";
+import { MailOptions } from "nodemailer/lib/json-transport";
 
 // Importez le module Transport
 const { createTransport } = nodemailer;
 
 // Créez un objet Transport
 const transport = createTransport({
-  host: "smtp.ionos.fr",
-  port: 465,
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT,
   secure: true, // upgrade later with STARTTLS
   auth: {
-    user: "bot@antonin-roy.fr",
-    pass: "./dMqRNa:$5HzCN",
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PWD,
   },
-});
+} as TransportOptions );
 
 // Créez un objet Mailer
 const mailer = nodemailer.createTransport(transport);
@@ -41,13 +42,13 @@ export default function handler(
   }
 
   const mailOptions = {
-    from: "bot@antonin-roy.fr",
-    to: ["ouaillenote.lefestival@gmail.com"],
+    from: "SITE OUAILLE NOTE",
+    to: [process.env.MAIL],
     subject: "[NE PAS REPONDRE] Message laissé sur www.ouaillenote.com",
     text: escape(message + "\n\n" + contact),
   };
 
-  transport.sendMail(mailOptions, (err, info) => {
+  transport.sendMail(mailOptions as MailOptions, (err, info) => {
     if (err) {
       console.log(err);
     } else {
