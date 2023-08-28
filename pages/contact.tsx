@@ -5,13 +5,14 @@ export default function MentionLegales() {
   const description = "Contact";
   const title = "Contact | Festival Ouaille Note";
   const pageName = "Contact";
-
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showMessage, setShowMessage] = useState<boolean | undefined>(
     undefined
   );
 
   const sendEmail = (event: any) => {
     event.preventDefault();
+    setIsLoading(true);
     fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -21,10 +22,15 @@ export default function MentionLegales() {
         message: event.target.message.value,
         contact: event.target.contact.value,
       }),
-    }).then((res) => {
-      setShowMessage(() => res.status === 200);
-      event.target.reset();
-    });
+    })
+      .then((res) => {
+        setShowMessage(() => res.status === 200);
+        event.target.reset();
+      })
+      .catch((res) => {
+        setShowMessage(() => res.status === 200);
+      })
+      .finally(() => setIsLoading(false));
   };
   return (
     <>
@@ -88,18 +94,30 @@ export default function MentionLegales() {
                 Vous avez une question au sujet du Festival Ouaille Note #9 et
                 vous ne trouvez pas la réponse sur le site ou nos réseaux
                 sociaux ? Vous pouvez nous contacter via le formulaire
-                ci-dessous. N&lsquo;oubliez pas de laisser une adresse email pour vous
-                recontacter !
+                ci-dessous. N&lsquo;oubliez pas de laisser une adresse email
+                pour vous recontacter !
               </p>
-              <label htmlFor="contact">Votre email : </label>
-              <input type="email" name="contact" required />
-              <label htmlFor="message">Votre message : </label>
-              <textarea rows={10} name="message" required />
-              <input
-                type="submit"
-                value="Envoyer"
-                style={{ backgroundColor: "#e3245b", color: "white" }}
-              />
+              {!isLoading ? (
+                <>
+                  <label htmlFor="contact">Votre email : </label>
+                  <input type="email" name="contact" required disabled={isLoading}/>
+                  <label htmlFor="message">Votre message : </label>
+                  <textarea
+                    rows={10}
+                    name="message"
+                    required
+                    disabled={isLoading}
+                  />
+                  <input
+                    type="submit"
+                    value="Envoyer"
+                    disabled={isLoading}
+                    style={{ backgroundColor: "#e3245b", color: "white" }}
+                  />
+                </>
+              ) : (
+                <p style={{marginBottom:"100px"}}>Envoi en cours...</p>
+              )}
             </form>
           </div>
         </div>

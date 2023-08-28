@@ -22,10 +22,8 @@ const transport = createTransport({
   },
 } as TransportOptions );
 
-// Créez un objet Mailer
-const mailer = nodemailer.createTransport(transport);
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
@@ -42,19 +40,28 @@ export default function handler(
   }
 
   const mailOptions = {
-    from: "SITE OUAILLE NOTE",
+    from: {
+      name: `SITE OUAILLE NOTE`,
+      address: process.env.SMTP_USER,
+  },
     to: [process.env.MAIL],
     subject: "[NE PAS REPONDRE] Message laissé sur www.ouaillenote.com",
     text: escape(message + "\n\n" + contact),
   };
 
-  transport.sendMail(mailOptions as MailOptions, (err, info) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("Email sent successfully!");
-    }
-  });
+
+  await new Promise((resolve, reject) => {
+    // send mail
+    transport.sendMail(mailOptions as MailOptions, (err, info) => {
+        if (err) {
+            console.error(err);
+            reject(err);
+        } else {
+            console.log(info);
+            resolve(info);
+        }
+    });
+});
   res.status(200).json({ name: "OK" });
 }
 

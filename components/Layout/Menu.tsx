@@ -63,9 +63,9 @@ export default function Menu() {
         <div className="menu-item">
           <Link href="/partenaires">Partenaires</Link>
         </div>
-        {/* <div className="menu-item">
+        <div className="menu-item">
           <Link href="/contact">Contact</Link>
-        </div> */}
+        </div>
       </motion.div>
     </>
   );
