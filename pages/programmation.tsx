@@ -8,7 +8,7 @@ import styles from "../styles/Programmation.module.css";
 
 export default function Programmation() {
   const description =
-    "Découvrez toute la programmation et tous les artistes du Ouaille Note ? Festival par jour. Le vendredi 8 et samedi 9 septembre 2023.";
+    "Découvrez toute la programmation et tous les artistes du Ouaille Note ? Festival par jour. Le vendredi 6 et samedi 7 septembre 2024.";
   const title = "Programmation | Festival Ouaille Note";
   const pageName = "Programmation";
 

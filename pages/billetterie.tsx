@@ -2,7 +2,7 @@ import Layout from "../components/Layout/Layout";
 
 export default function Billetterie() {
   const description =
-    "Billetterie du Ouaille Note ? Festival. Prenez vos billets et vos pass pour assister à tous les concerts du vendredi 9 et samedi 10 septembre 2023.";
+    "Billetterie du Ouaille Note ? Festival. Prenez vos billets et vos pass pour assister à tous les concerts du vendredi 6 et samedi 7 septembre 2024.";
   const title = "Billetterie | Festival Ouaille Note";
   const pageName = "Billetterie";
 

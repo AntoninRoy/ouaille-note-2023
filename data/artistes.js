@@ -9,7 +9,7 @@ export const artistes = [
       alt: "Artiste Ouaille Note HILIGHT TRIBE",
     },
     name: "HILIGHT TRIBE",
-    date: "VENDREDI 8 SEPTEMBRE 2023",
+    date: "VENDREDI 6 SEPTEMBRE 2024",
   },
   {
     className: "bleu1 from-right test",
@@ -21,7 +21,7 @@ export const artistes = [
       alt: "Artiste Ouaille Note 2TH",
     },
     name: "2TH",
-    date: "VENDREDI 8 SEPTEMBRE 2023",
+    date: "VENDREDI 6 SEPTEMBRE 2024",
   },
   {
     className: "from-right test rouge2",
@@ -33,7 +33,7 @@ export const artistes = [
       alt: "Artiste Ouaille Note TETRA HYDROK",
     },
     name: "TETRA HYDROK",
-    date: "SAMEDI 9 SEPTEMBRE 2023",
+    date: "SAMEDI 7 SEPTEMBRE 2024",
   },
 
   {
@@ -83,7 +83,7 @@ export const artistes = [
       </span>
     ),
     customStyle: { top: "40% !important" },
-    date: "VENDREDI 8 SEPTEMBRE 2023",
+    date: "VENDREDI 6 SEPTEMBRE 2024",
   },
 
 
@@ -97,7 +97,7 @@ export const artistes = [
       alt: "Artiste Ouaille Note 47TER",
     },
     name: "47TER",
-    date: "SAMEDI 9 SEPTEMBRE 2023",
+    date: "SAMEDI 7 SEPTEMBRE 2024",
   },
 
   {
@@ -110,7 +110,7 @@ export const artistes = [
       alt: "Artiste Ouaille Note Volodia",
     },
     name: "VOLODIA",
-    date: "SAMEDI 9 SEPTEMBRE 2023",
+    date: "SAMEDI 7 SEPTEMBRE 2024",
   },
   {
     className: "from-right test rouge1",
@@ -122,7 +122,7 @@ export const artistes = [
       alt: "Artiste Ouaille Note PIJAMA",
     },
     name: "PIJAMA",
-    date: "SAMEDI 9 SEPTEMBRE 2023",
+    date: "SAMEDI 7 SEPTEMBRE 2024",
   },
   {
     className: "from-right test bleu1",
@@ -153,6 +153,6 @@ export const artistes = [
         </span>
       </span>
     ),
-    date: "VENDREDI 8 SEPTEMBRE 2023",
+    date: "VENDREDI 6 SEPTEMBRE 2024",
   }
 ];

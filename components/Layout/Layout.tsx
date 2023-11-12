@@ -55,8 +55,8 @@ export default function Layout(props : {title : string, description : string, pa
     organizer: "Association « La Gatin'Ouaille »",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     eventStatus: "https://schema.org/EventScheduled",
-    startDate: "2023-09-08",
-    endDate: "2023-09-09",
+    startDate: "2024-09-06",
+    endDate: "2024-09-07",
     description: props.description,
     image: [`https://www.ouaillenote.fr/images/logo/logo.png`],
     performers: performers.map((performer) => ({
@@ -65,33 +65,33 @@ export default function Layout(props : {title : string, description : string, pa
       image: `https://www.ouaillenote.fr/images/artistes/${performer.imageSrc}`,
     })),
     offers: [
-      {
-        "@type": "Offer",
-        url: "https://my.weezevent.com/festival-ouaillenote-9",
-        price: "44.90",
-        priceCurrency: "EUR",
-        availability: "http://schema.org/InStock",
-        name: "PASS 2 JOURS : 8/9 SEPTEMBRE 2023",
-        validFrom: "2023-03-13",
-      },
-      {
-        "@type": "Offer",
-        url: "https://my.weezevent.com/festival-ouaillenote-9",
-        price: "24.90",
-        priceCurrency: "EUR",
-        availability: "http://schema.org/InStock",
-        name: "VENDREDI 8 SEPTEMBRE 2023",
-        validFrom: "2023-03-13",
-      },
-      {
-        "@type": "Offer",
-        url: "https://my.weezevent.com/festival-ouaillenote-9",
-        price: "24.90",
-        priceCurrency: "EUR",
-        availability: "http://schema.org/InStock",
-        name: "SAMEDI 9 SEPTEMBRE 2023",
-        validFrom: "2023-03-13"
-      }
+      // {
+      //   "@type": "Offer",
+      //   url: "https://my.weezevent.com/festival-ouaillenote-9",
+      //   price: "44.90",
+      //   priceCurrency: "EUR",
+      //   availability: "http://schema.org/InStock",
+      //   name: "PASS 2 JOURS : 8/9 SEPTEMBRE 2024",
+      //   validFrom: "2024-03-13", //TODO a completer
+      // },
+      // {
+      //   "@type": "Offer",
+      //   url: "https://my.weezevent.com/festival-ouaillenote-9",
+      //   price: "24.90",
+      //   priceCurrency: "EUR",
+      //   availability: "http://schema.org/InStock",
+      //   name: "VENDREDI 8 SEPTEMBRE 2024",
+      //   validFrom: "2024-03-13", //TODO a completer
+      // },
+      // {
+      //   "@type": "Offer",
+      //   url: "https://my.weezevent.com/festival-ouaillenote-9",
+      //   price: "24.90",
+      //   priceCurrency: "EUR",
+      //   availability: "http://schema.org/InStock",
+      //   name: "SAMEDI 9 SEPTEMBRE 2024",
+      //   validFrom: "2024-03-13" //TODO a completer
+      // }
     ],
     location: {
       "@type": "Place",
@@ -142,7 +142,7 @@ export default function Layout(props : {title : string, description : string, pa
         />
         <meta
           name="keywords"
-          content={`${props.pageName} Musique, Ouaille Note 2023, Festival, Été 2023, à Vasles 79340 Deux-Sèvres`}
+          content={`${props.pageName} Musique, Ouaille Note 2024, Festival, Été 2024, à Vasles 79340 Deux-Sèvres`}
         />
 
         <link rel="shortcut icon" href="/favicon.ico" />
