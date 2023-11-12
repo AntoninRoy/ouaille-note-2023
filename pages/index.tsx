@@ -13,8 +13,8 @@ import Link from "next/link";
 
 export default function Home() {
   const description =
-    "Le 8 et 9 septembre 2023, rendez-vous à Vasles (79), dans les Deux-Sèvres pour la 9ème édition du Festival Ouaille'Note ?.";
-  const title = "Festival Ouaille Note | Vasles (79) | 8 et 9 septembre 2023";
+    "Le 6 et 7 septembre 2024, rendez-vous à Vasles (79), dans les Deux-Sèvres pour la 9ème édition du Festival Ouaille'Note ?.";
+  const title = "Festival Ouaille Note | Vasles (79) | 6 et 7 septembre 2024";
   const pageName = "Accueil";
 
   const divRef = createRef<HTMLDivElement>();
@@ -67,7 +67,7 @@ export default function Home() {
             >
               <Image
                 className="logo-container"
-                alt={`Ouaille Note 9 2023`}
+                alt={`Ouaille Note 10 2024`}
                 src={`/images/logo/ON9TRANSPARENT-light.png`}
                 layout="fill"
                 objectFit="contain"
@@ -108,7 +108,7 @@ export default function Home() {
                   color: "#fff",
                 }}
               >
-                8-9 SEPTEMBRE 2023
+                6-7 SEPTEMBRE 2024
               </span>
               <br />
             </div>
