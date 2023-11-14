@@ -51,7 +51,7 @@ export const artistes = [
       >
         <span
           style={{
-            color: "#e3245b",
+            color: "#422e70",
             fontFamily: "Bebas-Neue",
             lineHeight: "25px",
           }}
@@ -65,7 +65,7 @@ export const artistes = [
         </span>
         <span
           style={{
-            color: "#e3245b",
+            color: "#422e70",
             fontFamily: "Bebas-Neue",
             lineHeight: "25px",
           }}
@@ -143,7 +143,7 @@ export const artistes = [
         </span>
         <span
           style={{
-            color: "#e3245b",
+            color: "#422e70",
             fontFamily: "Bebas-Neue",
             lineHeight: "25px",
           }}

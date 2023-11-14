@@ -3,7 +3,7 @@ import Layout from "../components/Layout/Layout";
 
 export default function Benevole() {
   const description = "";
-  const title = "Inscription Bénévoles | Festival Ouaille Note #9";
+  const title = "Inscription Bénévoles | Festival Ouaille Note #10";
   const pageName = "";
 
 
@@ -11,7 +11,7 @@ export default function Benevole() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <div className="mentions">
-          <h1 className="heading1">Inscription Bénévole Ouaille Note #9</h1>
+          <h1 className="heading1">Inscription Bénévole Ouaille Note #10</h1>
           <div>
             <iframe
               onLoad={(event) => {
