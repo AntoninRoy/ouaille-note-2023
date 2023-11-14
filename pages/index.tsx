@@ -33,7 +33,7 @@ export default function Home() {
             style={{
               height: "100vh",
               background:
-                "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(22,185,235,1) 70%)",
+                "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 22%), linear-gradient(127deg, rgba(66,46,112,1) 11%, rgba(238,76,39,1) 49%, rgba(238,76,39,1) 80%, rgba(240,122,173,1) 100%)",
 
               display: "flex",
               flexDirection: "column",
@@ -57,7 +57,7 @@ export default function Home() {
                 fontSize: "25px",
               }}
             >
-              OUAILLE NOTE #9
+              OUAILLE NOTE #10
             </h1>
             <div
               style={{
@@ -68,7 +68,7 @@ export default function Home() {
               <Image
                 className="logo-container"
                 alt={`Ouaille Note 10 2024`}
-                src={`/images/logo/ON9TRANSPARENT-light.png`}
+                src={`/images/logo/ON10TRANSPARENT.png`}
                 layout="fill"
                 objectFit="contain"
                 style={{ maxHeight: "50vh", zIndex: 0 }}
@@ -80,7 +80,7 @@ export default function Home() {
                 width: "100%",
                 textAlign: "center",
                 fontFamily: "Bebas-Neue",
-                color: "#e3245b",
+                color: "#422e70",
                 height: "5vh",
               }}
             >
@@ -91,7 +91,7 @@ export default function Home() {
                   fontWeight: "400",
                   fontStyle: "normal",
                   margin: "0",
-                  color: "#e3245b",
+                  color: "#422e70",
                 }}
               >
                 VASLES 79
@@ -116,12 +116,13 @@ export default function Home() {
               <RiArrowDownSLine />
             </div>
           </div>
-
+          <div className="video" style={{ padding: "0" }}>
+            <LiteYouTubeEmbed
+              id="99VjrAmNDc8"
+              title="AfterMovie 2023 - OUAILLE NOTE FESTIVAL #10"
+            />
+          </div>
           <div className="general-container">
-            <video controls width="100%">
-              <source src="/v3.mp4" type="video/mp4" />
-            </video>
-
             <div className="text-container">
               <motion.div
                 className="texte"
@@ -169,55 +170,6 @@ mètres du site des concerts. `}{" "}
                 </div>
               </div>
             </div>
-
-            <div id="programmation" className="programme-title">
-              Programmation
-            </div>
-            <ProgrammationCards divRef={divRef} inView={inView} />
-            <div className="text-container">
-              <motion.div
-                className="texte"
-                style={{ flex: "1 0 50%" }}
-                initial="offscreen"
-                viewport={{ once: true, margin: "-25%" }}
-                whileInView="onscreen"
-                variants={{
-                  offscreen: {},
-                  onscreen: {
-                    opacity: 1,
-                    transition: {
-                      type: "spring",
-                      bounce: 0.2,
-                      duration: 0.6,
-                    },
-                  },
-                }}
-              >
-                <span>Espace animation</span>
-                <p>
-                  {`L'espace animation est situé sur une partie du parc Mouton Village. Venez découvrir ce lieu unique, et profitez d’une entrée gratuite au parc. Une fois la visite effectuée, venez vous détendre autour d’une douzaine d’huitres, un bon burger ou encore devant un verre. Profitez
-des animations présentes et essayez vous au cornouaille, aux palets ou encore au lazer game.
-Ce lieu est également ouvert après les concerts du soir ou nous faisons place à quelques DJs régionnaux qui sauront enflammer l’after.`}
-                </p>
-              </motion.div>
-              <div style={{ flex: "1 0 50%" }}>
-                <div style={{ position: "relative", height: "50vh" }}>
-                  <Image
-                    src="/images/camping.webp"
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt="test"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="video">
-            <LiteYouTubeEmbed
-              id="pdRyq9bIG_Q"
-              title="AfterMovie 2022 - OUAILLE NOTE FESTIVAL"
-            />
           </div>
         </>
       </Layout>

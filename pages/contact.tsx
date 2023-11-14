@@ -36,7 +36,7 @@ export default function MentionLegales() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <div className="contact">
-          <h1 className="heading1" style={{ color: "#16b9eb" }}>
+          <h1 className="heading1" style={{ color: "#ee4c27" }}>
             Contact
           </h1>
 
@@ -61,7 +61,7 @@ export default function MentionLegales() {
                 maxWidth: "500px",
               }}
             >
-              <h2 style={{ fontSize: "20px", color: "#e3245b" }}>
+              <h2 style={{ fontSize: "20px", color: "#422e70" }}>
                 Formulaire de contact
               </h2>
               {showMessage === true && (
@@ -91,7 +91,7 @@ export default function MentionLegales() {
                 </p>
               )}
               <p style={{ textAlign: "left", marginBottom: "20px" }}>
-                Vous avez une question au sujet du Festival Ouaille Note #9 et
+                Vous avez une question au sujet du Festival Ouaille Note #10 et
                 vous ne trouvez pas la réponse sur le site ou nos réseaux
                 sociaux ? Vous pouvez nous contacter via le formulaire
                 ci-dessous. N&lsquo;oubliez pas de laisser une adresse email
@@ -112,7 +112,7 @@ export default function MentionLegales() {
                     type="submit"
                     value="Envoyer"
                     disabled={isLoading}
-                    style={{ backgroundColor: "#e3245b", color: "white" }}
+                    style={{ backgroundColor: "#422e70", color: "white" }}
                   />
                 </>
               ) : (

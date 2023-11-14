@@ -9,7 +9,7 @@
     width: calc((100% / 1) - (1 - 1) *  15px / 1 );
     margin-top: 15px;
     position: relative;
-    border: 5px solid #e3245b;
+    border: 5px solid #422e70;
   
   }
   .griditem:not(:nth-child(2n)) {
