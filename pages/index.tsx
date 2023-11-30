@@ -143,7 +143,7 @@ export default function Home() {
                 6-7 SEPTEMBRE 2024
               </span>
               <br />
-              <span  style={{
+              {/* <span  style={{
                   fontSize: "2em",
                   fontFamily: "Bebas-Neue",
                   fontWeight: "700",
@@ -152,7 +152,7 @@ export default function Home() {
                   color: "#D77CAE",
                  
 
-                }}>{countDownDateStr}</span>
+                }}>{countDownDateStr}</span> */}
               <br />
             </div>
 
