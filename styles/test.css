@@ -88,12 +88,12 @@
 
 .bleu1 .image-artiste,
 .bleu2 .image-artiste {
-  border: 5px solid #422e70 !important;
+  border: 5px solid #362E79 !important;
   border-radius: 50% !important;
 }
 .rouge1 .image-artiste,
 .rouge2 .image-artiste {
-  border: 5px solid #ee4c27 !important;
+  border: 5px solid #D14F2F !important;
   border-radius: 50% !important;
 }
 
@@ -109,7 +109,7 @@
   width: 100%;
   text-align: center;
   font-size: 30px;
-  color: #422e70;
+  color: #362E79;
   background-color: black;
   border-bottom: 1px solid black;
   font-family: "Crunold";
@@ -153,11 +153,11 @@
 
 .bleu1 .artiste-date,
 .bleu2 .artiste-date {
-  color: #422e70;
+  color: #362E79;
 }
 .rouge1 .artiste-date,
 .rouge2 .artiste-date {
-  color: #ee4c27;
+  color: #D14F2F;
 }
 
 @keyframes tilt-shaking {
@@ -193,7 +193,7 @@
   right: -45px;
 
   font-family: "Crunold";
-  background-color: #422e70;
+  background-color: #362E79;
   border-radius: 5px 5px 0 0;
   padding: 5px 15px;
   color: white;
@@ -226,7 +226,7 @@
   /* padding: 15px
 px
 ; */
-  /* background-color: #ee4c27; */
+  /* background-color: #D14F2F; */
   margin: 10px;
   border-radius: 10px;
   color: black;
@@ -284,13 +284,13 @@ px
 }
 .menu svg {
   font-size: 50px;
-  background-color: #422e70;
+  background-color: #362E79;
   padding: 10px;
   border-radius: 30%;
 }
 
 .background-red {
-  background-color: #422e70;
+  background-color: #362E79;
   background-position: bottom right;
 }
 
@@ -366,7 +366,7 @@ px
   margin-left: 50%;
   padding-right: 0px;
   line-height: 25px;
-  background-color: #422e70;
+  background-color: #362E79;
   border-radius: 10px;
   opacity: 0.7;
   color: white;

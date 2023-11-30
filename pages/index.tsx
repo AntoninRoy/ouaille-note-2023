@@ -21,6 +21,37 @@ export default function Home() {
 
   const inView = useInView(divRef, { once: true, margin: "-20%" });
 
+  const [countDownDateStr, setCountDownDateStr] = useState<string>("");
+
+  useEffect(() => {
+    var countDownDate = new Date("Sept 6, 2024 18:00:00").getTime();
+    const interval : any =  setInterval(() => {
+
+      // Get today's date and time
+      const now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      const distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the result in the element with id="demo"
+      setCountDownDateStr(days + "j " + hours + "h "
+      + minutes + "m " + seconds + "s ");
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        return clearInterval(interval);
+      }
+      
+    }, 1000);
+    return () => clearInterval(interval);
+  },[])
+
   return (
     <>
       <Layout description={description} title={title} pageName={pageName}>
@@ -33,7 +64,8 @@ export default function Home() {
             style={{
               height: "100vh",
               background:
-                "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 22%), linear-gradient(127deg, rgba(66,46,112,1) 11%, rgba(238,76,39,1) 49%, rgba(238,76,39,1) 80%, rgba(240,122,173,1) 100%)",
+                "linear-gradient(127deg, rgba(54,46,121,1) 11%, rgba(209,79,47,1) 49%, rgba(209,79,47,1) 80%, rgba(215,124,174,1) 100%)",
+               // "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 22%), linear-gradient(127deg, rgba(54,46,121,1) 11%, rgba(209,79,47,1) 49%, rgba(209,79,47,1) 80%, rgba(215,124,174,1) 100%)",
 
               display: "flex",
               flexDirection: "column",
@@ -80,7 +112,7 @@ export default function Home() {
                 width: "100%",
                 textAlign: "center",
                 fontFamily: "Bebas-Neue",
-                color: "#422e70",
+                color: "#362E79",
                 height: "5vh",
               }}
             >
@@ -91,7 +123,7 @@ export default function Home() {
                   fontWeight: "400",
                   fontStyle: "normal",
                   margin: "0",
-                  color: "#422e70",
+                  color: "#362E79",
                 }}
               >
                 VASLES 79
@@ -111,19 +143,38 @@ export default function Home() {
                 6-7 SEPTEMBRE 2024
               </span>
               <br />
+              <span  style={{
+                  fontSize: "7vw",
+                  fontFamily: "Bebas-Neue",
+                  fontWeight: "700",
+                  display: "flex",
+                  justifyContent: "center",
+                  color: "#D77CAE",
+                 
+
+                }}>{countDownDateStr}</span>
+              <br />
             </div>
+
             <div className="double-arrow" style={{ height: "20vh" }}>
-              <RiArrowDownSLine />
+              {/* <RiArrowDownSLine /> */}
             </div>
+            
           </div>
-          <div className="video" style={{ padding: "0" }}>
+          
+          
+          {/* <div className="video" style={{ padding: "0" }}>
             <LiteYouTubeEmbed
               id="99VjrAmNDc8"
               title="AfterMovie 2023 - OUAILLE NOTE FESTIVAL #10"
+              aspectHeight={8}
             />
-          </div>
-          <div className="general-container">
-            <div className="text-container">
+          </div> */}
+
+
+          {/* <div className="general-container">
+            
+            <div className="text-container" >
               <motion.div
                 className="texte"
                 style={{ flex: "1 0 50%" }}
@@ -144,7 +195,7 @@ export default function Home() {
               >
                 <span>Le festival</span>
                 <p>
-                  {`Après une belle édition 2022, l'association La Gatin'Ouaille vous propose une nouvelle édition de son festival ! `}
+                  {`Après une belle édition 2023, l'association La Gatin'Ouaille vous propose une nouvelle édition de son festival ! `}
                 </p>
                 <p>
                   {`Vous retrouverez deux soirs de concerts au coeur de Vasles, un village gatinais aux
@@ -170,7 +221,7 @@ mètres du site des concerts. `}{" "}
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </>
       </Layout>
     </>

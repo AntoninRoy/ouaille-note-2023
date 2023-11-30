@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+Violet : #362E79
+Orange : #D14F2F
+Rose : #D77CAE
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 
@@ -51,7 +57,7 @@ h1 {
 .heading1{
   padding-top : 10vh;
   padding-bottom: 5vh;
-  color : #422e70;
+  color : #362E79;
   font-family : 'Crunold';
   text-align : center;
   font-size: 2em;
