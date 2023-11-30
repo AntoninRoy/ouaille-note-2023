@@ -6,37 +6,32 @@ export default function Billetterie() {
   const title = "Billetterie | Festival Ouaille Note";
   const pageName = "Billetterie";
 
-  const wizevent = {
-    initialHeight: 658,
-    eventId: "631529",
-    code: "1298",
-    primaryColor: "f393ba",
-  };
+
 
   return (
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <>
-        <h1 className="heading1">BILLETTERIE</h1>
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-          }}
-        >
-  
-
+          <h1 className="heading1">BILLETTERIE</h1>
+          <div
+            style={{
+              maxWidth: "1200px",
+              margin: "0 auto",
+            }}
+          >
+            
           <iframe
-            src="https://widget.weezevent.com/ticket/E952273/?code=11010&locale=fr-FR&width_auto=1&color_primary=00AEEF"
+            src="https://www.billetweb.fr/shop.php?event=festival-ouaillenote-10"
             width="100%"
-            height={wizevent.initialHeight}
+            height={658}
             title="Billetterie Weezevent"
           >
             Chargement…
           </iframe>
-        </div>
+
+
+          </div>
         </>
-        
       </Layout>
     </>
   );

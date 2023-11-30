@@ -36,7 +36,7 @@ export default function MentionLegales() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <div className="contact">
-          <h1 className="heading1" style={{ color: "#ee4c27" }}>
+          <h1 className="heading1" style={{ color: "#D14F2F" }}>
             Contact
           </h1>
 
@@ -61,7 +61,7 @@ export default function MentionLegales() {
                 maxWidth: "500px",
               }}
             >
-              <h2 style={{ fontSize: "20px", color: "#422e70" }}>
+              <h2 style={{ fontSize: "20px", color: "#362E79" }}>
                 Formulaire de contact
               </h2>
               {showMessage === true && (
@@ -112,7 +112,7 @@ export default function MentionLegales() {
                     type="submit"
                     value="Envoyer"
                     disabled={isLoading}
-                    style={{ backgroundColor: "#422e70", color: "white" }}
+                    style={{ backgroundColor: "#362E79", color: "white" }}
                   />
                 </>
               ) : (
