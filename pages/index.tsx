@@ -93,7 +93,7 @@ export default function Home() {
             </h1>
             <div
               style={{
-                height: "60vh",
+                height: "55vh",
                 position: "relative",
               }}
             >
