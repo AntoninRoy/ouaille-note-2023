@@ -144,7 +144,7 @@ export default function Home() {
               </span>
               <br />
               <span  style={{
-                  fontSize: "7vw",
+                  fontSize: "2em",
                   fontFamily: "Bebas-Neue",
                   fontWeight: "700",
                   display: "flex",
