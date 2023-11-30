@@ -7,7 +7,7 @@ export default function Footer() {
       <div>
         <Image
           alt="Logo Ouaille Note 10"
-          src="/images/logo/logo.png"
+          src="/images/logo/ON10TRANSPARENT.png"
           width="300"
           height="150"
           objectFit="contain"

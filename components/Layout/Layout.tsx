@@ -58,7 +58,7 @@ export default function Layout(props : {title : string, description : string, pa
     startDate: "2024-09-06",
     endDate: "2024-09-07",
     description: props.description,
-    image: [`https://www.ouaillenote.fr/images/logo/logo.png`],
+    image: [`https://www.ouaillenote.fr/images/logo/logoorange.jpg`],
     performers: performers.map((performer) => ({
       "@type": "PerformingGroup",
       name: performer.name,
@@ -125,7 +125,7 @@ export default function Layout(props : {title : string, description : string, pa
         <meta property="og:locale" content="fr_FR" />
         <meta
           property="og:image"
-          content={`https://www.ouaillenote.fr/images/logo/logo.png`}
+          content={`https://www.ouaillenote.fr/images/logo/logoorange.jpg`}
         />
         <meta
           property="og:url"
@@ -138,7 +138,7 @@ export default function Layout(props : {title : string, description : string, pa
         <meta name="twitter:description" content={props.description} />
         <meta
           name="twitter:image"
-          content={`https://www.ouaillenote.fr/images/logo/logo.png`}
+          content={`https://www.ouaillenote.fr/images/logo/logoorange.jpg`}
         />
         <meta
           name="keywords"
