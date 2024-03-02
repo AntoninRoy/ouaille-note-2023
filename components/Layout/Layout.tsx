@@ -1,53 +1,13 @@
 import Footer from "./Footer";
 import Head from "next/head";
-import { JsxElement } from "typescript";
 import { ReactElement } from "react";
 import Menu from "./Menu";
+import { Analytics } from '@vercel/analytics/react';
+import { artistes } from "../../data/artistes";
 
 export default function Layout(props : {title : string, description : string, pageName : string, children : ReactElement<any, any>}) {
-  const performers = [
-    {
-      name: "",
-      imageSrc: "",
-    },
-    {
-      name: "",
-      imageSrc: "",
-    },
-    {
-      name: "",
-      imageSrc: "",
-    },
-    {
-      name: "",
-      imageSrc: "",
-    },
-    {
-      name: "",
-      imageSrc: "",
-    },
-    {
-      name: "",
-      imageSrc: "",
-    },
-    {
-      name: "",
-      imageSrc: "",
-    },
-    {
-      name: "",
-      imageSrc: "",
-    },
-    {
-      name: "",
-      imageSrc: "",
-    },
-    {
-      name: "",
-      imageSrc: "",
-    },
-  ];
 
+  
   const schemaData = {
     "@context": "http://schema.org",
     "@type": "Festival",
@@ -59,39 +19,39 @@ export default function Layout(props : {title : string, description : string, pa
     endDate: "2024-09-07",
     description: props.description,
     image: [`https://www.ouaillenote.fr/images/logo/logoorange.jpg`],
-    performers: performers.map((performer) => ({
+    performers: artistes.map((artistes) => ({
       "@type": "PerformingGroup",
-      name: performer.name,
-      image: `https://www.ouaillenote.fr/images/artistes/${performer.imageSrc}`,
+      name: artistes.name,
+      image: `https://www.ouaillenote.fr/images/artistes/${artistes.url}`,
     })),
     offers: [
-      // {
-      //   "@type": "Offer",
-      //   url: "https://my.weezevent.com/festival-ouaillenote-9",
-      //   price: "44.90",
-      //   priceCurrency: "EUR",
-      //   availability: "http://schema.org/InStock",
-      //   name: "PASS 2 JOURS : 8/9 SEPTEMBRE 2024",
-      //   validFrom: "2024-03-13", //TODO a completer
-      // },
-      // {
-      //   "@type": "Offer",
-      //   url: "https://my.weezevent.com/festival-ouaillenote-9",
-      //   price: "24.90",
-      //   priceCurrency: "EUR",
-      //   availability: "http://schema.org/InStock",
-      //   name: "VENDREDI 8 SEPTEMBRE 2024",
-      //   validFrom: "2024-03-13", //TODO a completer
-      // },
-      // {
-      //   "@type": "Offer",
-      //   url: "https://my.weezevent.com/festival-ouaillenote-9",
-      //   price: "24.90",
-      //   priceCurrency: "EUR",
-      //   availability: "http://schema.org/InStock",
-      //   name: "SAMEDI 9 SEPTEMBRE 2024",
-      //   validFrom: "2024-03-13" //TODO a completer
-      // }
+      {
+        "@type": "Offer",
+        url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-10",
+        price: "49.99",
+        priceCurrency: "EUR",
+        availability: "http://schema.org/InStock",
+        name: "PASS 2 JOURS : 6/7 SEPTEMBRE 2024",
+        validFrom: "2024-01-01", 
+      },
+      {
+        "@type": "Offer",
+        url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-10",
+        price: "27.99",
+        priceCurrency: "EUR",
+        availability: "http://schema.org/InStock",
+        name: "VENDREDI 6 SEPTEMBRE 2024",
+        validFrom: "2024-01-01", 
+      },
+      {
+        "@type": "Offer",
+        url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-10",
+        price: "27.99",
+        priceCurrency: "EUR",
+        availability: "http://schema.org/InStock",
+        name: "SAMEDI 7 SEPTEMBRE 2024",
+        validFrom: "2024-01-01"
+      }
     ],
     location: {
       "@type": "Place",
@@ -149,6 +109,7 @@ export default function Layout(props : {title : string, description : string, pa
       </Head>
       <Menu/>
       {props.children}
+      <Analytics />
       <Footer />
     </>
   );
