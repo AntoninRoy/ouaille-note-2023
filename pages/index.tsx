@@ -173,6 +173,7 @@ export default function Home() {
           <div className="wrapper">
             {artistes.map((artiste, index) => (
               <ArtistCard
+              key={index}
                 name={artiste.name}
                 url={`/images/artistes/${artiste.url}`}
                 size={artiste.size}
