@@ -76,6 +76,22 @@ export default function Billetterie() {
   ];
   const privees = [
     {
+      path: "pizzavan.png",
+      nom: "Pizza Van",
+    },
+    {
+      path: "impulsion.jpg",
+      nom: "Impulsion",
+    },
+    {
+      path: "busont.jpg",
+      nom: "Busont Fabrice",
+    },
+    {
+      path: "audreytaxi.png",
+      nom: "Audrey Taxi",
+    },
+    {
       path: "agneaupoitou.jpg",
       nom: "Agneau du poitou",
     },

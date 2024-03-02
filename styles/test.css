@@ -376,3 +376,48 @@ px
   top: 20px;
   cursor: pointer;
 }
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.box {
+  border-radius: 5px;
+  position: relative;
+  max-width: 800px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  height: 7vh;
+  width: 100%;
+  background-color: #362E79;
+  color : white;
+  padding : 10px;
+  font-family: "Crunold";
+  font-size: 1.3em;
+  line-height: 1.3em;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.orange {
+  background-color: #D14F2F;
+}
+
+.small {
+  font-size: 0.8em;
+  line-height: 0.9em;
+}
