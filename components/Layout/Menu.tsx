@@ -55,7 +55,9 @@ export default function Menu() {
         <div className="menu-item">
           <Link href="/billetterie">Billetterie</Link>
         </div>
-
+        {/* <div className="menu-item">
+          <Link href="/tremplin">Tremplin</Link>
+        </div> */}
         <div className="menu-item">
           <Link href="/partenaires">Partenaires</Link>
         </div>
