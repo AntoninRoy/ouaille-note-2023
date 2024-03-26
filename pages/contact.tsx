@@ -42,83 +42,18 @@ export default function MentionLegales() {
 
           <div
             style={{
-              height: "100%",
+              height: "calc(100vh - 300px)",
               display: "flex",
               justifyContent: "center",
-              alignItems: "center",
+              maxWidth: "600px",
+              margin: "auto",
             }}
           >
-            <form
-              action="/api/contact"
-              method="post"
-              onSubmit={sendEmail}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                width: "90%",
-                margin: "auto",
-                maxWidth: "500px",
-              }}
-            >
-              <h2 style={{ fontSize: "20px", color: "#362E79" }}>
-                Formulaire de contact
-              </h2>
-              {showMessage === true && (
-                <p
-                  style={{
-                    color: "white",
-                    backgroundColor: "green",
-                    padding: "5px 10px",
-                    width: "100%",
-                    textAlign: "start",
-                  }}
-                >
-                  Votre message a bien été envoyé !
-                </p>
-              )}
-              {showMessage != true && showMessage != undefined && (
-                <p
-                  style={{
-                    color: "white",
-                    backgroundColor: "red",
-                    padding: "5px 10px",
-                    width: "100%",
-                    textAlign: "start",
-                  }}
-                >
-                  Votre message n&lsquo;a pas été envoyé, veuillez réessayer.
-                </p>
-              )}
-              <p style={{ textAlign: "left", marginBottom: "20px" }}>
-                Vous avez une question au sujet du Festival Ouaille Note #10 et
+            Vous avez une question au sujet du Festival Ouaille Note #10 et
                 vous ne trouvez pas la réponse sur le site ou nos réseaux
-                sociaux ? Vous pouvez nous contacter via le formulaire
-                ci-dessous. N&lsquo;oubliez pas de laisser une adresse email
-                pour vous recontacter !
-              </p>
-              {!isLoading ? (
-                <>
-                  <label htmlFor="contact">Votre email : </label>
-                  <input type="email" name="contact" required disabled={isLoading}/>
-                  <label htmlFor="message">Votre message : </label>
-                  <textarea
-                    rows={10}
-                    name="message"
-                    required
-                    disabled={isLoading}
-                  />
-                  <input
-                    type="submit"
-                    value="Envoyer"
-                    disabled={isLoading}
-                    style={{ backgroundColor: "#362E79", color: "white" }}
-                  />
-                </>
-              ) : (
-                <p style={{marginBottom:"100px"}}>Envoi en cours...</p>
-              )}
-            </form>
+                sociaux ? 
+            Contactez-nous par email à l&lsquo;adresse suivante :
+            ouaillenote.lefestival@gmail.com
           </div>
         </div>
       </Layout>
