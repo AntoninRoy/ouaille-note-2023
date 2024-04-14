@@ -22,4 +22,27 @@ export const artistes = [
     url: "lesgarsdanslcoin.jpg",
     size: "small",
   },
+  {
+    name: "Jive Me",
+    url: "jiveme.jpg",
+    color: "orange",
+  },
+  {
+    name: "Weeding Dub",
+    url: "weddingdub.jpg",
+  },
+  {
+    name: "ATOEM",
+    url: "ATOEM.jpg",
+    color: "orange",
+  },
+  {
+    name: "RIO VERO",
+    url: "riovero.jpg",
+  },
+  {
+    name: "DEMKAZ",
+    url: "demkaz.jpg",
+    color: "orange",
+  },
 ];

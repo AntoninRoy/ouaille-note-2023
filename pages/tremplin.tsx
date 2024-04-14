@@ -5,17 +5,34 @@ export default function Tremplin() {
   const title = "Inscription Tremplin | Festival Ouaille Note #10";
   const pageName = "";
 
-
   return (
     <>
       <Layout description={description} title={title} pageName={pageName}>
-        <div className="mentions" style={{
-          background:
-          "linear-gradient(127deg, rgba(54,46,121,1) 11%, rgba(209,79,47,1) 49%, rgba(209,79,47,1) 80%, rgba(215,124,174,1) 100%)"
-        }}>
-          <h1 className="heading1" style={{color : "white"}}>Inscription Tremplin Ouaille Note #10</h1>
+        <div
+          className="mentions"
+          style={{
+            background:
+              "linear-gradient(127deg, rgba(54,46,121,1) 11%, rgba(209,79,47,1) 49%, rgba(209,79,47,1) 80%, rgba(215,124,174,1) 100%)",
+          }}
+        >
+          <h1 className="heading1" style={{ color: "white" }}>
+            Inscription Tremplin Ouaille Note #10
+          </h1>
           <div>
             <iframe
+              src="https://sondage.app.ps/embed/tremplin-ouaille-note-10-2024"
+              height="720"
+              loading="lazy"
+              style={{
+                display: "block",
+                width: "100%",
+                maxWidth: "810px",
+                margin: "auto",
+                border: "3px solid #444",
+                borderRadius: "6px",
+              }}
+            ></iframe>
+            {/* <iframe
               onLoad={(event) => {
                 console.log("EHOH");
               }}
@@ -28,7 +45,7 @@ export default function Tremplin() {
               }}
             >
               Chargement…
-            </iframe>
+            </iframe> */}
           </div>
         </div>
       </Layout>
