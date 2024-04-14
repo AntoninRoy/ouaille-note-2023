@@ -2,7 +2,7 @@ import Layout from "../components/Layout/Layout";
 
 export default function Tremplin() {
   const description = "";
-  const title = "Inscription Tremplin | Festival Ouaille Note #10";
+  const title = "Vote Tremplin | Festival Ouaille Note #10";
   const pageName = "";
 
   return (
@@ -16,7 +16,7 @@ export default function Tremplin() {
           }}
         >
           <h1 className="heading1" style={{ color: "white" }}>
-            Inscription Tremplin Ouaille Note #10
+            Vote Tremplin Ouaille Note #10
           </h1>
           <div>
             <iframe
