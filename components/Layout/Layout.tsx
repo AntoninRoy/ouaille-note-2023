@@ -4,6 +4,7 @@ import { ReactElement } from "react";
 import Menu from "./Menu";
 import { Analytics } from '@vercel/analytics/react';
 import { artistes } from "../../data/artistes";
+import Facebook from "../../tracking/Facebook";
 
 export default function Layout(props : {title : string, description : string, pageName : string, children : ReactElement<any, any>}) {
 
@@ -107,6 +108,7 @@ export default function Layout(props : {title : string, description : string, pa
 
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
+      <Facebook />
       <Menu/>
       {props.children}
       <Analytics />
