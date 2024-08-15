@@ -1,6 +1,6 @@
 import Footer from "./Footer";
 import Head from "next/head";
-import { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 import Menu from "./Menu";
 import { Analytics } from '@vercel/analytics/react';
 import { artistes } from "../../data/artistes";
@@ -67,6 +67,24 @@ export default function Layout(props : {title : string, description : string, pa
     },
   };
 
+  useEffect(() => {
+    const scriptId = 'custom-script'; // Give your script an ID for easy reference
+    const existingScript = document.getElementById(scriptId);
+
+  if (!existingScript) {
+    const script = document.createElement('script');
+    script.setAttribute('src', '/js/googleTagElement.js');
+    script.setAttribute('id', scriptId);
+    document.head.appendChild(script);
+    
+    return () => {
+      // Cleanup script when component is unmounted
+      document.head.removeChild(script);
+    };
+  }    
+  }, []);
+  
+
   return (
     <>
       <script
@@ -108,6 +126,8 @@ export default function Layout(props : {title : string, description : string, pa
 
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBFKFJKB"
+height="0" width="0" style={{"display":"none", "visibility":"hidden"}}></iframe></noscript>
       <Facebook />
       <Menu/>
       {props.children}
