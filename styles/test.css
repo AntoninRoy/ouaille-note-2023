@@ -88,12 +88,12 @@
 
 .bleu1 .image-artiste,
 .bleu2 .image-artiste {
-  border: 5px solid #362E79 !important;
+  border: 5px solid #362e79 !important;
   border-radius: 50% !important;
 }
 .rouge1 .image-artiste,
 .rouge2 .image-artiste {
-  border: 5px solid #D14F2F !important;
+  border: 5px solid #d14f2f !important;
   border-radius: 50% !important;
 }
 
@@ -109,7 +109,7 @@
   width: 100%;
   text-align: center;
   font-size: 30px;
-  color: #362E79;
+  color: #362e79;
   background-color: black;
   border-bottom: 1px solid black;
   font-family: "Crunold";
@@ -153,11 +153,11 @@
 
 .bleu1 .artiste-date,
 .bleu2 .artiste-date {
-  color: #362E79;
+  color: #362e79;
 }
 .rouge1 .artiste-date,
 .rouge2 .artiste-date {
-  color: #D14F2F;
+  color: #d14f2f;
 }
 
 @keyframes tilt-shaking {
@@ -193,13 +193,29 @@
   right: -45px;
 
   font-family: "Crunold";
-  background-color: #362E79;
+  background-color: #362e79;
   border-radius: 5px 5px 0 0;
   padding: 5px 15px;
   color: white;
   z-index: 10;
 
   transform: rotate(-90deg);
+}
+
+.reseaux-link {
+  float: left;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  font-family: "Crunold";
+  background-color: black;
+  border-radius: 0 0 5px 5px;
+  padding: 5px 15px;
+  color: white;
+  z-index: 10;
 }
 .billetterie-link svg {
   margin-left: 10px;
@@ -255,7 +271,7 @@ px
   color: white;
   position: absolute;
   right: 5px;
-  z-index: 3;
+  z-index: 101;
   cursor: pointer;
 }
 
@@ -264,7 +280,7 @@ px
   height: 50vh;
   position: absolute;
   width: 100vw;
-  z-index: 2;
+  z-index: 100;
   font-family: Bebas-Neue;
   display: flex;
   flex-direction: column;
@@ -284,13 +300,13 @@ px
 }
 .menu svg {
   font-size: 50px;
-  background-color: #362E79;
+  background-color: #362e79;
   padding: 10px;
   border-radius: 30%;
 }
 
 .background-red {
-  background-color: #362E79;
+  background-color: #362e79;
   background-position: bottom right;
 }
 
@@ -350,7 +366,8 @@ px
   font-family: "Crunold";
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
   border: grey 1px solid;
   background-color: #efe8e8;
   border-radius: 5px;
@@ -366,7 +383,7 @@ px
   margin-left: 50%;
   padding-right: 0px;
   line-height: 25px;
-  background-color: #362E79;
+  background-color: #362e79;
   border-radius: 10px;
   opacity: 0.7;
   color: white;
@@ -376,7 +393,6 @@ px
   top: 20px;
   cursor: pointer;
 }
-
 
 .wrapper {
   display: grid;
@@ -399,9 +415,9 @@ px
   bottom: 0;
   height: 7vh;
   width: 100%;
-  background-color: #362E79;
-  color : white;
-  padding : 10px;
+  background-color: #362e79;
+  color: white;
+  padding: 10px;
   font-family: "Crunold";
   font-size: 1.3em;
   line-height: 1.3em;
@@ -410,11 +426,10 @@ px
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
 
 .orange {
-  background-color: #D14F2F;
+  background-color: #d14f2f;
 }
 
 .small {

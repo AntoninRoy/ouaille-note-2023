@@ -22,12 +22,6 @@ export default function Navbar() {
       >
         <FaInstagram size="1.4em" className="icon-style" />
       </Link>
-      <Link
-        href="https://twitter.com/ouaillenote?fbclid=IwAR1ODWMIGwW4SWHIS2ZSx8PNEH7zJH-odB-fa_cHE63z0N62py78oW_Fsds"
-        passHref={true}
-      >
-        <FaTwitter size="1.4em" className="icon-style" />
-      </Link>
       <Link href="https://www.tiktok.com/@ouaillenotefestival" passHref={true}>
         <FaTiktok size="1.4em" className="icon-style" />
       </Link>

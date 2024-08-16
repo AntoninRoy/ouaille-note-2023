@@ -1,14 +1,19 @@
 import Footer from "./Footer";
 import Head from "next/head";
-import { ReactElement, useEffect } from "react";
+import { ReactElement } from "react";
 import Menu from "./Menu";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 import { artistes } from "../../data/artistes";
 import Facebook from "../../tracking/Facebook";
+import Link from "next/link";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
-export default function Layout(props : {title : string, description : string, pageName : string, children : ReactElement<any, any>}) {
-
-  
+export default function Layout(props: {
+  title: string;
+  description: string;
+  pageName: string;
+  children: ReactElement<any, any>;
+}) {
   const schemaData = {
     "@context": "http://schema.org",
     "@type": "Festival",
@@ -33,7 +38,7 @@ export default function Layout(props : {title : string, description : string, pa
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
         name: "PASS 2 JOURS : 6/7 SEPTEMBRE 2024",
-        validFrom: "2024-01-01", 
+        validFrom: "2024-01-01",
       },
       {
         "@type": "Offer",
@@ -42,7 +47,7 @@ export default function Layout(props : {title : string, description : string, pa
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
         name: "VENDREDI 6 SEPTEMBRE 2024",
-        validFrom: "2024-01-01", 
+        validFrom: "2024-01-01",
       },
       {
         "@type": "Offer",
@@ -51,8 +56,8 @@ export default function Layout(props : {title : string, description : string, pa
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
         name: "SAMEDI 7 SEPTEMBRE 2024",
-        validFrom: "2024-01-01"
-      }
+        validFrom: "2024-01-01",
+      },
     ],
     location: {
       "@type": "Place",
@@ -66,24 +71,6 @@ export default function Layout(props : {title : string, description : string, pa
       },
     },
   };
-
-  useEffect(() => {
-    const scriptId = 'custom-script'; // Give your script an ID for easy reference
-    const existingScript = document.getElementById(scriptId);
-
-  if (!existingScript) {
-    const script = document.createElement('script');
-    script.setAttribute('src', '/js/googleTagElement.js');
-    script.setAttribute('id', scriptId);
-    document.head.appendChild(script);
-    
-    return () => {
-      // Cleanup script when component is unmounted
-      document.head.removeChild(script);
-    };
-  }    
-  }, []);
-  
 
   return (
     <>
@@ -126,10 +113,35 @@ export default function Layout(props : {title : string, description : string, pa
 
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBFKFJKB"
-height="0" width="0" style={{"display":"none", "visibility":"hidden"}}></iframe></noscript>
       <Facebook />
-      <Menu/>
+      <Menu />
+      <Link
+        href="https://www.tiktok.com/@ouaillenotefestival"
+        passHref={true}
+        target="_blank"
+      >
+        <div className="reseaux-link" style={{ right: "calc(50vw - 25px)" }}>
+          <FaTiktok size="2em" className="icon-style" />
+        </div>
+      </Link>
+      <Link
+        href="https://www.facebook.com/ouaillenote.lefestival/"
+        passHref={true}
+        target="_blank"
+      >
+        <div className="reseaux-link" style={{ right: "calc(50vw - 80px)" }}>
+          <FaFacebook size="2em" className="icon-style" />
+        </div>
+      </Link>
+      <Link
+        href="https://www.secure.instagram.com/ouaillenotefestival/"
+        passHref={true}
+        target="_blank"
+      >
+        <div className="reseaux-link" style={{ right: "calc(50vw + 30px)" }}>
+          <FaInstagram size="2em" className="icon-style" />
+        </div>
+      </Link>
       {props.children}
       <Analytics />
       <Footer />

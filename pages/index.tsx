@@ -12,8 +12,7 @@ import { ProgrammationCards } from "../components/ProgrammationCards";
 import Link from "next/link";
 import styles from "../styles/Partenaires.module.css";
 import ArtistCard from "@/components/ArtisteCard";
-
-
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function Home() {
   const description =
@@ -21,13 +20,8 @@ export default function Home() {
   const title = "Festival Ouaille Note | Vasles (79) | 6 et 7 septembre 2024";
   const pageName = "Accueil";
 
-  const divRef = createRef<HTMLDivElement>();
-
-  const inView = useInView(divRef, { once: true, margin: "-20%" });
-
   const [countDownDateStr, setCountDownDateStr] = useState<string>("");
 
- 
   useEffect(() => {
     var countDownDate = new Date("Sept 6, 2024 18:00:00").getTime();
     const interval: any = setInterval(() => {
@@ -58,7 +52,6 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  
   return (
     <>
       <Layout description={description} title={title} pageName={pageName}>
@@ -66,7 +59,6 @@ export default function Home() {
           <div className="billetterie-link">
             <Link href="/billetterie">billetterie</Link>
           </div>
-
           <div
             style={{
               height: "100vh",
@@ -169,11 +161,17 @@ export default function Home() {
               <RiArrowDownSLine />
             </div>
           </div>
-
+          <div className="video" style={{ padding: "0" }}>
+            <LiteYouTubeEmbed
+              id="LQLbE-Vv-7k"
+              title="Teaser 2024 - OUAILLE NOTE FESTIVAL #10"
+              aspectHeight={8}
+            />
+          </div>
           <div className="wrapper">
             {artistes.map((artiste, index) => (
               <ArtistCard
-              key={index}
+                key={index}
                 name={artiste.name}
                 url={`/images/artistes/${artiste.url}`}
                 size={artiste.size}
@@ -181,64 +179,6 @@ export default function Home() {
               />
             ))}
           </div>
-          <div className="video" style={{ padding: "0" }}>
-            <LiteYouTubeEmbed
-              id="99VjrAmNDc8"
-              title="AfterMovie 2023 - OUAILLE NOTE FESTIVAL #10"
-              aspectHeight={8}
-            />
-          </div>
-
-          {/* <div className="general-container">
-            
-            <div className="text-container" >
-              <motion.div
-                className="texte"
-                style={{ flex: "1 0 50%" }}
-                initial="offscreen"
-                viewport={{ once: true, margin: "-25%" }}
-                whileInView="onscreen"
-                variants={{
-                  offscreen: {},
-                  onscreen: {
-                    opacity: 1,
-                    transition: {
-                      type: "spring",
-                      bounce: 0.2,
-                      duration: 0.6,
-                    },
-                  },
-                }}
-              >
-                <span>Le festival</span>
-                <p>
-                  {`Après une belle édition 2023, l'association La Gatin'Ouaille vous propose une nouvelle édition de son festival ! `}
-                </p>
-                <p>
-                  {`Vous retrouverez deux soirs de concerts au coeur de Vasles, un village gatinais aux
-              portes de la Vienne, à 30 minutes de Poitiers, de Parthenay et 45
-              minutes de Niort. `}{" "}
-                </p>
-                <p>
-                  {`Tout est fait pour passer un week-end exceptionnel. En plus de la salle de concert et notre
-espace extérieur, vous trouverez également un camping GRATUIT et un espace animations situé
-en partie sur le Parc de Mouton Village, à moins de 200
-mètres du site des concerts. `}{" "}
-                </p>
-              </motion.div>
-              <div style={{ flex: "1 0 50%" }}>
-                <div style={{ position: "relative", height: "50vh" }}>
-                  <Image
-                    src="/images/photo1.jpg"
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="center"
-                    alt="test"
-                  />
-                </div>
-              </div>
-            </div>
-          </div> */}
         </>
       </Layout>
     </>
