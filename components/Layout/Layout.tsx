@@ -7,7 +7,6 @@ import { artistes } from "../../data/artistes";
 import Facebook from "../../tracking/Facebook";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 export default function Layout(props: {
   title: string;
   description: string;
@@ -144,7 +143,6 @@ export default function Layout(props: {
       </Link>
       {props.children}
       <Analytics />
-      <SpeedInsights />
       <Footer />
     </>
   );

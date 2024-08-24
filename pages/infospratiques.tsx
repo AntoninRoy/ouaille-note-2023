@@ -64,7 +64,7 @@ export default function MentionLegales() {
             </h3>
             <p>
               <strong>En voiture : </strong>Des parkings gratuits sont à votre
-              disposition à proximité à 100m site.
+              disposition à proximité.
             </p>
             <p>
               <strong>En train : </strong>La gare la plus proche est POITIERS à
@@ -254,12 +254,10 @@ export default function MentionLegales() {
               mises à disposition.
               <br />
               <br />
-              Les animaux de compagnie ne sont pas admis sur le site.
+              Les animaux de compagnie, les bouteilles en verre et les objets dangereux ne sont pas admis sur le site.
               <br />
               <br />
-              Les bouteilles en verre et les objets dangereux sont interdits.
-              <br />
-              <br />
+ 
             </p>
           </div>
           <div

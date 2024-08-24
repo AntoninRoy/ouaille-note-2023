@@ -1,12 +1,18 @@
 import Image from "next/legacy/image";
 import Layout from "../components/Layout/Layout";
-import { useEffect, useState } from "react";
+import { useWindowDimensions } from "@/hook/useWindowDimensions";
+import { createRef, useEffect, useState } from "react";
+import { color, motion, useInView } from "framer-motion";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import { artistes } from "../data/artistes";
+import { TiTicket } from "react-icons/ti";
 import { RiArrowDownSLine } from "react-icons/ri";
+import { ProgrammationCards } from "../components/ProgrammationCards";
 import Link from "next/link";
+import styles from "../styles/Partenaires.module.css";
 import ArtistCard from "@/components/ArtisteCard";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function Home() {
   const description =
