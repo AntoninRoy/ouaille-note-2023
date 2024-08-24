@@ -108,6 +108,11 @@ export default function Billetterie() {
       path: "spar.jpg",
       nom: "SPAR Vasles",
     },
+
+    {
+      path: "faitmain.jpg",
+      nom: "Fait Main ",
+    },
     {
       path: "avenirelec.png",
       nom: "Avenir Elec",

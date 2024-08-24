@@ -361,9 +361,21 @@ px
   flex-direction: column;
 }
 .mentions h2,
-.contact h2 {
+.contact h2,
+.infos h2 {
   font-weight: bold;
   font-family: "Crunold";
+}
+
+.infos h2 {
+  color : #362e79;
+}
+.mentions h3,
+.contact h3,
+.infos h3 {
+  font-family: "Crunold";
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .contact input,
