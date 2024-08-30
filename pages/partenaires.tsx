@@ -84,6 +84,14 @@ export default function Billetterie() {
       nom: "Impulsion",
     },
     {
+      path: "solaire17.png",
+      nom: "Solaire 17",
+    },
+    {
+      path: "victor.png",
+      nom: "Victor Architecture",
+    },
+    {
       path: "busont.jpg",
       nom: "Busont Fabrice",
     },

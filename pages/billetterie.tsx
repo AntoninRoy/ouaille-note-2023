@@ -6,30 +6,40 @@ export default function Billetterie() {
   const title = "Billetterie | Festival Ouaille Note";
   const pageName = "Billetterie";
 
-
-
   return (
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <>
           <h1 className="heading1">BILLETTERIE</h1>
+          <p
+            style={{
+              maxWidth: "1200px",
+              margin: "0 auto",
+              textAlign: "center",
+              fontSize: "1.1em",
+              fontFamily: "Crunold",
+              color: "rgb(209, 79, 47)",
+              padding: "25px"
+            }}
+          >
+            {
+              "Entrée gratuite jusqu'à l'âge de 12 ans (pièce d'identité demandée)"
+            }
+          </p>
           <div
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
             }}
           >
-            
-          <iframe
-            src="https://www.billetweb.fr/shop.php?event=festival-ouaillenote-10"
-            width="100%"
-            height={658}
-            title="Billetterie Weezevent"
-          >
-            Chargement…
-          </iframe>
-
-
+            <iframe
+              src="https://www.billetweb.fr/shop.php?event=festival-ouaillenote-10"
+              width="100%"
+              height={658}
+              title="Billetterie Weezevent"
+            >
+              Chargement…
+            </iframe>
           </div>
         </>
       </Layout>
