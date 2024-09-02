@@ -130,6 +130,10 @@ export default function Billetterie() {
       nom: "SARL Bordage",
     },
     {
+      path: "meche.jpg",
+      nom: "De mèche avec vous",
+    },
+    {
       path: "fb.jpg",
       nom: "FB EURL",
     },

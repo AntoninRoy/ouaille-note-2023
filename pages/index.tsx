@@ -161,13 +161,41 @@ export default function Home() {
               <RiArrowDownSLine />
             </div>
           </div>
-          <div className="video" style={{ padding: "0" }}>
-            <LiteYouTubeEmbed
-              id="LQLbE-Vv-7k"
-              title="Teaser 2024 - OUAILLE NOTE FESTIVAL #10"
-              aspectHeight={8}
+          <div className="box">
+            <Image
+              src={"/images/vendredi.jpg"}
+              width={0}
+              height={0}
+              sizes="100vw"
             />
           </div>
+          <div className="box">
+            <Image
+              src={"/images/samedi.JPG"}
+              width={0}
+              height={0}
+              sizes="100vw"
+            />
+          </div>
+          <div className="box">
+            <iframe
+              src="https://open.spotify.com/embed/playlist/4GWTFkCHJeNnd8YUbkLZaj?utm_source=generator&theme=0"
+              width="100%"
+              height="152"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div className="box">
+            <div className="video" style={{ padding: "0" }}>
+              <LiteYouTubeEmbed
+                id="LQLbE-Vv-7k"
+                title="Teaser 2024 - OUAILLE NOTE FESTIVAL #10"
+                aspectHeight={8}
+              />
+            </div>
+          </div>
+
           <div className="wrapper">
             {artistes.map((artiste, index) => (
               <ArtistCard
