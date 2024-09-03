@@ -171,7 +171,7 @@ export default function Home() {
           </div>
           <div className="box">
             <Image
-              src={"/images/samedi.JPG"}
+              src={"/images/samedi.jpg"}
               width={0}
               height={0}
               sizes="100vw"
