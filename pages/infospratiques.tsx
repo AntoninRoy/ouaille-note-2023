@@ -11,9 +11,9 @@ export default function MentionLegales() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <div className="infos" style={{padding : "0 20px"}}>
-          <div className="billetterie-link">
+          {/* <div className="billetterie-link">
             <Link href="/billetterie">billetterie</Link>
-          </div>
+          </div> */}
           <h1 className="heading1" style={{ color: "#6a2d84" }}>
             Infos pratiques
           </h1>
