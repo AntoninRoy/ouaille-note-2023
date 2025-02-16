@@ -16,14 +16,14 @@ import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function Home() {
   const description =
-    "Le 6 et 7 septembre 2024, rendez-vous à Vasles (79), dans les Deux-Sèvres pour la 9ème édition du Festival Ouaille'Note ?.";
-  const title = "Festival Ouaille Note | Vasles (79) | 6 et 7 septembre 2024";
+    "Le 12 et 13 septembre 2025, rendez-vous à Vasles (79), dans les Deux-Sèvres pour la 9ème édition du Festival Ouaille'Note ?.";
+  const title = "Festival Ouaille Note | Vasles (79) | 12 et 13 septembre 2025";
   const pageName = "Accueil";
 
   const [countDownDateStr, setCountDownDateStr] = useState<string>("");
 
   useEffect(() => {
-    var countDownDate = new Date("Sept 6, 2024 18:00:00").getTime();
+    var countDownDate = new Date("Sept 12, 2025 18:00:00").getTime();
     const interval: any = setInterval(() => {
       // Get today's date and time
       const now = new Date().getTime();
@@ -56,16 +56,15 @@ export default function Home() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <>
-          <div className="billetterie-link">
+          {/* <div className="billetterie-link">
             <Link href="/billetterie">billetterie</Link>
-          </div>
+          </div> */}
           <div
             style={{
               height: "100vh",
               background:
-                "linear-gradient(127deg, rgba(54,46,121,1) 11%, rgba(209,79,47,1) 49%, rgba(209,79,47,1) 80%, rgba(215,124,174,1) 100%)",
+                "linear-gradient(127deg, rgb(245,190,33) -15%, rgb(106,45,132) 35%, rgb(106,45,132) 50%, rgb(135,108,164) 100%)",
               // "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 22%), linear-gradient(127deg, rgba(54,46,121,1) 11%, rgba(209,79,47,1) 49%, rgba(209,79,47,1) 80%, rgba(215,124,174,1) 100%)",
-
               display: "flex",
               flexDirection: "column",
               width: "100vw",
@@ -88,7 +87,7 @@ export default function Home() {
                 fontSize: "25px",
               }}
             >
-              OUAILLE NOTE #10
+              OUAILLE NOTE #11
             </h1>
             <div
               style={{
@@ -98,8 +97,8 @@ export default function Home() {
             >
               <Image
                 className="logo-container"
-                alt={`Ouaille Note 10 2024`}
-                src={`/images/logo/ON10TRANSPARENT.png`}
+                alt={`Ouaille Note 11 2025`}
+                src={`/images/logo/ON11TRANSPARENT.png`}
                 layout="fill"
                 objectFit="contain"
                 style={{ maxHeight: "50vh", zIndex: 0 }}
@@ -111,7 +110,7 @@ export default function Home() {
                 width: "100%",
                 textAlign: "center",
                 fontFamily: "Bebas-Neue",
-                color: "#362E79",
+                color: "#f5be21",
                 height: "5vh",
               }}
             >
@@ -122,7 +121,7 @@ export default function Home() {
                   fontWeight: "400",
                   fontStyle: "normal",
                   margin: "0",
-                  color: "#362E79",
+                  color: "#FFFFFF",
                 }}
               >
                 VASLES 79
@@ -136,10 +135,10 @@ export default function Home() {
                   fontWeight: "700",
                   margin: "0",
                   lineHeight: "25px",
-                  color: "#fff",
+                  color: "#f5be21",
                 }}
               >
-                6-7 SEPTEMBRE 2024
+                12-13 SEPTEMBRE 2025
               </span>
               <br />
               <span
@@ -149,7 +148,7 @@ export default function Home() {
                   fontWeight: "700",
                   display: "flex",
                   justifyContent: "center",
-                  color: "#D77CAE",
+                  color: "#17ace3",
                 }}
               >
                 {countDownDateStr}
@@ -161,7 +160,7 @@ export default function Home() {
               <RiArrowDownSLine />
             </div>
           </div>
-          <div className="box">
+          {/* <div className="box">
             <Image
               src={"/images/vendredi.jpg"}
               width={0}
@@ -176,8 +175,8 @@ export default function Home() {
               height={0}
               sizes="100vw"
             />
-          </div>
-          <div className="box">
+          </div> */}
+          {/* <div className="box">
             <iframe
               src="https://open.spotify.com/embed/playlist/4GWTFkCHJeNnd8YUbkLZaj?utm_source=generator&theme=0"
               width="100%"
@@ -185,8 +184,8 @@ export default function Home() {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
-          </div>
-          <div className="box">
+          </div> */}
+          {/* <div className="box">
             <div className="video" style={{ padding: "0" }}>
               <LiteYouTubeEmbed
                 id="LQLbE-Vv-7k"
@@ -194,9 +193,9 @@ export default function Home() {
                 aspectHeight={8}
               />
             </div>
-          </div>
+          </div> */}
 
-          <div className="wrapper">
+          {/* <div className="wrapper">
             {artistes.map((artiste, index) => (
               <ArtistCard
                 key={index}
@@ -206,7 +205,7 @@ export default function Home() {
                 color={artiste.color}
               />
             ))}
-          </div>
+          </div> */}
         </>
       </Layout>
     </>

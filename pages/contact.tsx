@@ -36,7 +36,7 @@ export default function MentionLegales() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <div className="contact">
-          <h1 className="heading1" style={{ color: "#D14F2F" }}>
+          <h1 className="heading1" style={{ color: "#6a2d84" }}>
             Contact
           </h1>
 
@@ -49,7 +49,7 @@ export default function MentionLegales() {
               margin: "auto",
             }}
           >
-            Vous avez une question au sujet du Festival Ouaille Note #10 et
+            Vous avez une question au sujet du Festival Ouaille Note #11 et
                 vous ne trouvez pas la réponse sur le site ou nos réseaux
                 sociaux ? 
             Contactez-nous par email à l&lsquo;adresse suivante :

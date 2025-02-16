@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 /*
-Violet : #362E79
-Orange : #D14F2F
+Violet : #f5be21
+Orange : #6a2d84
 Rose : #D77CAE
 */
 
@@ -57,7 +57,7 @@ h1 {
 .heading1{
   padding-top : 10vh;
   padding-bottom: 5vh;
-  color : #362E79;
+  color : #f5be21;
   font-family : 'Crunold';
   text-align : center;
   font-size: 2em;

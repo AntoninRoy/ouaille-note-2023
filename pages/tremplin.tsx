@@ -1,9 +1,15 @@
 import Layout from "../components/Layout/Layout";
+import { notFound } from "next/navigation";
+
+export const getServerSideProps = async () => {
+  return { notFound: true }; // Bloque l'accès et renvoie une erreur 404
+};
 
 export default function Tremplin() {
   const description = "";
   const title = "Vote Tremplin | Festival Ouaille Note #10";
   const pageName = "";
+  return notFound();
 
   return (
     <>
@@ -16,7 +22,7 @@ export default function Tremplin() {
           }}
         >
           <h1 className="heading1" style={{ color: "white" }}>
-            Vote Tremplin Ouaille Note #10
+            Vote Tremplin Ouaille Note #11
           </h1>
           <div>
             <iframe

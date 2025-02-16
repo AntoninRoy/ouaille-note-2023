@@ -6,8 +6,8 @@ export default function Footer() {
     <div className="footer">
       <div>
         <Image
-          alt="Logo Ouaille Note 10"
-          src="/images/logo/ON10TRANSPARENT.png"
+          alt="Logo Ouaille Note 11"
+          src="/images/logo/ON11TRANSPARENT.png"
           width="300"
           height="150"
           objectFit="contain"
@@ -17,7 +17,7 @@ export default function Footer() {
         <SocialMedias />
       </div>
       <div>
-        {"@GATIN'OUAILLE 2024 - "}
+        {"@GATIN'OUAILLE 2025 - "}
 
         <Link href="/mentionslegales">
           MENTIONS LÉGALES

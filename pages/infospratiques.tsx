@@ -14,7 +14,7 @@ export default function MentionLegales() {
           <div className="billetterie-link">
             <Link href="/billetterie">billetterie</Link>
           </div>
-          <h1 className="heading1" style={{ color: "#D14F2F" }}>
+          <h1 className="heading1" style={{ color: "#6a2d84" }}>
             Infos pratiques
           </h1>
           <div
@@ -74,10 +74,6 @@ export default function MentionLegales() {
               <strong>En covoiturage : </strong>Favorisez le covoiturage pour
               venir au festival, une option écologique et conviviale !
             </p>
-            Le festival Ouaille&#39;Note se déroule à Vasles, un charmant
-            village situé dans le département des Deux-Sèvres. Cette année, le
-            festival vous accueille dans une ambiance festive et conviviale, au
-            cœur de la nature, à deux pas de Mouton Village.
           </div>
           <div
             style={{

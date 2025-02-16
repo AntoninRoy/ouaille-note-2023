@@ -20,8 +20,8 @@ export default function Layout(props: {
     organizer: "Association « La Gatin'Ouaille »",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     eventStatus: "https://schema.org/EventScheduled",
-    startDate: "2024-09-06",
-    endDate: "2024-09-07",
+    startDate: "2025-09-12",
+    endDate: "2025-09-13",
     description: props.description,
     image: [`https://www.ouaillenote.fr/images/logo/logoorange.jpg`],
     performers: artistes.map((artistes) => ({
@@ -36,8 +36,8 @@ export default function Layout(props: {
         price: "49.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
-        name: "PASS 2 JOURS : 6/7 SEPTEMBRE 2024",
-        validFrom: "2024-01-01",
+        name: "PASS 2 JOURS : 12/13 SEPTEMBRE 2025",
+        validFrom: "2025-01-01",
       },
       {
         "@type": "Offer",
@@ -45,8 +45,8 @@ export default function Layout(props: {
         price: "27.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
-        name: "VENDREDI 6 SEPTEMBRE 2024",
-        validFrom: "2024-01-01",
+        name: "VENDREDI 12 SEPTEMBRE 2025",
+        validFrom: "2025-01-01",
       },
       {
         "@type": "Offer",
@@ -54,8 +54,8 @@ export default function Layout(props: {
         price: "27.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
-        name: "SAMEDI 7 SEPTEMBRE 2024",
-        validFrom: "2024-01-01",
+        name: "SAMEDI 13 SEPTEMBRE 2025",
+        validFrom: "2025-01-01",
       },
     ],
     location: {
@@ -107,7 +107,7 @@ export default function Layout(props: {
         />
         <meta
           name="keywords"
-          content={`${props.pageName} Musique, Ouaille Note 2024, Festival, Été 2024, à Vasles 79340 Deux-Sèvres`}
+          content={`${props.pageName} Musique, Ouaille Note 2025, Festival, Été 2025, à Vasles 79340 Deux-Sèvres`}
         />
 
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -119,7 +119,7 @@ export default function Layout(props: {
         passHref={true}
         target="_blank"
       >
-        <div className="reseaux-link" style={{ right: "calc(50vw - 25px)" }}>
+        <div className="reseaux-link" style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 - 25px)" }}>
           <FaTiktok size="2em" className="icon-style" />
         </div>
       </Link>
@@ -128,7 +128,7 @@ export default function Layout(props: {
         passHref={true}
         target="_blank"
       >
-        <div className="reseaux-link" style={{ right: "calc(50vw - 80px)" }}>
+        <div className="reseaux-link" style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 - 80px)" }}>
           <FaFacebook size="2em" className="icon-style" />
         </div>
       </Link>
@@ -137,7 +137,7 @@ export default function Layout(props: {
         passHref={true}
         target="_blank"
       >
-        <div className="reseaux-link" style={{ right: "calc(50vw + 30px)" }}>
+        <div className="reseaux-link" style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 + 30px)" }}>
           <FaInstagram size="2em" className="icon-style" />
         </div>
       </Link>

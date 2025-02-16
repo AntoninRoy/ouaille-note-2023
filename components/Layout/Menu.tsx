@@ -52,9 +52,9 @@ export default function Menu() {
         <div className="menu-item">
           <Link href="/">Accueil</Link>
         </div>
-        <div className="menu-item">
+        {/* <div className="menu-item">
           <Link href="/billetterie">Billetterie</Link>
-        </div>
+        </div> */}
         <div className="menu-item">
           <Link href="/infospratiques">Infos pratiques</Link>
         </div>
