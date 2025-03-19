@@ -56,9 +56,9 @@ export default function Home() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <>
-          {/* <div className="billetterie-link">
+          <div className="billetterie-link">
             <Link href="/billetterie">billetterie</Link>
-          </div> */}
+          </div>
           <div
             style={{
               height: "100vh",

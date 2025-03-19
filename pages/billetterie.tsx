@@ -18,8 +18,8 @@ export default function Billetterie() {
               textAlign: "center",
               fontSize: "1.1em",
               fontFamily: "Crunold",
-              color: "rgb(209, 79, 47)",
-              padding: "25px"
+              color: "rgb(106, 45, 132)",
+              padding: "25px",
             }}
           >
             {
@@ -30,22 +30,16 @@ export default function Billetterie() {
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
-              minHeight: "600px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            
             }}
           >
-            Billeterie en ligne à venir ...
-            {/* <iframe
-              src=""
+             <iframe
+              src="https://www.billetweb.fr/shop.php?event=festival-ouaillenote-111"
               width="100%"
-              height={658}
+              height={1000}
               title="Billetterie Weezevent"
             >
               Chargement…
-            </iframe> */}
+            </iframe>
           </div>
         </>
       </Layout>
