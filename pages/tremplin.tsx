@@ -1,15 +1,9 @@
 import Layout from "../components/Layout/Layout";
-import { notFound } from "next/navigation";
-
-export const getServerSideProps = async () => {
-  return { notFound: true }; // Bloque l'accès et renvoie une erreur 404
-};
 
 export default function Tremplin() {
   const description = "";
-  const title = "Vote Tremplin | Festival Ouaille Note #10";
+  const title = "Inscription Tremplin | Festival Ouaille Note #11";
   const pageName = "";
-  return notFound();
 
   return (
     <>
@@ -18,14 +12,14 @@ export default function Tremplin() {
           className="mentions"
           style={{
             background:
-              "linear-gradient(127deg, rgba(54,46,121,1) 11%, rgba(209,79,47,1) 49%, rgba(209,79,47,1) 80%, rgba(215,124,174,1) 100%)",
+              "linear-gradient(127deg, rgb(245,190,33) -15%, rgb(106,45,132) 35%, rgb(106,45,132) 50%, rgb(135,108,164) 100%)",
           }}
         >
           <h1 className="heading1" style={{ color: "white" }}>
-            Vote Tremplin Ouaille Note #11
+            Inscription Tremplin Ouaille Note #11
           </h1>
           <div>
-            <iframe
+            {/* <iframe
               src="https://sondage.app.ps/embed/tremplin-ouaille-note-10-2024"
               height="720"
               loading="lazy"
@@ -37,21 +31,18 @@ export default function Tremplin() {
                 border: "3px solid #444",
                 borderRadius: "6px",
               }}
-            ></iframe>
-            {/* <iframe
-              onLoad={(event) => {
-                console.log("EHOH");
-              }}
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfJ-SyyCnpwmYu5z2AnCpXo784SLX3tL1sbOBk33CkJJTumjA/viewform?embedded=true"
+            ></iframe> */}
+            <iframe
+
+              src="https://docs.google.com/forms/d/1gKbPPtaBmXEeUWMez-bHkvdrzFIY6M7EnZ-xHn3OSZ0/viewform?embedded=true"
               style={{
                 width: "90vw",
-                height: "calc(100vh - 200px)",
+                height: "3700px",
                 margin: "auto",
-
               }}
             >
               Chargement…
-            </iframe> */}
+            </iframe>
           </div>
         </div>
       </Layout>

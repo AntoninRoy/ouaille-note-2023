@@ -38,7 +38,7 @@ export default function Menu() {
             },
           },
           closed: {
-            top: "-50vh",
+            top: "-70vh",
             display: "flex",
             transition: {
               type: "spring",
@@ -54,6 +54,9 @@ export default function Menu() {
         </div>
         <div className="menu-item">
           <Link href="/billetterie">Billetterie</Link>
+        </div>
+        <div className="menu-item">
+          <Link href="/tremplin">Tremplin</Link>
         </div>
         <div className="menu-item">
           <Link href="/infospratiques">Infos pratiques</Link>

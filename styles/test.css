@@ -277,7 +277,7 @@ px
 
 .menu-container {
   background-color: #000000ab;
-  height: 50vh;
+  height: 70vh;
   position: absolute;
   width: 100vw;
   z-index: 100;
@@ -285,7 +285,7 @@ px
   display: flex;
   flex-direction: column;
   border-radius: 0 0 5px 5px;
-  top: -50vh;
+  top: -70vh;
 }
 .menu-item {
   height: 100%;

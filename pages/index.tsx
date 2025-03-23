@@ -64,7 +64,6 @@ export default function Home() {
               height: "100vh",
               background:
                 "linear-gradient(127deg, rgb(245,190,33) -15%, rgb(106,45,132) 35%, rgb(106,45,132) 50%, rgb(135,108,164) 100%)",
-              // "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 22%), linear-gradient(127deg, rgba(54,46,121,1) 11%, rgba(209,79,47,1) 49%, rgba(209,79,47,1) 80%, rgba(215,124,174,1) 100%)",
               display: "flex",
               flexDirection: "column",
               width: "100vw",
