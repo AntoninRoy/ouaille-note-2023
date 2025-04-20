@@ -2,7 +2,7 @@ import Layout from "../components/Layout/Layout";
 
 export default function Tremplin() {
   const description = "";
-  const title = "Inscription Tremplin | Festival Ouaille Note #11";
+  const title = "Vote Tremplin | Festival Ouaille Note #11";
   const pageName = "";
 
   return (
@@ -16,12 +16,12 @@ export default function Tremplin() {
           }}
         >
           <h1 className="heading1" style={{ color: "white" }}>
-            Inscription Tremplin Ouaille Note #11
+             Tremplin Ouaille Note #11
           </h1>
           <div>
-            {/* <iframe
-              src="https://sondage.app.ps/embed/tremplin-ouaille-note-10-2024"
-              height="720"
+            <iframe
+              src="https://sondage.app.ps/embed/tremplin-festival-ouaille-note-2023-373433"
+              height="4000"
               loading="lazy"
               style={{
                 display: "block",
@@ -31,8 +31,8 @@ export default function Tremplin() {
                 border: "3px solid #444",
                 borderRadius: "6px",
               }}
-            ></iframe> */}
-            <iframe
+            ></iframe>
+            {/* <iframe
 
               src="https://docs.google.com/forms/d/1gKbPPtaBmXEeUWMez-bHkvdrzFIY6M7EnZ-xHn3OSZ0/viewform?embedded=true"
               style={{
@@ -42,7 +42,7 @@ export default function Tremplin() {
               }}
             >
               Chargement…
-            </iframe>
+            </iframe> */}
           </div>
         </div>
       </Layout>
