@@ -1,10 +1,14 @@
 import Layout from "../components/Layout/Layout";
+import { notFound } from "next/navigation";
 
+export const getServerSideProps = async () => {
+  return { notFound: true }; // Bloque l'accès et renvoie une erreur 404
+};
 export default function Tremplin() {
   const description = "";
   const title = "Vote Tremplin | Festival Ouaille Note #11";
   const pageName = "";
-
+  return notFound();
   return (
     <>
       <Layout description={description} title={title} pageName={pageName}>
