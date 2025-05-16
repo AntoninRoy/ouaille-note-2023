@@ -70,7 +70,7 @@ export default function Home() {
     },
     {
       id: 3,
-      name: "Tairo",
+      name: "Taïro",
       date: "Samedi 13 Septembre",
       time: "18:00",
       image: "tairo.jpg",
