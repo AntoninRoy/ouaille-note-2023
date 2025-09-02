@@ -55,6 +55,29 @@ export default function Billetterie() {
               alignItems: "center",
             }}
           >
+            <p
+              style={{
+                maxWidth: "1200px",
+                margin: "0 auto",
+                textAlign: "center",
+                fontSize: "1.1em",
+                fontFamily: "Crunold",
+                color: "rgb(230, 12, 23)",
+                padding: "25px",
+                paddingBottom: "0px"
+              }}
+            >
+              {"Plate-forme unique de revente officielle : "}
+            </p>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             {widgetReady ? (
               <a
                 target="_blank"
@@ -87,7 +110,7 @@ export default function Billetterie() {
                     <polygon points="11.53 0 9.77 1.76 14.22 6.21 9.77 10.66 11.53 12.41 17.74 6.21 11.53 0"></polygon>
                     <polygon points="6.21 2.83 0 9.04 6.21 15.24 7.96 13.49 3.51 9.04 7.96 4.59 6.21 2.83"></polygon>
                   </svg>
-                  Bourse aux billets officielle
+                  Bourse aux billets
                 </button>
               </a>
             ) : (

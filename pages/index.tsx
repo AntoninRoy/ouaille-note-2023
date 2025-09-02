@@ -53,13 +53,13 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
   const artists = [
-    //   {
-    //   id: 99,
-    //   name: "Mandø",
-    //   date: "Vendredi 12 Septembre",
-    //   time: "20:00",
-    //   image: "mando.jpg",
-    // },
+    {
+      id: 99,
+      name: "Mandø",
+      date: "Vendredi 12 Septembre",
+      time: "20:00",
+      image: "mando.jpg",
+    },
     {
       id: 7,
       name: "Pierre Hugues José",
@@ -298,7 +298,9 @@ export default function Home() {
                         </h2>
                         <div className="flex items-center text-festival-lavender mb-2">
                           <CalendarDays className="h-5 w-5 mr-2 text-festival-orange" />
-                          <span>{artist.date} -  {artist.time}</span>
+                          <span>
+                            {artist.date} - {artist.time}
+                          </span>
                         </div>
                         {/* <div className="mt-4 pt-4 border-t border-gray-100">
                     <button className="w-full py-2 px-4 bg-white border-2 border-festival-orange text-festival-violet rounded-full font-medium hover:bg-festival-orange hover:text-white transition-colors duration-300">
