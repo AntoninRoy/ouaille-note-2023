@@ -49,6 +49,21 @@ export default function Billetterie() {
 
           <div
             style={{
+              maxWidth: "1200px",
+              margin: "0 auto",
+            }}
+          >
+            <iframe
+              src="https://www.billetweb.fr/shop.php?event=festival-ouaillenote-111"
+              width="100%"
+              height={1000}
+              title="Billetterie Weezevent"
+            >
+              Chargement…
+            </iframe>
+          </div>
+          <div
+            style={{
               width: "100%",
               display: "flex",
               justifyContent: "center",
@@ -64,7 +79,7 @@ export default function Billetterie() {
                 fontFamily: "Crunold",
                 color: "rgb(230, 12, 23)",
                 padding: "25px",
-                paddingBottom: "0px"
+                paddingBottom: "0px",
               }}
             >
               {"Plate-forme unique de revente officielle : "}
@@ -76,6 +91,7 @@ export default function Billetterie() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              paddingBottom: "50px",
             }}
           >
             {widgetReady ? (
@@ -142,21 +158,6 @@ export default function Billetterie() {
                 </button>
               </a>
             )}
-          </div>
-          <div
-            style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
-            }}
-          >
-            <iframe
-              src="https://www.billetweb.fr/shop.php?event=festival-ouaillenote-111"
-              width="100%"
-              height={1000}
-              title="Billetterie Weezevent"
-            >
-              Chargement…
-            </iframe>
           </div>
         </>
       </Layout>
