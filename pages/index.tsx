@@ -53,13 +53,13 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
   const artists = [
-      {
-      id: 99,
-      name: "Mandø",
-      date: "Vendredi 12 Septembre",
-      time: "20:00",
-      image: "mando.jpg",
-    },
+    //   {
+    //   id: 99,
+    //   name: "Mandø",
+    //   date: "Vendredi 12 Septembre",
+    //   time: "20:00",
+    //   image: "mando.jpg",
+    // },
     {
       id: 7,
       name: "Pierre Hugues José",
@@ -288,9 +288,9 @@ export default function Home() {
                           className="object-cover"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
-                        {/* <div className="absolute top-4 right-4 bg-festival-orange text-festival-violet font-bold py-1 px-3 rounded-full text-sm z-20">
-                    {artist.time}
-                  </div> */}
+                        <div className="absolute top-4 right-4 bg-festival-orange text-festival-violet font-bold py-1 px-3 rounded-full text-sm z-20">
+                          {artist.time}
+                        </div>
                       </div>
                       <div className="p-6">
                         <h2 className="text-2xl font-bold mb-3 text-festival-violet">
@@ -298,7 +298,7 @@ export default function Home() {
                         </h2>
                         <div className="flex items-center text-festival-lavender mb-2">
                           <CalendarDays className="h-5 w-5 mr-2 text-festival-orange" />
-                          <span>{artist.date}</span>
+                          <span>{artist.date} -  {artist.time}</span>
                         </div>
                         {/* <div className="mt-4 pt-4 border-t border-gray-100">
                     <button className="w-full py-2 px-4 bg-white border-2 border-festival-orange text-festival-violet rounded-full font-medium hover:bg-festival-orange hover:text-white transition-colors duration-300">
