@@ -52,91 +52,100 @@ export default function Home() {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
-  // Données fictives des artistes du festival
   const artists = [
+      {
+      id: 99,
+      name: "Mandø",
+      date: "Vendredi 12 Septembre",
+      time: "20:00",
+      image: "mando.jpg",
+    },
+    {
+      id: 7,
+      name: "Pierre Hugues José",
+      date: "Vendredi 12 Septembre",
+      time: "21:10",
+      image: "pierre.jpg",
+    },
     {
       id: 1,
       name: "Danakil",
       date: "Vendredi 12 Septembre",
-      time: "18:00",
+      time: "22:40",
       image: "danakil.jpg",
     },
+
     {
-      id: 2,
-      name: "Billx",
-      date: "Samedi 13 Septembre",
-      time: "18:00",
-      image: "billx.jpg",
+      id: 9,
+      name: "Radio Byzance",
+      date: "Vendredi 12 Septembre",
+      time: "00:25",
+      image: "radio.jpg",
     },
     {
-      id: 3,
-      name: "Taïro",
-      date: "Samedi 13 Septembre",
-      time: "18:00",
-      image: "tairo.jpg",
+      id: 6,
+      name: "Mahom",
+      date: "Vendredi 12 Septembre",
+      time: "01:40",
+      image: "mahom.jpg",
     },
+    {
+      id: 10,
+      name: "Jael",
+      date: "Vendredi 12 Septembre",
+      time: "CHILL",
+      image: "jael.jpg",
+    },
+
+    {
+      id: 8,
+      name: "Andrick Airways",
+      date: "Samedi 13 Septembre",
+      time: "19:30",
+      image: "andrick.jpg",
+    },
+
     {
       id: 4,
       name: "Christophe Mali",
       date: "Samedi 13 Septembre",
-      time: "18:00",
+      time: "20:30",
       image: "christophe.jpg",
     },
     {
       id: 5,
       name: "Luiza",
       date: "Samedi 13 Septembre",
-      time: "18:00",
+      time: "22:00",
       image: "luiza.jpg",
     },
     {
-      id: 6,
-      name: "Mahom",
-      date: "Vendredi 12 Septembre",
-      time: "18:00",
-      image: "mahom.jpg",
-    },
-    {
-      id: 7,
-      name: "Pierre Hugues José",
-      date: "Vendredi 12 Septembre",
-      time: "18:00",
-      image: "pierre.jpg",
-    },
-    {
-      id: 8,
-      name: "Andrick Airways",
+      id: 3,
+      name: "Taïro",
       date: "Samedi 13 Septembre",
-      time: "18:00",
-      image: "andrick.jpg",
+      time: "23:30",
+      image: "tairo.jpg",
     },
     {
-      id: 9,
-      name: "Radio Byzance",
-      date: "Vendredi 12 Septembre",
-      time: "18:00",
-      image: "radio.jpg",
+      id: 2,
+      name: "Billx",
+      date: "Samedi 13 Septembre",
+      time: "01:15",
+      image: "billx.jpg",
     },
-    {
-      id: 10,
-      name: "Jael",
-      date: "Vendredi 12 Septembre",
-      time: "18:00",
-      image: "jael.jpg",
-    },
+
     {
       id: 11,
       name: "Youthie",
       date: "Samedi 13 Septembre",
-      time: "18:00",
+      time: "CHILL",
       image: "youthie.jpg",
     },
   ];
   return (
     <>
       <Layout description={description} title={title} pageName={pageName}>
-        <div
-        >
+        <div>
           <div className="billetterie-link">
             <Link href="/billetterie">billetterie</Link>
           </div>
@@ -144,7 +153,7 @@ export default function Home() {
             style={{
               height: "100vh",
               background:
-              "linear-gradient(to right bottom, rgb(245, 190, 33) -15%, rgb(106, 45, 132) 35%, rgb(106, 45, 132) 50%, rgb(135, 108, 164) 100%)",
+                "linear-gradient(to right bottom, rgb(245, 190, 33) -15%, rgb(106, 45, 132) 35%, rgb(106, 45, 132) 50%, rgb(135, 108, 164) 100%)",
               display: "flex",
               flexDirection: "column",
               width: "100vw",
@@ -246,63 +255,62 @@ export default function Home() {
                 "linear-gradient(127deg, rgb(245,190,33) -15%, rgb(106,45,132) 35%, rgb(106,45,132) 50%, rgb(135,108,164) 100%)",
             }}
           >
-          <div
-            className="container mx-auto py-12 px-4"
-          >
-            <div className="mb-12 text-center">
-              <h1
-                className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg"
-                style={{ textShadow: "3px 3px 0px rgba(245, 190, 33, 0.7)" }}
-              >
-                PROGRAMMATION 2025
-              </h1>
-              <div className="flex items-center justify-center gap-2 mb-6">
-                <div className="h-1 w-12 bg-festival-orange rounded-full"></div>
-                <Music className="h-8 w-8 text-festival-orange" />
-                <div className="h-1 w-12 bg-festival-orange rounded-full"></div>
+            <div className="container mx-auto py-12 px-4">
+              <div className="mb-12 text-center">
+                <h1
+                  className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg"
+                  style={{ textShadow: "3px 3px 0px rgba(245, 190, 33, 0.7)" }}
+                >
+                  PROGRAMMATION 2025
+                </h1>
+                <div className="flex items-center justify-center gap-2 mb-6">
+                  <div className="h-1 w-12 bg-festival-orange rounded-full"></div>
+                  <Music className="h-8 w-8 text-festival-orange" />
+                  <div className="h-1 w-12 bg-festival-orange rounded-full"></div>
+                </div>
+                <p className="text-white text-xl max-w-2xl mx-auto">
+                  Découvrez les artistes qui vont enflammer la scène cette année
+                  !
+                </p>
               </div>
-              <p className="text-white text-xl max-w-2xl mx-auto">
-                Découvrez les artistes qui vont enflammer la scène cette année !
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {artists.map((artist) => (
-                <div key={artist.id} className="group relative">
-                  <div className="absolute inset-0 bg-white rounded-xl rotate-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-                  <div className="relative bg-white rounded-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(23,172,227,0.4)]">
-                    <div className="aspect-square relative">
-                      {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-festival-violet/70 z-10"></div> */}
-                      <Image
-                        src={"/images/artistes/" + artist.image}
-                        alt={artist.name}
-                        layout="fill"
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                      {/* <div className="absolute top-4 right-4 bg-festival-orange text-festival-violet font-bold py-1 px-3 rounded-full text-sm z-20">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {artists.map((artist) => (
+                  <div key={artist.id} className="group relative">
+                    <div className="absolute inset-0 bg-white rounded-xl rotate-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                    <div className="relative bg-white rounded-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(23,172,227,0.4)]">
+                      <div className="aspect-square relative">
+                        {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-festival-violet/70 z-10"></div> */}
+                        <Image
+                          src={"/images/artistes/" + artist.image}
+                          alt={artist.name}
+                          layout="fill"
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                        {/* <div className="absolute top-4 right-4 bg-festival-orange text-festival-violet font-bold py-1 px-3 rounded-full text-sm z-20">
                     {artist.time}
                   </div> */}
-                    </div>
-                    <div className="p-6">
-                      <h2 className="text-2xl font-bold mb-3 text-festival-violet">
-                        {artist.name}
-                      </h2>
-                      <div className="flex items-center text-festival-lavender mb-2">
-                        <CalendarDays className="h-5 w-5 mr-2 text-festival-orange" />
-                        <span>{artist.date}</span>
                       </div>
-                      {/* <div className="mt-4 pt-4 border-t border-gray-100">
+                      <div className="p-6">
+                        <h2 className="text-2xl font-bold mb-3 text-festival-violet">
+                          {artist.name}
+                        </h2>
+                        <div className="flex items-center text-festival-lavender mb-2">
+                          <CalendarDays className="h-5 w-5 mr-2 text-festival-orange" />
+                          <span>{artist.date}</span>
+                        </div>
+                        {/* <div className="mt-4 pt-4 border-t border-gray-100">
                     <button className="w-full py-2 px-4 bg-white border-2 border-festival-orange text-festival-violet rounded-full font-medium hover:bg-festival-orange hover:text-white transition-colors duration-300">
                       Voir détails
                     </button>
                   </div> */}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
           </div>
           {/* <div className="box">
             <Image

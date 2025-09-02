@@ -1,6 +1,6 @@
 import Footer from "./Footer";
 import Head from "next/head";
-import { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 import Menu from "./Menu";
 import { Analytics } from "@vercel/analytics/react";
 import { artistes } from "../../data/artistes";
@@ -119,7 +119,10 @@ export default function Layout(props: {
         passHref={true}
         target="_blank"
       >
-        <div className="reseaux-link" style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 - 25px)" }}>
+        <div
+          className="reseaux-link"
+          style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 - 25px)" }}
+        >
           <FaTiktok size="2em" className="icon-style" />
         </div>
       </Link>
@@ -128,7 +131,10 @@ export default function Layout(props: {
         passHref={true}
         target="_blank"
       >
-        <div className="reseaux-link" style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 - 80px)" }}>
+        <div
+          className="reseaux-link"
+          style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 - 80px)" }}
+        >
           <FaFacebook size="2em" className="icon-style" />
         </div>
       </Link>
@@ -137,7 +143,10 @@ export default function Layout(props: {
         passHref={true}
         target="_blank"
       >
-        <div className="reseaux-link" style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 + 30px)" }}>
+        <div
+          className="reseaux-link"
+          style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 + 30px)" }}
+        >
           <FaInstagram size="2em" className="icon-style" />
         </div>
       </Link>
