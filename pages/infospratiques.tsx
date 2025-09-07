@@ -159,7 +159,7 @@ export default function MentionLegales() {
             <p>
               <strong>Mouton Village : </strong>Le festival se déroule à
               proximité de Mouton Village, un parc thématique unique.
-              L&#39;entrée au parc est gratuite pour tous les festivaliers le
+              L&#39;entrée au parc est disponible à un tarif minoré le
               samedi ! Profitez-en pour découvrir les différentes races de
               moutons et vous immerger dans la vie rurale traditionnelle.
             </p>
