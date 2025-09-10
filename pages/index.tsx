@@ -259,6 +259,63 @@ export default function Home() {
               <div className="mb-12 text-center">
                 <h1
                   className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg"
+                  style={{ textShadow: "3px 3px 0px rgba(245, 65, 33, 0.7)" }}
+                >
+                  LE OUAILLE NOTE EST COMPLET !
+                </h1>
+                <div className="flex items-center justify-center gap-2 mb-6">
+                  <div className="h-1 w-12 bg-festival-orange rounded-full"></div>
+                  <Music className="h-8 w-8 text-festival-orange" />
+                  <div className="h-1 w-12 bg-festival-orange rounded-full"></div>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div className="group relative">
+                  <div className="absolute inset-0 bg-white rounded-xl rotate-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                  <div className="relative bg-white rounded-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(23,172,227,0.4)]">
+                    <div className="aspect-square relative">
+                      <Image
+                        src={"/images/COMPLETVENDREDI.jpg"}
+                        alt={"Complet Vendredi Soir"}
+                        layout="fill"
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="group relative">
+                  <div className="absolute inset-0 bg-white rounded-xl rotate-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                  <div className="relative bg-white rounded-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(23,172,227,0.4)]">
+                    <div className="aspect-square relative">
+                      <Image
+                        src={"/images/COMPLETSAMEDI.jpg"}
+                        alt={"Complet Samedi Soir"}
+                        layout="fill"
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="group relative">
+                  <div className="absolute inset-0 bg-white rounded-xl rotate-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                  <div className="relative bg-white rounded-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(23,172,227,0.4)]">
+                    <div className="aspect-square relative">
+                      <Image
+                        src={"/images/COMPLETPASS.jpg"}
+                        alt={"Complet PASS 2 Jours"}
+                        layout="fill"
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mb-12 text-center">
+                <h1
+                  className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg"
                   style={{ textShadow: "3px 3px 0px rgba(245, 190, 33, 0.7)" }}
                 >
                   PROGRAMMATION 2025
