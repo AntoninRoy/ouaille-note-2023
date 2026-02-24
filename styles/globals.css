@@ -47,6 +47,11 @@ Rose : #D77CAE
 
 html {
   overflow-x: hidden;
+  background-color: #143c32;
+}
+
+body {
+  background-color: #143c32;
 }
 
 h1 {
