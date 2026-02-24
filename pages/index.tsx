@@ -156,7 +156,7 @@ export default function Home() {
                 "linear-gradient(to right bottom, rgb(206, 218, 66) 0%, rgb(206, 218, 66) 15%, rgb(40, 105, 84) 50%, rgb(40, 105, 84) 100%)",
               display: "flex",
               flexDirection: "column",
-              width: "100vw",
+              width: "100%",
             }}
           >
             <div
@@ -181,17 +181,28 @@ export default function Home() {
             <div
               style={{
                 height: "55vh",
-                position: "relative",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <Image
+              <div
                 className="logo-container"
-                alt={`Ouaille Note 12 2026`}
-                src={`/images/logo/ON12TRANSPARENT.png`}
-                layout="fill"
-                objectFit="contain"
-                style={{ maxHeight: "50vh", zIndex: 0 }}
-              />
+                style={{
+                  position: "relative",
+                  width: "80vw",
+                  maxWidth: "400px",
+                  height: "50vh",
+                }}
+              >
+                <Image
+                  alt={`Ouaille Note 12 2026`}
+                  src={`/images/logo/ON12TRANSPARENT.png`}
+                  layout="fill"
+                  objectFit="contain"
+                  objectPosition="center"
+                />
+              </div>
             </div>
 
             <div
