@@ -111,7 +111,6 @@ export default function Menu() {
                   <Link
                     href={item.href}
                     className="menu-link"
-                    onClick={() => setShowMenu(false)}
                   >
                     <span className="menu-number">0{index + 1}</span>
                     <span className="menu-label">{item.label}</span>
