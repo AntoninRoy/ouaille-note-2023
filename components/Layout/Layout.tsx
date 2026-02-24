@@ -7,6 +7,7 @@ import { artistes } from "../../data/artistes";
 import Facebook from "../../tracking/Facebook";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import { Ticket } from "lucide-react";
 export default function Layout(props: {
   title: string;
   description: string;
@@ -114,41 +115,38 @@ export default function Layout(props: {
       </Head>
       <Facebook />
       <Menu />
-      <Link
-        href="https://www.tiktok.com/@ouaillenotefestival"
-        passHref={true}
-        target="_blank"
-      >
-        <div
-          className="reseaux-link"
-          style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 - 25px)" }}
+      <div className="socials-fixed">
+        <a
+          href="https://www.facebook.com/ouaillenote.lefestival/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+          aria-label="Facebook"
         >
-          <FaTiktok size="2em" className="icon-style" />
-        </div>
-      </Link>
-      <Link
-        href="https://www.facebook.com/ouaillenote.lefestival/"
-        passHref={true}
-        target="_blank"
-      >
-        <div
-          className="reseaux-link"
-          style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 - 80px)" }}
+          <FaFacebook size={20} />
+        </a>
+        <a
+          href="https://www.instagram.com/ouaillenotefestival/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+          aria-label="Instagram"
         >
-          <FaFacebook size="2em" className="icon-style" />
-        </div>
-      </Link>
-      <Link
-        href="https://www.secure.instagram.com/ouaillenotefestival/"
-        passHref={true}
-        target="_blank"
-      >
-        <div
-          className="reseaux-link"
-          style={{ right: "calc((100vw - (100vw - 100%)) - 100vw/2 + 30px)" }}
+          <FaInstagram size={20} />
+        </a>
+        <a
+          href="https://www.tiktok.com/@ouaillenotefestival"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+          aria-label="TikTok"
         >
-          <FaInstagram size="2em" className="icon-style" />
-        </div>
+          <FaTiktok size={18} />
+        </a>
+      </div>
+      <Link href="/billetterie" className="hero-cta-fixed">
+        <Ticket size={20} />
+        <span>BILLETTERIE</span>
       </Link>
       {props.children}
       <Analytics />
