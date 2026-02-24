@@ -187,7 +187,7 @@ export default function Home() {
               <Image
                 className="logo-container"
                 alt={`Ouaille Note 12 2026`}
-                src={`/images/logo/ON11TRANSPARENT.png`}
+                src={`/images/logo/ON12TRANSPARENT.png`}
                 layout="fill"
                 objectFit="contain"
                 style={{ maxHeight: "50vh", zIndex: 0 }}

@@ -62,3 +62,12 @@ h1 {
   text-align : center;
   font-size: 2em;
 }
+
+.page-background {
+  background-image: url('/images/fond/background-vert.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}

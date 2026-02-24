@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
+import { Ticket, RefreshCw } from "lucide-react";
 
 export default function Billetterie() {
   const description =
@@ -10,7 +11,6 @@ export default function Billetterie() {
 
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout>;
-    // injecte le script s'il n'existe pas
     if (!document.getElementById("reelax-script")) {
       const s = document.createElement("script");
       s.id = "reelax-script";
@@ -22,104 +22,127 @@ export default function Billetterie() {
     } else {
       setWidgetReady(true);
     }
-    // si au bout de 2s rien n’a pris, on affiche le fallback
     timeout = setTimeout(() => setWidgetReady((ok) => ok && true), 2000);
     return () => clearTimeout(timeout);
   }, []);
+
   return (
     <>
       <Layout description={description} title={title} pageName={pageName}>
-        <>
-          <h1 className="heading1">BILLETTERIE</h1>
-          <p
+        <div className="page-background" style={{ padding: "0 20px", paddingBottom: "50px" }}>
+
+          <h1
             style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
-              textAlign: "center",
-              fontSize: "1.1em",
+              paddingTop: "10vh",
+              paddingBottom: "3vh",
+              color: "#ceda42",
               fontFamily: "Crunold",
-              color: "rgb(40, 105, 84)",
-              padding: "25px",
+              textAlign: "center",
+              fontSize: "2.5em",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.5)"
             }}
           >
-            {
-              "Entrée gratuite jusqu'à l'âge de 12 ans (pièce d'identité demandée)"
-            }
-          </p>
+            BILLETTERIE
+          </h1>
 
+          {/* Info gratuit enfants */}
           <div
             style={{
-              maxWidth: "1200px",
-              margin: "0 auto",
+              maxWidth: "800px",
+              margin: "0 auto 30px",
+              padding: "20px 25px",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              borderRadius: "6px",
+              color: "white",
+              textAlign: "center",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "15px"
+            }}
+          >
+            <Ticket size={28} color="#ceda42" />
+            <p style={{ margin: 0, fontSize: "1.1em", fontFamily: "Crunold" }}>
+              Entrée gratuite jusqu&apos;à l&apos;âge de 12 ans (pièce d&apos;identité demandée)
+            </p>
+          </div>
+
+          {/* Iframe billetterie */}
+          <div
+            style={{
+              maxWidth: "1000px",
+              margin: "0 auto 30px",
+              backgroundColor: "rgba(255, 255, 255, 0.95)",
+              borderRadius: "6px",
+              overflow: "hidden",
             }}
           >
             <iframe
               src="https://www.billetweb.fr/shop.php?event=festival-ouaillenote-111"
               width="100%"
-              height={1000}
+              height={800}
               title="Billetterie Weezevent"
+              style={{ border: "none" }}
             >
               Chargement…
             </iframe>
           </div>
+
+          {/* Revente */}
           <div
             style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              maxWidth: "800px",
+              margin: "0 auto 30px",
+              padding: "25px",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              borderRadius: "6px",
+              color: "white",
+              textAlign: "center",
             }}
           >
-            <p
-              style={{
-                maxWidth: "1200px",
-                margin: "0 auto",
-                textAlign: "center",
-                fontSize: "1.1em",
-                fontFamily: "Crunold",
-                color: "rgb(230, 12, 23)",
-                padding: "25px",
-                paddingBottom: "0px",
-              }}
-            >
-              {"Plate-forme unique de revente officielle : "}
-            </p>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              paddingBottom: "50px",
-            }}
-          >
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "15px", gap: "10px" }}>
+              <RefreshCw size={24} color="#ceda42" />
+              <p style={{ margin: 0, fontFamily: "Crunold", fontSize: "1.2em", color: "#ceda42" }}>
+                Plate-forme unique de revente officielle
+              </p>
+            </div>
+
             {widgetReady ? (
               <a
                 target="_blank"
                 id="reelax-iframe-placeholder"
                 href="https://reelax-tickets.com/e/n/festival-ouaillenote-11"
-                style={{ display: "contents", color: "unset" }}
+                style={{ display: "inline-block", textDecoration: "none" }}
               >
                 <button
                   type="button"
                   style={{
                     display: "flex",
-                    flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    minWidth: 0,
-                    padding: "10px 16px",
-                    borderRadius: "8px",
-                    border: "1px solid #ddd",
-                    backgroundColor: "#fff",
+                    gap: "10px",
+                    padding: "12px 24px",
+                    borderRadius: "4px",
+                    border: "2px solid #ceda42",
+                    backgroundColor: "transparent",
+                    color: "#ceda42",
                     cursor: "pointer",
                     fontSize: "16px",
                     fontWeight: "bold",
+                    fontFamily: "Crunold",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = "#ceda42";
+                    e.currentTarget.style.color = "#286954";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.color = "#ceda42";
                   }}
                 >
                   <svg
-                    style={{ height: "1em", marginRight: "5px" }}
+                    style={{ height: "1.2em", fill: "currentColor" }}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 17.74 15.24"
                   >
@@ -130,12 +153,11 @@ export default function Billetterie() {
                 </button>
               </a>
             ) : (
-              // Fallback propre (ouvre en nouvel onglet)
               <a
                 href="https://reelax-tickets.com/e/n/festival-ouaillenote-11"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ textDecoration: "none", color: "inherit" }}
+                style={{ textDecoration: "none" }}
               >
                 <button
                   type="button"
@@ -144,14 +166,15 @@ export default function Billetterie() {
                     alignItems: "center",
                     justifyContent: "center",
                     gap: "8px",
-                    padding: "10px 16px",
+                    padding: "12px 24px",
                     fontSize: "16px",
                     fontWeight: 600,
-                    border: "1px solid #ddd",
-                    borderRadius: "8px",
-                    background: "#fff",
+                    border: "2px solid #ceda42",
+                    borderRadius: "4px",
+                    background: "#ceda42",
+                    color: "#286954",
                     cursor: "pointer",
-                    boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                    fontFamily: "Crunold",
                   }}
                 >
                   Ouvrir la billetterie
@@ -159,7 +182,8 @@ export default function Billetterie() {
               </a>
             )}
           </div>
-        </>
+
+        </div>
       </Layout>
     </>
   );

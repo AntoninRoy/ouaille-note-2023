@@ -15,7 +15,7 @@ export default function Benevole() {
   return (
     <>
       <Layout description={description} title={title} pageName={pageName}>
-        <div className="mentions">
+        <div className="page-background mentions">
           <h1 className="heading1">Inscription Bénévole Ouaille Note #12</h1>
           <div>
             <iframe

@@ -1,60 +1,87 @@
-import { useState } from "react";
 import Layout from "../components/Layout/Layout";
+import { Mail, MessageCircle } from "lucide-react";
 
-export default function MentionLegales() {
+export default function Contact() {
   const description = "Contact";
   const title = "Contact | Festival Ouaille Note";
   const pageName = "Contact";
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [showMessage, setShowMessage] = useState<boolean | undefined>(
-    undefined
-  );
 
-  const sendEmail = (event: any) => {
-    event.preventDefault();
-    setIsLoading(true);
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        message: event.target.message.value,
-        contact: event.target.contact.value,
-      }),
-    })
-      .then((res) => {
-        setShowMessage(() => res.status === 200);
-        event.target.reset();
-      })
-      .catch((res) => {
-        setShowMessage(() => res.status === 200);
-      })
-      .finally(() => setIsLoading(false));
-  };
   return (
     <>
       <Layout description={description} title={title} pageName={pageName}>
-        <div className="contact">
-          <h1 className="heading1" style={{ color: "#286954" }}>
-            Contact
+        <div className="page-background" style={{ padding: "0 20px", paddingBottom: "50px", minHeight: "100vh" }}>
+
+          <h1
+            style={{
+              paddingTop: "10vh",
+              paddingBottom: "5vh",
+              color: "#ceda42",
+              fontFamily: "Crunold",
+              textAlign: "center",
+              fontSize: "2.5em",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.5)"
+            }}
+          >
+            CONTACT
           </h1>
 
           <div
             style={{
-              height: "calc(100vh - 300px)",
-              display: "flex",
-              justifyContent: "center",
               maxWidth: "600px",
-              margin: "auto",
+              margin: "0 auto 30px",
+              padding: "30px",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              borderRadius: "6px",
+              color: "white",
             }}
           >
-            Vous avez une question au sujet du Festival Ouaille Note #12 et
-                vous ne trouvez pas la réponse sur le site ou nos réseaux
-                sociaux ? 
-            Contactez-nous par email à l&lsquo;adresse suivante :
-            ouaillenote.lefestival@gmail.com
+            <div style={{ display: "flex", alignItems: "center", marginBottom: "25px" }}>
+              <MessageCircle size={32} color="#ceda42" style={{ marginRight: "15px" }} />
+              <h2 style={{ color: "#ceda42", fontFamily: "Crunold", fontSize: "1.5em", margin: 0 }}>
+                Une question ?
+              </h2>
+            </div>
+
+            <p style={{ lineHeight: "1.8", marginBottom: "25px" }}>
+              Vous avez une question au sujet du <strong style={{ color: "#ceda42" }}>Festival Ouaille Note #12</strong> et
+              vous ne trouvez pas la réponse sur le site ou nos réseaux sociaux ?
+            </p>
+
+            <div
+              style={{
+                padding: "20px",
+                backgroundColor: "rgba(206, 218, 66, 0.15)",
+                borderRadius: "4px",
+                borderLeft: "4px solid #ceda42",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
+                <Mail size={24} color="#ceda42" style={{ marginRight: "10px" }} />
+                <span style={{ fontFamily: "Bebas-Neue", fontSize: "1.2em", color: "#ceda42" }}>
+                  Contactez-nous par email
+                </span>
+              </div>
+              <a
+                href="mailto:ouaillenote.lefestival@gmail.com"
+                style={{
+                  color: "white",
+                  fontSize: "1.1em",
+                  textDecoration: "none",
+                  display: "inline-block",
+                  padding: "10px 20px",
+                  marginTop: "10px",
+                  backgroundColor: "rgba(206, 218, 66, 0.3)",
+                  borderRadius: "4px",
+                  transition: "background-color 0.3s ease",
+                }}
+                onMouseOver={(e) => e.currentTarget.style.backgroundColor = "rgba(206, 218, 66, 0.5)"}
+                onMouseOut={(e) => e.currentTarget.style.backgroundColor = "rgba(206, 218, 66, 0.3)"}
+              >
+                ouaillenote.lefestival@gmail.com
+              </a>
+            </div>
           </div>
+
         </div>
       </Layout>
     </>

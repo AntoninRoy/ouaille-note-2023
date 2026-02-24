@@ -13,11 +13,7 @@ export default function Tremplin() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <div
-          className="mentions"
-          style={{
-            background:
-              "linear-gradient(127deg, rgb(206,218,66) 0%, rgb(206,218,66) 15%, rgb(40,105,84) 50%, rgb(40,105,84) 100%)",
-          }}
+          className="page-background mentions"
         >
           <h1 className="heading1" style={{ color: "white" }}>
              Tremplin Ouaille Note #12
