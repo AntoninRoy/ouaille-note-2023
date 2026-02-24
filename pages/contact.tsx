@@ -49,7 +49,7 @@ export default function MentionLegales() {
               margin: "auto",
             }}
           >
-            Vous avez une question au sujet du Festival Ouaille Note #11 et
+            Vous avez une question au sujet du Festival Ouaille Note #12 et
                 vous ne trouvez pas la réponse sur le site ou nos réseaux
                 sociaux ? 
             Contactez-nous par email à l&lsquo;adresse suivante :

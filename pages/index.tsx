@@ -17,14 +17,14 @@ import { CalendarDays, Music } from "lucide-react";
 
 export default function Home() {
   const description =
-    "Le 12 et 13 septembre 2025, rendez-vous à Vasles (79), dans les Deux-Sèvres pour la 9ème édition du Festival Ouaille'Note ?.";
-  const title = "Festival Ouaille Note | Vasles (79) | 12 et 13 septembre 2025";
+    "Le 11 et 12 septembre 2026, rendez-vous à Vasles (79), dans les Deux-Sèvres pour la 9ème édition du Festival Ouaille'Note ?.";
+  const title = "Festival Ouaille Note | Vasles (79) | 11 et 12 septembre 2026";
   const pageName = "Accueil";
 
   const [countDownDateStr, setCountDownDateStr] = useState<string>("");
 
   useEffect(() => {
-    var countDownDate = new Date("Sept 12, 2025 18:00:00").getTime();
+    var countDownDate = new Date("Sept 11, 2026 18:00:00").getTime();
     const interval: any = setInterval(() => {
       // Get today's date and time
       const now = new Date().getTime();
@@ -56,21 +56,21 @@ export default function Home() {
     {
       id: 99,
       name: "Mandø",
-      date: "Vendredi 12 Septembre",
+      date: "Vendredi 11 Septembre",
       time: "20:00",
       image: "mando.jpg",
     },
     {
       id: 7,
       name: "Pierre Hugues José",
-      date: "Vendredi 12 Septembre",
+      date: "Vendredi 11 Septembre",
       time: "21:10",
       image: "pierre.jpg",
     },
     {
       id: 1,
       name: "Danakil",
-      date: "Vendredi 12 Septembre",
+      date: "Vendredi 11 Septembre",
       time: "22:40",
       image: "danakil.jpg",
     },
@@ -78,21 +78,21 @@ export default function Home() {
     {
       id: 9,
       name: "Radio Byzance",
-      date: "Vendredi 12 Septembre",
+      date: "Vendredi 11 Septembre",
       time: "00:25",
       image: "radio.jpg",
     },
     {
       id: 6,
       name: "Mahom",
-      date: "Vendredi 12 Septembre",
+      date: "Vendredi 11 Septembre",
       time: "01:40",
       image: "mahom.jpg",
     },
     {
       id: 10,
       name: "Jael",
-      date: "Vendredi 12 Septembre",
+      date: "Vendredi 11 Septembre",
       time: "CHILL",
       image: "jael.jpg",
     },
@@ -100,7 +100,7 @@ export default function Home() {
     {
       id: 8,
       name: "Andrick Airways",
-      date: "Samedi 13 Septembre",
+      date: "Samedi 12 Septembre",
       time: "19:30",
       image: "andrick.jpg",
     },
@@ -108,28 +108,28 @@ export default function Home() {
     {
       id: 4,
       name: "Christophe Mali",
-      date: "Samedi 13 Septembre",
+      date: "Samedi 12 Septembre",
       time: "20:30",
       image: "christophe.jpg",
     },
     {
       id: 5,
       name: "Luiza",
-      date: "Samedi 13 Septembre",
+      date: "Samedi 12 Septembre",
       time: "22:00",
       image: "luiza.jpg",
     },
     {
       id: 3,
       name: "Taïro",
-      date: "Samedi 13 Septembre",
+      date: "Samedi 12 Septembre",
       time: "23:30",
       image: "tairo.jpg",
     },
     {
       id: 2,
       name: "Billx",
-      date: "Samedi 13 Septembre",
+      date: "Samedi 12 Septembre",
       time: "01:15",
       image: "billx.jpg",
     },
@@ -137,7 +137,7 @@ export default function Home() {
     {
       id: 11,
       name: "Youthie",
-      date: "Samedi 13 Septembre",
+      date: "Samedi 12 Septembre",
       time: "CHILL",
       image: "youthie.jpg",
     },
@@ -176,7 +176,7 @@ export default function Home() {
                 fontSize: "25px",
               }}
             >
-              OUAILLE NOTE #11
+              OUAILLE NOTE #12
             </h1>
             <div
               style={{
@@ -186,7 +186,7 @@ export default function Home() {
             >
               <Image
                 className="logo-container"
-                alt={`Ouaille Note 11 2025`}
+                alt={`Ouaille Note 12 2026`}
                 src={`/images/logo/ON11TRANSPARENT.png`}
                 layout="fill"
                 objectFit="contain"
@@ -227,7 +227,7 @@ export default function Home() {
                   color: "#f5be21",
                 }}
               >
-                12-13 SEPTEMBRE 2025
+                11-12 SEPTEMBRE 2026
               </span>
               <br />
               <span
@@ -318,7 +318,7 @@ export default function Home() {
                   className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg"
                   style={{ textShadow: "3px 3px 0px rgba(245, 190, 33, 0.7)" }}
                 >
-                  PROGRAMMATION 2025
+                  PROGRAMMATION 2026
                 </h1>
                 <div className="flex items-center justify-center gap-2 mb-6">
                   <div className="h-1 w-12 bg-festival-orange rounded-full"></div>

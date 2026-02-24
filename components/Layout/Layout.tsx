@@ -20,8 +20,8 @@ export default function Layout(props: {
     organizer: "Association « La Gatin'Ouaille »",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     eventStatus: "https://schema.org/EventScheduled",
-    startDate: "2025-09-12",
-    endDate: "2025-09-13",
+    startDate: "2026-09-11",
+    endDate: "2026-09-12",
     description: props.description,
     image: [`https://www.ouaillenote.fr/images/logo/logoviolet.jpg`],
     performers: artistes.map((artistes) => ({
@@ -36,8 +36,8 @@ export default function Layout(props: {
         price: "49.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
-        name: "PASS 2 JOURS : 12/13 SEPTEMBRE 2025",
-        validFrom: "2025-01-01",
+        name: "PASS 2 JOURS : 11/12 SEPTEMBRE 2026",
+        validFrom: "2026-01-01",
       },
       {
         "@type": "Offer",
@@ -45,8 +45,8 @@ export default function Layout(props: {
         price: "27.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
-        name: "VENDREDI 12 SEPTEMBRE 2025",
-        validFrom: "2025-01-01",
+        name: "VENDREDI 11 SEPTEMBRE 2026",
+        validFrom: "2026-01-01",
       },
       {
         "@type": "Offer",
@@ -54,8 +54,8 @@ export default function Layout(props: {
         price: "27.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
-        name: "SAMEDI 13 SEPTEMBRE 2025",
-        validFrom: "2025-01-01",
+        name: "SAMEDI 12 SEPTEMBRE 2026",
+        validFrom: "2026-01-01",
       },
     ],
     location: {
@@ -107,7 +107,7 @@ export default function Layout(props: {
         />
         <meta
           name="keywords"
-          content={`${props.pageName} Musique, Ouaille Note 2025, Festival, Été 2025, à Vasles 79340 Deux-Sèvres`}
+          content={`${props.pageName} Musique, Ouaille Note 2026, Festival, Été 2026, à Vasles 79340 Deux-Sèvres`}
         />
 
         <link rel="shortcut icon" href="/favicon.ico" />

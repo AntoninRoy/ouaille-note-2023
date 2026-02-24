@@ -8,7 +8,7 @@ export const getServerSideProps = async () => {
 
 export default function Benevole() {
   const description = "";
-  const title = "Inscription Bénévoles | Festival Ouaille Note #10";
+  const title = "Inscription Bénévoles | Festival Ouaille Note #12";
   const pageName = "";
   return notFound();
 
@@ -16,7 +16,7 @@ export default function Benevole() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <div className="mentions">
-          <h1 className="heading1">Inscription Bénévole Ouaille Note #11</h1>
+          <h1 className="heading1">Inscription Bénévole Ouaille Note #12</h1>
           <div>
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSdkDTcQvlhX2PdjCsISBWz000X5icKJGxGnk17dLy6-8NilsQ/viewform?embedded=true"
