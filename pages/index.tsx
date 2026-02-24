@@ -1,6 +1,7 @@
 import Image from "next/legacy/image";
 import Layout from "../components/Layout/Layout";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { RiArrowDownSLine } from "react-icons/ri";
 
 export default function Home() {
@@ -72,9 +73,12 @@ export default function Home() {
                 OUAILLE NOTE #12
               </h1>
 
-              {/* Logo */}
-              <div
-                className="logo-container"
+              {/* Logo avec animation */}
+              <motion.div
+                className="logo-container logo-animated"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 style={{
                   position: "relative",
                   width: "80vw",
@@ -89,7 +93,7 @@ export default function Home() {
                   objectFit="contain"
                   objectPosition="center"
                 />
-              </div>
+              </motion.div>
 
               {/* Lieu et Date */}
               <div style={{ textAlign: "center", marginTop: "20px" }}>

@@ -160,28 +160,6 @@
   color: #286954;
 }
 
-@keyframes tilt-shaking {
-  0% {
-    transform: rotate(0deg);
-  }
-  5% {
-    transform: rotate(4deg);
-  }
-  10% {
-    transform: rotate(0eg);
-  }
-  15% {
-    transform: rotate(-4deg);
-  }
-  20%,
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.logo-container {
-  animation: tilt-shaking 1s infinite;
-}
 
 .billetterie-link {
   float: left;
