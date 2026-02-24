@@ -20,9 +20,9 @@ module.exports = {
     extend: {
       colors: {
         festival: {
-          violet: "rgb(106, 45, 132)",
-          orange: "#f5be21",
-          lavender: "rgb(135, 108, 164)",
+          violet: "rgb(40, 105, 84)",
+          orange: "#ceda42",
+          lavender: "rgb(159, 197, 77)",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

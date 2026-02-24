@@ -36,7 +36,7 @@ export default function MentionLegales() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <div className="contact">
-          <h1 className="heading1" style={{ color: "#6a2d84" }}>
+          <h1 className="heading1" style={{ color: "#286954" }}>
             Contact
           </h1>
 

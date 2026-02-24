@@ -38,7 +38,7 @@ export default function Billetterie() {
               textAlign: "center",
               fontSize: "1.1em",
               fontFamily: "Crunold",
-              color: "rgb(106, 45, 132)",
+              color: "rgb(40, 105, 84)",
               padding: "25px",
             }}
           >

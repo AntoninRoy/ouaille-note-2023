@@ -14,7 +14,7 @@ export default function MentionLegales() {
           <div className="billetterie-link">
             <Link href="/billetterie">billetterie</Link>
           </div>
-          <h1 className="heading1" style={{ color: "#6a2d84" }}>
+          <h1 className="heading1" style={{ color: "#286954" }}>
             Infos pratiques
           </h1>
           <div

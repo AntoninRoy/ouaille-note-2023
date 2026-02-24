@@ -153,7 +153,7 @@ export default function Home() {
             style={{
               height: "100vh",
               background:
-                "linear-gradient(to right bottom, rgb(245, 190, 33) -15%, rgb(106, 45, 132) 35%, rgb(106, 45, 132) 50%, rgb(135, 108, 164) 100%)",
+                "linear-gradient(to right bottom, rgb(206, 218, 66) 0%, rgb(206, 218, 66) 15%, rgb(40, 105, 84) 50%, rgb(40, 105, 84) 100%)",
               display: "flex",
               flexDirection: "column",
               width: "100vw",
@@ -199,7 +199,7 @@ export default function Home() {
                 width: "100%",
                 textAlign: "center",
                 fontFamily: "Bebas-Neue",
-                color: "#f5be21",
+                color: "#ceda42",
                 height: "5vh",
               }}
             >
@@ -224,7 +224,7 @@ export default function Home() {
                   fontWeight: "700",
                   margin: "0",
                   lineHeight: "25px",
-                  color: "#f5be21",
+                  color: "#ceda42",
                 }}
               >
                 11-12 SEPTEMBRE 2026
@@ -237,7 +237,7 @@ export default function Home() {
                   fontWeight: "700",
                   display: "flex",
                   justifyContent: "center",
-                  color: "#17ace3",
+                  color: "#ecb731",
                 }}
               >
                 {countDownDateStr}
@@ -252,7 +252,7 @@ export default function Home() {
 {/* <div
             style={{
               background:
-                "linear-gradient(127deg, rgb(245,190,33) -15%, rgb(106,45,132) 35%, rgb(106,45,132) 50%, rgb(135,108,164) 100%)",
+                "linear-gradient(127deg, rgb(206,218,66) 0%, rgb(206,218,66) 15%, rgb(40,105,84) 50%, rgb(40,105,84) 100%)",
             }}
           >
 <div className="container mx-auto py-12 px-4">

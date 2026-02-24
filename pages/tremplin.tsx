@@ -16,7 +16,7 @@ export default function Tremplin() {
           className="mentions"
           style={{
             background:
-              "linear-gradient(127deg, rgb(245,190,33) -15%, rgb(106,45,132) 35%, rgb(106,45,132) 50%, rgb(135,108,164) 100%)",
+              "linear-gradient(127deg, rgb(206,218,66) 0%, rgb(206,218,66) 15%, rgb(40,105,84) 50%, rgb(40,105,84) 100%)",
           }}
         >
           <h1 className="heading1" style={{ color: "white" }}>
