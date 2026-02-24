@@ -249,13 +249,13 @@ export default function Home() {
               <RiArrowDownSLine />
             </div>
           </div>
-          <div
+{/* <div
             style={{
               background:
                 "linear-gradient(127deg, rgb(245,190,33) -15%, rgb(106,45,132) 35%, rgb(106,45,132) 50%, rgb(135,108,164) 100%)",
             }}
           >
-            <div className="container mx-auto py-12 px-4">
+<div className="container mx-auto py-12 px-4">
               <div className="mb-12 text-center">
                 <h1
                   className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg"
@@ -337,7 +337,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-white rounded-xl rotate-3 opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
                     <div className="relative bg-white rounded-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(23,172,227,0.4)]">
                       <div className="aspect-square relative">
-                        {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-festival-violet/70 z-10"></div> */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-festival-violet/70 z-10"></div>
                         <Image
                           src={"/images/artistes/" + artist.image}
                           alt={artist.name}
@@ -359,18 +359,18 @@ export default function Home() {
                             {artist.date} - {artist.time}
                           </span>
                         </div>
-                        {/* <div className="mt-4 pt-4 border-t border-gray-100">
+                        <div className="mt-4 pt-4 border-t border-gray-100">
                     <button className="w-full py-2 px-4 bg-white border-2 border-festival-orange text-festival-violet rounded-full font-medium hover:bg-festival-orange hover:text-white transition-colors duration-300">
                       Voir détails
                     </button>
-                  </div> */}
+                  </div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
           {/* <div className="box">
             <Image
               src={"/images/vendredi.jpg"}
