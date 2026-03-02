@@ -34,7 +34,7 @@ export default function Layout(props: {
       {
         "@type": "Offer",
         url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-12",
-        price: "49.99",
+        price: "59.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
         name: "PASS 2 JOURS : 11/12 SEPTEMBRE 2026",
@@ -43,7 +43,7 @@ export default function Layout(props: {
       {
         "@type": "Offer",
         url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-12",
-        price: "27.99",
+        price: "32.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
         name: "VENDREDI 11 SEPTEMBRE 2026",
@@ -52,7 +52,7 @@ export default function Layout(props: {
       {
         "@type": "Offer",
         url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-12",
-        price: "27.99",
+        price: "32.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
         name: "SAMEDI 12 SEPTEMBRE 2026",
