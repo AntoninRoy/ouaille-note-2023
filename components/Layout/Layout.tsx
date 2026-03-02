@@ -33,7 +33,7 @@ export default function Layout(props: {
     offers: [
       {
         "@type": "Offer",
-        url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-10",
+        url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-12",
         price: "49.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
@@ -42,7 +42,7 @@ export default function Layout(props: {
       },
       {
         "@type": "Offer",
-        url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-10",
+        url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-12",
         price: "27.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
@@ -51,7 +51,7 @@ export default function Layout(props: {
       },
       {
         "@type": "Offer",
-        url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-10",
+        url: "https://www.billetweb.fr/shop.php?event=festival-ouaillenote-12",
         price: "27.99",
         priceCurrency: "EUR",
         availability: "http://schema.org/InStock",
