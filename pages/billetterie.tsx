@@ -40,21 +40,23 @@ export default function Billetterie() {
           {/* Info gratuit enfants */}
           <div
             style={{
-              maxWidth: "800px",
+              maxWidth: "1000px",
               margin: "0 auto 30px",
               padding: "20px 25px",
-              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              backgroundColor: "rgba(232, 93, 4, 0.9)",
               borderRadius: "6px",
               color: "white",
               textAlign: "center",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              gap: "15px"
+              gap: "15px",
+              border: "2px solid #ff6b35",
+              boxShadow: "0 4px 15px rgba(232, 93, 4, 0.4)"
             }}
           >
-            <Ticket size={28} color="#ceda42" />
-            <p style={{ margin: 0, fontSize: "1.1em", fontFamily: "Crunold" }}>
+            <Ticket size={28} color="white" />
+            <p style={{ margin: 0, fontSize: "1.1em", fontFamily: "Crunold", fontWeight: "bold" }}>
               Entrée gratuite jusqu&apos;à l&apos;âge de 12 ans (pièce d&apos;identité demandée)
             </p>
           </div>
