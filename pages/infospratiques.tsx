@@ -12,9 +12,6 @@ export default function InfosPratiques() {
     <>
       <Layout description={description} title={title} pageName={pageName}>
         <div className="page-background" style={{ padding: "0 20px", paddingBottom: "50px" }}>
-          <div className="billetterie-link">
-            <Link href="/billetterie">billetterie</Link>
-          </div>
 
           <h1
             style={{
