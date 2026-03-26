@@ -184,6 +184,10 @@ export default function Home() {
               {/* Bande diagonale décorative */}
               <div className="artist-card-stripe" />
             </motion.div>
+
+            <p className="artist-coming-soon">
+              Et ce n&apos;est que le debut...
+            </p>
           </section>
         </div>
       </Layout>
