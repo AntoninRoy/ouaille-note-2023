@@ -341,6 +341,27 @@ px
   color: #ceda42;
 }
 
+.menu-link-active .menu-label {
+  color: #ceda42;
+}
+
+.menu-link-active .menu-number {
+  color: #ceda42;
+}
+
+.menu-active-indicator {
+  color: #ceda42;
+  font-size: 12px;
+  margin-left: 15px;
+  align-self: center;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
 .menu-number {
   font-family: "Bebas-Neue", sans-serif;
   font-size: 16px;

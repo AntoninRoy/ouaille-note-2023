@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const menuItems = [
   { href: "/", label: "Accueil" },
@@ -63,6 +64,8 @@ const lineVariants = {
 
 export default function Menu() {
   const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter();
+  const currentPath = router.pathname;
 
   return (
     <>
@@ -102,25 +105,35 @@ export default function Menu() {
             variants={menuVariants}
           >
             <nav className="menu-nav">
-              {menuItems.map((item, index) => (
-                <motion.div
-                  key={item.href}
-                  className="menu-item-wrapper"
-                  variants={itemVariants}
-                >
-                  <Link
-                    href={item.href}
-                    className="menu-link"
-                  >
-                    <span className="menu-number">0{index + 1}</span>
-                    <span className="menu-label">{item.label}</span>
-                  </Link>
+              {menuItems.map((item, index) => {
+                const isActive = currentPath === item.href;
+                return (
                   <motion.div
-                    className="menu-line"
-                    variants={lineVariants}
-                  />
-                </motion.div>
-              ))}
+                    key={item.href}
+                    className="menu-item-wrapper"
+                    variants={itemVariants}
+                  >
+                    <Link
+                      href={item.href}
+                      className={`menu-link ${isActive ? "menu-link-active" : ""}`}
+                      onClick={(e) => {
+                        if (isActive) {
+                          e.preventDefault();
+                        }
+                        setShowMenu(false);
+                      }}
+                    >
+                      <span className="menu-number">0{index + 1}</span>
+                      <span className="menu-label">{item.label}</span>
+                      {isActive && <span className="menu-active-indicator">●</span>}
+                    </Link>
+                    <motion.div
+                      className="menu-line"
+                      variants={lineVariants}
+                    />
+                  </motion.div>
+                );
+              })}
             </nav>
 
             {/* Décoration Logo */}
