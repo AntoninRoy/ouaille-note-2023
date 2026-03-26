@@ -192,70 +192,70 @@ export default function Home() {
             </p>
           </section>
         </div>
-
-        {/* Bottom Slider Artiste */}
-        <AnimatePresence>
-          {showArtistSlider && (
-            <>
-              {/* Overlay */}
-              <motion.div
-                className="slider-overlay"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setShowArtistSlider(false)}
-              />
-              {/* Slider */}
-              <motion.div
-                className="artist-slider"
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                exit={{ y: "100%" }}
-                transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              >
-                <div className="artist-slider-header">
-                  <h3 className="artist-slider-title">SKIP THE USE</h3>
-                  <button
-                    className="artist-slider-close"
-                    onClick={() => setShowArtistSlider(false)}
-                  >
-                    <RiCloseLine size={28} />
-                  </button>
-                </div>
-                <div className="artist-slider-content" onClick={(e) => e.stopPropagation()}>
-                  {/* Spotify Embed */}
-                  <div className="artist-spotify" onClick={(e) => e.stopPropagation()}>
-                    <iframe
-                      src="https://open.spotify.com/embed/artist/6UWiE4V9p2HK4C74A0CGKB?utm_source=generator"
-                      width="100%"
-                      height="152"
-                      frameBorder="0"
-                      allowFullScreen
-                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                      loading="lazy"
-                      style={{ borderRadius: "12px" }}
-                    />
-                  </div>
-                  {/* Description */}
-                  <div className="artist-description">
-                    <p>
-                      Skip the Use est un groupe de rock francais originaire de Lille, forme en 2008.
-                      Connu pour leur energie explosive sur scene et leurs tubes comme &quot;Nameless World&quot;
-                      et &quot;Ghost&quot;, le groupe melange rock, punk et electro pour creer un son unique
-                      et federateur.
-                    </p>
-                    <p>
-                      Apres une pause de plusieurs annees, Skip the Use revient sur le devant de la scene
-                      avec une nouvelle formation et une energie intacte. Ne manquez pas leur passage au
-                      Festival Ouaille Note !
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
       </Layout>
+
+      {/* Bottom Slider Artiste */}
+      <AnimatePresence>
+        {showArtistSlider && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              className="slider-overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowArtistSlider(false)}
+            />
+            {/* Slider */}
+            <motion.div
+              className="artist-slider"
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            >
+              <div className="artist-slider-header">
+                <h3 className="artist-slider-title">SKIP THE USE</h3>
+                <button
+                  className="artist-slider-close"
+                  onClick={() => setShowArtistSlider(false)}
+                >
+                  <RiCloseLine size={28} />
+                </button>
+              </div>
+              <div className="artist-slider-content" onClick={(e) => e.stopPropagation()}>
+                {/* Spotify Embed */}
+                <div className="artist-spotify" onClick={(e) => e.stopPropagation()}>
+                  <iframe
+                    src="https://open.spotify.com/embed/artist/6UWiE4V9p2HK4C74A0CGKB?utm_source=generator"
+                    width="100%"
+                    height="152"
+                    frameBorder="0"
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    style={{ borderRadius: "12px" }}
+                  />
+                </div>
+                {/* Description */}
+                <div className="artist-description">
+                  <p>
+                    Skip the Use est un groupe de rock francais originaire de Lille, forme en 2008.
+                    Connu pour leur energie explosive sur scene et leurs tubes comme &quot;Nameless World&quot;
+                    et &quot;Ghost&quot;, le groupe melange rock, punk et electro pour creer un son unique
+                    et federateur.
+                  </p>
+                  <p>
+                    Apres une pause de plusieurs annees, Skip the Use revient sur le devant de la scene
+                    avec une nouvelle formation et une energie intacte. Ne manquez pas leur passage au
+                    Festival Ouaille Note !
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }
