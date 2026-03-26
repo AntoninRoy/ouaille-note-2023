@@ -17,7 +17,7 @@ export default function Navbar() {
         <FaFacebook size="1.4em" className="icon-style" />
       </Link>
       <Link
-        href="https://www.secure.instagram.com/ouaillenotefestival/"
+        href="https://www.instagram.com/ouaillenotefestival/"
         passHref={true}
       >
         <FaInstagram size="1.4em" className="icon-style" />

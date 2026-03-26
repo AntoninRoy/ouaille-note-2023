@@ -383,3 +383,262 @@ h1 {
             drop-shadow(0 0 100px rgba(206, 218, 66, 0.4));
   }
 }
+
+/* Artist Announcement Section */
+.artist-section {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #143c32 0%, #0d2a23 100%);
+}
+
+.artist-section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.artist-section-tag {
+  display: inline-block;
+  background: #ceda42;
+  color: #143c32;
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.artist-section-title {
+  font-family: "Crunold", sans-serif;
+  font-size: clamp(28px, 6vw, 42px);
+  color: white;
+  margin: 0;
+}
+
+.artist-card {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Bordures décoratives inclinées - derrière la card */
+.artist-card-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid #ceda42;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.artist-card-border-1 {
+  transform: translate(-12px, -12px) rotate(-2deg);
+}
+
+.artist-card-border-2 {
+  transform: translate(12px, 12px) rotate(2deg);
+  border-color: rgba(206, 218, 66, 0.5);
+}
+
+.artist-card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(206, 218, 66, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Bande diagonale */
+.artist-card-stripe {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 45%, rgba(206, 218, 66, 0.08) 45%, rgba(206, 218, 66, 0.08) 55%, transparent 55%);
+  pointer-events: none;
+}
+
+.artist-card-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 25px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgb(20, 60, 50) 0%, rgb(10, 30, 25) 100%);
+}
+
+@media (min-width: 640px) {
+  .artist-card-inner {
+    flex-direction: row;
+    padding: 40px;
+    gap: 40px;
+  }
+}
+
+.artist-card-left {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.artist-photo-wrapper {
+  position: relative;
+  padding: 4px;
+  background: linear-gradient(135deg, #ceda42 0%, #a8b835 50%, #ceda42 100%);
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(206, 218, 66, 0.3),
+              0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.artist-card:hover .artist-photo-wrapper {
+  transform: rotate(0deg);
+}
+
+/* Cadre décoratif incliné derrière la photo */
+.artist-photo-frame {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 3px solid rgba(206, 218, 66, 0.5);
+  border-radius: 20px;
+  transform: rotate(3deg);
+  pointer-events: none;
+}
+
+.artist-photo {
+  position: relative;
+  width: 200px;
+  height: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .artist-photo {
+    width: 240px;
+    height: 320px;
+  }
+}
+
+/* Texte LIVE superposé */
+.artist-overlay-text {
+  position: absolute;
+  bottom: -15px;
+  right: -20px;
+  font-family: "Crunold", sans-serif;
+  font-size: 48px;
+  color: #ceda42;
+  text-shadow: 3px 3px 0 #143c32, -1px -1px 0 #143c32, 1px -1px 0 #143c32, -1px 1px 0 #143c32;
+  transform: rotate(-5deg);
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .artist-overlay-text {
+    font-size: 64px;
+    bottom: -20px;
+    right: -30px;
+  }
+}
+
+.artist-card-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+@media (min-width: 640px) {
+  .artist-card-right {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+/* Grand texte de fond */
+.artist-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  font-family: "Crunold", sans-serif;
+  font-size: 120px;
+  color: rgba(206, 218, 66, 0.06);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (min-width: 640px) {
+  .artist-bg-text {
+    font-size: 180px;
+    left: 30%;
+  }
+}
+
+.artist-day-badge {
+  display: inline-block;
+  background: rgba(206, 218, 66, 0.15);
+  border: 1px solid #ceda42;
+  color: #ceda42;
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 14px;
+  padding: 5px 14px;
+  border-radius: 6px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.artist-name {
+  position: relative;
+  font-family: "Crunold", sans-serif;
+  font-size: clamp(40px, 10vw, 72px);
+  color: white;
+  margin: 0 0 8px 0;
+  line-height: 0.9;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.artist-date {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: clamp(18px, 4vw, 24px);
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 15px 0;
+  letter-spacing: 1px;
+}
+
+.artist-details-btn {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #143c32;
+  background: #ceda42;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.artist-details-btn:hover {
+  background: #d8e455;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(206, 218, 66, 0.4);
+}

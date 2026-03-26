@@ -138,6 +138,53 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Section Annonce Artiste */}
+          <section className="artist-section">
+            <div className="artist-section-header">
+              <h2 className="artist-section-title">PROGRAMMATION 2026</h2>
+            </div>
+
+            <motion.div
+              className="artist-card"
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              <div className="artist-card-glow" />
+              <div className="artist-card-inner">
+                <div className="artist-card-left">
+                  <div className="artist-photo-wrapper">
+                    {/* Cadre décoratif incliné */}
+                    <div className="artist-photo-frame" />
+                    <div className="artist-photo">
+                      <Image
+                        src="/images/annonces/skip-the-use.jpg"
+                        alt="Skip The Use"
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center top"
+                      />
+                    </div>
+                  </div>
+                  {/* Texte superposé sur la photo - à utiliser plus tard pour l'heure */}
+                  {/* <span className="artist-overlay-text">20H30</span> */}
+                </div>
+                <div className="artist-card-right">
+                  {/* Grand texte de fond */}
+                  <span className="artist-bg-text">2026</span>
+                  <span className="artist-day-badge">VENDREDI</span>
+                  <h3 className="artist-name">SKIP<br/>THE USE</h3>
+                  <p className="artist-date">11 SEPTEMBRE 2026</p>
+                  <button className="artist-details-btn">DECOUVRIR L&apos;ARTISTE</button>
+                </div>
+              </div>
+
+              {/* Bande diagonale décorative */}
+              <div className="artist-card-stripe" />
+            </motion.div>
+          </section>
         </div>
       </Layout>
     </>
