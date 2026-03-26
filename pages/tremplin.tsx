@@ -57,7 +57,7 @@ export default function Tremplin() {
               Tremplin Ouaille Note #12
             </h2>
             <p style={{ lineHeight: "1.8", fontSize: "1.1em", marginBottom: "15px" }}>
-              C'est le moment de voter ! Les gagnants des votes participeront à une finale en live.
+              C&apos;est le moment de voter ! Les gagnants des votes participeront a une finale en live.
             </p>
             <p style={{ lineHeight: "1.6", marginBottom: "0" }}>
               Écoutez les extraits et votez pour votre favori ci-dessous.
