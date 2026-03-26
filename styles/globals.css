@@ -667,3 +667,103 @@ h1 {
   color: rgba(255, 255, 255, 0.6);
   font-style: italic;
 }
+
+/* Bottom Slider */
+.slider-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+}
+
+.artist-slider {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 85vh;
+  background: linear-gradient(180deg, #143c32 0%, #0a1f19 100%);
+  border-radius: 24px 24px 0 0;
+  border-top: 3px solid #ceda42;
+  z-index: 2001;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 1px solid rgba(206, 218, 66, 0.2);
+  flex-shrink: 0;
+}
+
+.artist-slider-title {
+  font-family: "Crunold", sans-serif;
+  font-size: 28px;
+  color: #ceda42;
+  margin: 0;
+}
+
+.artist-slider-close {
+  background: rgba(206, 218, 66, 0.1);
+  border: 1px solid rgba(206, 218, 66, 0.3);
+  border-radius: 50%;
+  color: #ceda42;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.artist-slider-close:hover {
+  background: #ceda42;
+  color: #143c32;
+}
+
+.artist-slider-content {
+  padding: 25px;
+  padding-bottom: 50px;
+  overflow-y: auto;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
+}
+
+.artist-slider-content iframe {
+  position: relative;
+  z-index: 999;
+  isolation: isolate;
+}
+
+.artist-spotify {
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 10;
+}
+
+.artist-spotify iframe {
+  pointer-events: auto;
+}
+
+.artist-description {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.artist-description p {
+  margin: 0 0 15px 0;
+}
+
+.artist-description p:last-child {
+  margin-bottom: 0;
+}
