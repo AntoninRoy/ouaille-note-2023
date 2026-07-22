@@ -1,16 +1,14 @@
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 20px;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 0;
 }
 
 .griditem {
-  width: calc((100% / 2) - 15px);
   height: 120px;
   position: relative;
   background-color: white;
@@ -33,24 +31,12 @@
   position: relative;
 }
 
-@media (min-width: 550px) {
-  .griditem {
-    width: calc((100% / 3) - 15px);
-  }
-}
-
 @media (min-width: 700px) {
-  .griditem {
-    width: calc((100% / 4) - 15px);
-  }
-}
-
-@media (min-width: 950px) {
-  .griditem {
-    width: calc((100% / 5) - 15px);
-  }
-
   .grid {
-    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .griditem {
+    height: 150px;
   }
 }

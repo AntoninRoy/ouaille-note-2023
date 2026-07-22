@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout/Layout";
 import Image from "next/legacy/image";
-import { Building2, Radio, Briefcase } from "lucide-react";
 
 import styles from "../styles/Partenaires.module.css";
 
@@ -9,113 +8,54 @@ export default function Partenaires() {
   const title = "Partenaires | Festival Ouaille Note";
   const pageName = "Partenaires";
 
-  const institutionnels = [
-    { path: "comcompy.jpg", nom: "Communauté de communes Parthenay-Gatine" },
-    { path: "regions.png", nom: "Region Aquitaine Limousin Poitou-Charentes" },
-    { path: "nouvelleAquitaine.jpg", nom: "Région de la Nouvelle Aquitaine" },
-    { path: "terredefestivals.jpg", nom: "Terre de festivals Deux sèvres" },
-    { path: "sacem.png", nom: "SACEM" },
-    { path: "vasles.jpg", nom: "Commune de Vasles" },
-    { path: "ministereculture.jpg", nom: "Ministère de la culture" },
-  ];
-
-  const medias = [
-    { path: "fnac.jpg", nom: "La Fnac" },
-    { path: "infoconcert.png", nom: "infoconcert.com" },
-    { path: "festivalrock.jpg", nom: "festivalrock.com" },
-    { path: "reggaepromo.png", nom: "reggae-promo.com" },
-    { path: "radioGatine.jpg", nom: "Radio Gatine" },
-    { path: "nouvellerepublique.png", nom: "La nouvelle République" },
-    { path: "paysdegatine.jpg", nom: "Pays de gatine" },
-    { path: "pulsar.jpg", nom: "Radio Pulsar" },
-  ];
-
-  const privees = [
-    { path: "pizzavan.png", nom: "Pizza Van" },
-    { path: "impulsion.jpg", nom: "Impulsion" },
-    { path: "solaire17.png", nom: "Solaire 17" },
-    { path: "victor.png", nom: "Victor Architecture" },
-    { path: "busont.jpg", nom: "Busont Fabrice" },
-    { path: "audreytaxi.png", nom: "Audrey Taxi" },
-    { path: "agneaupoitou.jpg", nom: "Agneau du poitou" },
-    { path: "metsenvin.png", nom: "Cave Mets en vin" },
-    { path: "ca.jpg", nom: "Crédit Agricole" },
-    { path: "spar.jpg", nom: "SPAR Vasles" },
-    { path: "faitmain.jpg", nom: "Fait Main" },
-    { path: "avenirelec.png", nom: "Avenir Elec" },
-    { path: "bordage.jpg", nom: "SARL Bordage" },
-    { path: "meche.jpg", nom: "De mèche avec vous" },
-    { path: "fb.jpg", nom: "FB EURL" },
-    { path: "pepsandgo.PNG", nom: "Peps and Go" },
-    { path: "moutonvillage.png", nom: "Mouton Village" },
-    { path: "guimick.jpg", nom: "GUIMICK Media" },
-    { path: "lezinc.png", nom: "Bar le Zinc" },
-    { path: "taxidutouhet.png", nom: "Taxi du thouet" },
-    { path: "toilettes.jpg", nom: "Toilettes&Co" },
-    { path: "espritpub.jpg", nom: "Esprit Pub" },
-    { path: "CANIVET.png", nom: "Traiteur Canivet et associés" },
-    { path: "tissuterie.jpg", nom: "La Tissuterie" },
-    { path: "saintloup.png", nom: "Saint Loup" },
-    { path: "tag.jpg", nom: "TAG" },
+  const partenaires = [
+    { path: "ministere-culture.png", nom: "Ministère de la Culture et de la Communication" },
+    { path: "nouvelle-aquitaine.png", nom: "Région Nouvelle-Aquitaine" },
+    { path: "deux-sevres.png", nom: "Département des Deux-Sèvres" },
+    { path: "parthenay-gatine.png", nom: "Communauté de Communes Parthenay-Gâtine" },
+    { path: "vasles.png", nom: "Commune de Vasles" },
+    { path: "csc-pays-menigoutais.png", nom: "Centre Socio-Culturel Pays Ménigoutais" },
+    { path: "credit-agricole.png", nom: "Crédit Agricole Charente-Maritime Deux-Sèvres" },
+    { path: "de-meche-avec-vous.png", nom: "De mèche avec vous" },
+    { path: "diffart.png", nom: "Diff'art" },
+    { path: "girard-vitre.png", nom: "SAS Girard-Vitré" },
+    { path: "les-2-fer.png", nom: "Les 2 Fer" },
+    { path: "quincaillerie-vasleenne.png", nom: "La Quincaillerie Vasléenne" },
+    { path: "yc-conseil.png", nom: "Y&C Conseil" },
+    { path: "spar-vasles.png", nom: "SPAR Vasles" },
+    { path: "la-regalade.png", nom: "La Régalade" },
+    { path: "west-wood-tiny.png", nom: "West Wood Tiny" },
+    { path: "impulsion.png", nom: "Impulsion" },
+    { path: "metal-fer.png", nom: "Métal Fer Recyclage & Environnement" },
+    { path: "fb-eurl.png", nom: "FB Eurl" },
+    { path: "laser-game-evolution.png", nom: "Laser Game Evolution" },
+    { path: "vlok.png", nom: "V'Lok" },
+    { path: "prisme.png", nom: "Prisme Éclairage Scénique" },
+    { path: "areas-assurances.png", nom: "Areas Assurances" },
+    { path: "roule-tonton.png", nom: "Roule Tonton" },
+    { path: "radio-gatine.png", nom: "Radio Gâtine" },
+    { path: "eb-emilie-benoit.png", nom: "Emilie & Benoit" },
     { path: "rebeb.png", nom: "Rebeb" },
-    { path: "prisme.jpg", nom: "Prisme Eclairage Scenique" },
-    { path: "hydrozone.png", nom: "Hydrozone" },
-    { path: "bevin.jpg", nom: "BE & VIN" },
-    { path: "gatineprimeur.jpg", nom: "Gatine Primeurs" },
-    { path: "open55.png", nom: "Open 5" },
-    { path: "lasergame.png", nom: "Laser Game Evolution" },
-    { path: "mutuellePoitiers.jpg", nom: "Mutuelle de Poitiers Assurances" },
-    { path: "westwood.jpg", nom: "West wood Tiny" },
-    { path: "corpsetesprit.jpeg", nom: "Corps Et Esprit Institut" },
-    { path: "aicm.png", nom: "AICM" },
-    { path: "russeill.jpg", nom: "Russeil Chauffage" },
-    { path: "GROUPEACTIVE.png", nom: "Groupe Active" },
-    { path: "diffart.jpg", nom: "Diffart" },
-    { path: "csc.png", nom: "CSC Pays Ménigoutais" },
+    { path: "tag.png", nom: "TAG" },
+    { path: "agneau-poitou-charentes.png", nom: "L'Agneau du Poitou-Charentes" },
+    { path: "si-agencement.png", nom: "SI Agencement" },
+    { path: "matos-menuiserie.png", nom: "Matos Menuiserie" },
+    { path: "open-5.png", nom: "L'Open 5" },
+    { path: "saint-loup.png", nom: "Saint-Loup sur Thouet" },
+    { path: "sylvain-rouvreau.png", nom: "Sylvain Rouvreau Menuiserie" },
+    { path: "parc-mouton-village.png", nom: "Parc Mouton Village" },
+    { path: "poitou-chevre.png", nom: "Fromagerie Poitou Chèvre" },
+    { path: "russeil-chauffage.png", nom: "Russeil Maintenance Chauffage" },
+    { path: "la-luma.png", nom: "La Luma" },
+    { path: "sovam.png", nom: "Sovam" },
+    { path: "tti-services.png", nom: "TTI Services Imprimerie" },
+    { path: "gourbault.png", nom: "Gourbault Fer & Métaux" },
+    { path: "br-zinguerie.png", nom: "BR Couverture Zinguerie" },
+    { path: "v-and-b-parthenay.png", nom: "V and B Parthenay" },
+    { path: "guimick-media.png", nom: "Guimick Media" },
+    { path: "castorama.png", nom: "Castorama" },
+    { path: "urban-painters.png", nom: "Urban Painters" },
   ];
-
-  const PartenaireSection = ({
-    title,
-    icon: Icon,
-    partenaires
-  }: {
-    title: string;
-    icon: any;
-    partenaires: { path: string; nom: string }[]
-  }) => (
-    <div
-      style={{
-        maxWidth: "1200px",
-        margin: "0 auto 30px",
-        padding: "25px",
-        backgroundColor: "rgba(0, 0, 0, 0.6)",
-        borderRadius: "6px",
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center", marginBottom: "25px", justifyContent: "center" }}>
-        <Icon size={28} color="#ceda42" style={{ marginRight: "15px" }} />
-        <h2 style={{ color: "#ceda42", fontFamily: "Crunold", fontSize: "1.8em", margin: 0 }}>
-          {title}
-        </h2>
-      </div>
-      <div className={styles.grid}>
-        {partenaires.map((partenaire, i) => (
-          <div key={i} className={styles.griditem}>
-            <div className={styles.picture}>
-              <div>
-                <Image
-                  alt={`Partenaire ${partenaire.nom}`}
-                  src={`/images/partenaires/${partenaire.path}`}
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
 
   return (
     <>
@@ -136,9 +76,32 @@ export default function Partenaires() {
             PARTENAIRES
           </h1>
 
-          <PartenaireSection title="Institutionnels" icon={Building2} partenaires={institutionnels} />
-          <PartenaireSection title="Médias" icon={Radio} partenaires={medias} />
-          <PartenaireSection title="Privés" icon={Briefcase} partenaires={privees} />
+          <div
+            style={{
+              maxWidth: "1200px",
+              margin: "0 auto 30px",
+              padding: "25px",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              borderRadius: "6px",
+            }}
+          >
+            <div className={styles.grid}>
+              {partenaires.map((partenaire, i) => (
+                <div key={i} className={styles.griditem}>
+                  <div className={styles.picture}>
+                    <div>
+                      <Image
+                        alt={`Partenaire ${partenaire.nom}`}
+                        src={`/images/partenaires/2026/${partenaire.path}`}
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
         </div>
       </Layout>
