@@ -417,6 +417,20 @@ h1 {
   margin: 0;
 }
 
+.artist-cards-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .artist-cards-list {
+    gap: 60px;
+  }
+}
+
 .artist-card {
   position: relative;
   width: 100%;
@@ -445,13 +459,14 @@ h1 {
   border-color: rgba(206, 218, 66, 0.5);
 }
 
+/* Halo doux autour de la carte.
+   NB : un radial-gradient sur un bloc surdimensionne se fait rogner net par les
+   bords du bloc. Une ombre portee s'estompe toujours proprement, meme empilee. */
 .artist-card-glow {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 30% 50%, rgba(206, 218, 66, 0.15) 0%, transparent 50%);
+  inset: 0;
+  border-radius: 20px;
+  box-shadow: 0 0 80px 10px rgba(206, 218, 66, 0.1);
   pointer-events: none;
 }
 
@@ -570,8 +585,8 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%) rotate(-8deg);
   font-family: "Crunold", sans-serif;
-  font-size: 120px;
-  color: rgba(206, 218, 66, 0.06);
+  font-size: 85px;
+  color: rgba(206, 218, 66, 0.04);
   white-space: nowrap;
   pointer-events: none;
   z-index: 0;
@@ -579,7 +594,7 @@ h1 {
 
 @media (min-width: 640px) {
   .artist-bg-text {
-    font-size: 180px;
+    font-size: 130px;
     left: 30%;
   }
 }

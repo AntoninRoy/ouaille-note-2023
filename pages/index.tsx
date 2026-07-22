@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RiArrowDownSLine, RiCloseLine } from "react-icons/ri";
+import { artistes2026, Artiste } from "../data/programmation2026";
 
 export default function Home() {
   const description =
@@ -17,7 +18,7 @@ export default function Home() {
     seconds: 0,
   });
 
-  const [showArtistSlider, setShowArtistSlider] = useState(false);
+  const [selectedArtiste, setSelectedArtiste] = useState<Artiste | null>(null);
 
   useEffect(() => {
     const countDownDate = new Date("Sept 11, 2026 18:00:00").getTime();
@@ -147,56 +148,71 @@ export default function Home() {
               <h2 className="artist-section-title">PROGRAMMATION 2026</h2>
             </div>
 
-            <motion.div
-              className="artist-card"
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
-              <div className="artist-card-glow" />
-              <div className="artist-card-inner">
-                <div className="artist-card-left">
-                  <div className="artist-photo-wrapper">
-                    {/* Cadre décoratif incliné */}
-                    <div className="artist-photo-frame" />
-                    <div className="artist-photo">
-                      <Image
-                        src="/images/annonces/skip-the-use.jpg"
-                        alt="Skip The Use"
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center top"
-                      />
+            <div className="artist-cards-list">
+              {artistes2026.map((artiste, index) => (
+                <motion.div
+                  key={artiste.id}
+                  className="artist-card"
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+                >
+                  <div className="artist-card-glow" />
+                  <div className="artist-card-inner">
+                    <div className="artist-card-left">
+                      <div className="artist-photo-wrapper">
+                        {/* Cadre décoratif incliné */}
+                        <div className="artist-photo-frame" />
+                        <div className="artist-photo">
+                          <Image
+                            src={artiste.image}
+                            alt={artiste.name}
+                            layout="fill"
+                            objectFit="cover"
+                            objectPosition={artiste.imagePosition ?? "center"}
+                          />
+                        </div>
+                      </div>
+                      {/* Heure de passage superposée sur la photo */}
+                      {artiste.hour && (
+                        <span className="artist-overlay-text">{artiste.hour}</span>
+                      )}
+                    </div>
+                    <div className="artist-card-right">
+                      {/* Grand texte de fond : le nom de l'artiste */}
+                      <span className="artist-bg-text">{artiste.name}</span>
+                      <span className="artist-day-badge">{artiste.day}</span>
+                      <h3 className="artist-name">
+                        {(artiste.nameLines ?? [artiste.name]).map((line, i) => (
+                          <span key={i}>
+                            {i > 0 && <br />}
+                            {line}
+                          </span>
+                        ))}
+                      </h3>
+                      <p className="artist-date">{artiste.date}</p>
+                      <button
+                        className="artist-details-btn"
+                        onClick={() => setSelectedArtiste(artiste)}
+                      >
+                        DECOUVRIR L&apos;ARTISTE
+                      </button>
                     </div>
                   </div>
-                  {/* Texte superposé sur la photo - à utiliser plus tard pour l'heure */}
-                  {/* <span className="artist-overlay-text">20H30</span> */}
-                </div>
-                <div className="artist-card-right">
-                  {/* Grand texte de fond */}
-                  <span className="artist-bg-text">2026</span>
-                  <span className="artist-day-badge">VENDREDI</span>
-                  <h3 className="artist-name">SKIP<br/>THE USE</h3>
-                  <p className="artist-date">11 SEPTEMBRE 2026</p>
-                  <button className="artist-details-btn" onClick={() => setShowArtistSlider(true)}>DECOUVRIR L&apos;ARTISTE</button>
-                </div>
-              </div>
 
-              {/* Bande diagonale décorative */}
-              <div className="artist-card-stripe" />
-            </motion.div>
-
-            <p className="artist-coming-soon">
-              Et ce n&apos;est que le debut...
-            </p>
+                  {/* Bande diagonale décorative */}
+                  <div className="artist-card-stripe" />
+                </motion.div>
+              ))}
+            </div>
           </section>
         </div>
       </Layout>
 
       {/* Bottom Slider Artiste */}
       <AnimatePresence>
-        {showArtistSlider && (
+        {selectedArtiste && (
           <>
             {/* Overlay */}
             <motion.div
@@ -204,7 +220,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setShowArtistSlider(false)}
+              onClick={() => setSelectedArtiste(null)}
             />
             {/* Slider */}
             <motion.div
@@ -215,41 +231,37 @@ export default function Home() {
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
             >
               <div className="artist-slider-header">
-                <h3 className="artist-slider-title">SKIP THE USE</h3>
+                <h3 className="artist-slider-title">{selectedArtiste.name}</h3>
                 <button
                   className="artist-slider-close"
-                  onClick={() => setShowArtistSlider(false)}
+                  onClick={() => setSelectedArtiste(null)}
                 >
                   <RiCloseLine size={28} />
                 </button>
               </div>
               <div className="artist-slider-content" onClick={(e) => e.stopPropagation()}>
                 {/* Spotify Embed */}
-                <div className="artist-spotify" onClick={(e) => e.stopPropagation()}>
-                  <iframe
-                    src="https://open.spotify.com/embed/artist/6UWiE4V9p2HK4C74A0CGKB?utm_source=generator"
-                    width="100%"
-                    height="152"
-                    frameBorder="0"
-                    allowFullScreen
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"
-                    style={{ borderRadius: "12px" }}
-                  />
-                </div>
+                {selectedArtiste.spotifyId && (
+                  <div className="artist-spotify" onClick={(e) => e.stopPropagation()}>
+                    <iframe
+                      src={`https://open.spotify.com/embed/${
+                        selectedArtiste.spotifyType ?? "artist"
+                      }/${selectedArtiste.spotifyId}?utm_source=generator&theme=0`}
+                      width="100%"
+                      height="352"
+                      frameBorder="0"
+                      allowFullScreen
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                      loading="lazy"
+                      style={{ borderRadius: "12px" }}
+                    />
+                  </div>
+                )}
                 {/* Description */}
                 <div className="artist-description">
-                  <p>
-                    Skip the Use est un groupe de rock francais originaire de Lille, forme en 2008.
-                    Connu pour leur energie explosive sur scene et leurs tubes comme &quot;Nameless World&quot;
-                    et &quot;Ghost&quot;, le groupe melange rock, punk et electro pour creer un son unique
-                    et federateur.
-                  </p>
-                  <p>
-                    Apres une pause de plusieurs annees, Skip the Use revient sur le devant de la scene
-                    avec une nouvelle formation et une energie intacte. Ne manquez pas leur passage au
-                    Festival Ouaille Note !
-                  </p>
+                  {(selectedArtiste.description ?? []).map((paragraphe, i) => (
+                    <p key={i}>{paragraphe}</p>
+                  ))}
                 </div>
               </div>
             </motion.div>
