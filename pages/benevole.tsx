@@ -1,37 +1,31 @@
-import { createRef, useEffect, useRef, useState } from "react";
 import Layout from "../components/Layout/Layout";
-import { notFound } from "next/navigation";
-
-export const getServerSideProps = async () => {
-  return { notFound: true }; // Bloque l'accès et renvoie une erreur 404
-};
 
 export default function Benevole() {
-  const description = "";
-  const title = "Inscription Bénévoles | Festival Ouaille Note #12";
-  const pageName = "";
-  return notFound();
+  const description =
+    "Rejoignez l'équipe de bénévoles du Festival Ouaille'Note #12, les 11 et 12 septembre 2026 à Vasles (79).";
+  const title = "Inscription nouveau bénévole | Festival Ouaille Note #12";
+  const pageName = "Inscription nouveau bénévole";
 
   return (
-    <>
-      <Layout description={description} title={title} pageName={pageName}>
-        <div className="page-background mentions">
-          <h1 className="heading1">Inscription Bénévole Ouaille Note #12</h1>
-          <div>
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdkDTcQvlhX2PdjCsISBWz000X5icKJGxGnk17dLy6-8NilsQ/viewform?embedded=true"
-              style={{
-                width: "90vw",
-                height: "calc(100vh - 200px)",
-                margin: "auto",
-
-              }}
-            >
-              Chargement…
-            </iframe>
-          </div>
+    <Layout description={description} title={title} pageName={pageName}>
+      <div className="page-background mentions">
+        <h1 className="heading1">Inscription nouveau bénévole</h1>
+        <div>
+          <iframe
+            title="Formulaire d'inscription nouveau bénévole"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeid7xTGKxNrxYygR0mfCpB2AdZWWk78cpH_AZPgfdirs6dAA/viewform?embedded=true"
+            style={{
+              display: "block",
+              width: "90vw",
+              height: "calc(100vh - 200px)",
+              margin: "auto",
+              border: "none",
+            }}
+          >
+            Chargement…
+          </iframe>
         </div>
-      </Layout>
-    </>
+      </div>
+    </Layout>
   );
 }
