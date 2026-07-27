@@ -9,6 +9,7 @@ const menuItems = [
   { href: "/billetterie", label: "Billetterie" },
   { href: "/infospratiques", label: "Infos pratiques" },
   { href: "/partenaires", label: "Partenaires" },
+  { href: "/benevole", label: "Devenir bénévole" },
   { href: "/contact", label: "Contact" },
 ];
 
