@@ -1,0 +1,5 @@
+# Festival Ouaille Note
+User-agent: *
+Allow: /
+Disallow: /benevole
+Disallow: /success

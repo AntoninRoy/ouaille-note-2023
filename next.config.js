@@ -6,6 +6,20 @@ const nextConfig = {
   images: {
     domains: ["images.unsplash.com"],
   },
+  async headers() {
+    return [
+      // Page de remerciement apres achat : jamais indexee.
+      {
+        source: "/success",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       // Tremplin desactive : la page est conservee dans pages-disabled/.
