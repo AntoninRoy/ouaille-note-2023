@@ -9,6 +9,7 @@ export default function Partenaires() {
   const pageName = "Partenaires";
 
   const partenaires = [
+    { path: "sacem.png", nom: "Sacem" },
     { path: "ministere-culture.png", nom: "Ministère de la Culture et de la Communication" },
     { path: "nouvelle-aquitaine.png", nom: "Région Nouvelle-Aquitaine" },
     { path: "deux-sevres.png", nom: "Département des Deux-Sèvres" },
