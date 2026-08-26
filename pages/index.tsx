@@ -5,6 +5,39 @@ import { motion, AnimatePresence } from "framer-motion";
 import { RiArrowDownSLine, RiCloseLine } from "react-icons/ri";
 import { artistes2026, Artiste } from "../data/programmation2026";
 
+type DayFilter = "VENDREDI" | "SAMEDI" | null;
+
+const DAY_TABS: { label: string; date: string; value: DayFilter }[] = [
+  { label: "TOUT", date: "11 & 12 SEPT.", value: null },
+  { label: "VENDREDI", date: "11 SEPT.", value: "VENDREDI" },
+  { label: "SAMEDI", date: "12 SEPT.", value: "SAMEDI" },
+];
+
+/** Convertit "22H30" en minutes depuis le debut de soiree.
+ *  Les heures d'apres minuit (< 06H) sont repoussees en fin de soiree. */
+const heureEnMinutes = (hour?: string): number => {
+  const match = hour?.match(/^(\d{1,2})H(\d{2})$/i);
+  if (!match) return Number.MAX_SAFE_INTEGER;
+  const heures = Number(match[1]);
+  return (heures < 6 ? heures + 24 : heures) * 60 + Number(match[2]);
+};
+
+/** Dates du festival, pour preselectionner l'onglet du jour. */
+const JOURS_FESTIVAL: { date: string; value: DayFilter }[] = [
+  { date: "2026-09-11", value: "VENDREDI" },
+  { date: "2026-09-12", value: "SAMEDI" },
+];
+
+/** Onglet a preselectionner selon la date locale du visiteur ("TOUT" hors festival). */
+const ongletDuJour = (maintenant: Date): DayFilter => {
+  const aujourdhui = [
+    maintenant.getFullYear(),
+    String(maintenant.getMonth() + 1).padStart(2, "0"),
+    String(maintenant.getDate()).padStart(2, "0"),
+  ].join("-");
+  return JOURS_FESTIVAL.find((jour) => jour.date === aujourdhui)?.value ?? null;
+};
+
 export default function Home() {
   const description =
     "Le 11 et 12 septembre 2026, rendez-vous à Vasles (79), dans les Deux-Sèvres pour la 12ème édition du Festival Ouaille'Note.";
@@ -19,6 +52,22 @@ export default function Home() {
   });
 
   const [selectedArtiste, setSelectedArtiste] = useState<Artiste | null>(null);
+
+  // Filtre de programmation : null = les deux soirs (defaut)
+  const [selectedDay, setSelectedDay] = useState<DayFilter>(null);
+
+  // Pendant le festival, on preselectionne le soir en cours. Calcule apres le
+  // montage : la date du visiteur n'est pas connue au rendu serveur.
+  useEffect(() => {
+    setSelectedDay(ongletDuJour(new Date()));
+  }, []);
+
+  // Filtre par soir + tri chronologique. L'onglet "TOUT" garde l'ordre d'origine.
+  const artistesFiltres = selectedDay
+    ? artistes2026
+        .filter((artiste) => artiste.day === selectedDay)
+        .sort((a, b) => heureEnMinutes(a.hour) - heureEnMinutes(b.hour))
+    : artistes2026;
 
   useEffect(() => {
     const countDownDate = new Date("Sept 11, 2026 18:00:00").getTime();
@@ -146,10 +195,29 @@ export default function Home() {
           <section className="artist-section">
             <div className="artist-section-header">
               <h2 className="artist-section-title">PROGRAMMATION 2026</h2>
+
+              {/* Onglets de filtre : les deux soirs (defaut), vendredi, samedi */}
+              <div className="artist-tabs" role="tablist">
+                {DAY_TABS.map((tab) => (
+                  <button
+                    key={tab.label}
+                    type="button"
+                    role="tab"
+                    aria-selected={selectedDay === tab.value}
+                    className={`artist-tab${
+                      selectedDay === tab.value ? " artist-tab-active" : ""
+                    }`}
+                    onClick={() => setSelectedDay(tab.value)}
+                  >
+                    <span className="artist-tab-day">{tab.label}</span>
+                    <span className="artist-tab-date">{tab.date}</span>
+                  </button>
+                ))}
+              </div>
             </div>
 
             <div className="artist-cards-list">
-              {artistes2026.map((artiste, index) => (
+              {artistesFiltres.map((artiste, index) => (
                 <motion.div
                   key={artiste.id}
                   className="artist-card"

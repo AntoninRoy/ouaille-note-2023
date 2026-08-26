@@ -34,6 +34,7 @@ export const artistes2026: Artiste[] = [
     imagePosition: "center top",
     day: "VENDREDI",
     date: "11 SEPTEMBRE 2026",
+    hour: "22H30",
     spotifyId: "37i9dQZF1DZ06evO45CL5m",
     spotifyType: "playlist",
     description: [
@@ -48,6 +49,7 @@ export const artistes2026: Artiste[] = [
     imagePosition: "center",
     day: "VENDREDI",
     date: "11 SEPTEMBRE 2026",
+    hour: "01H45",
     photoCredit: "Charlotte Payan",
     spotifyId: "37i9dQZF1DZ06evO1wSsXm",
     spotifyType: "playlist",
@@ -65,6 +67,7 @@ export const artistes2026: Artiste[] = [
     imagePosition: "center",
     day: "SAMEDI",
     date: "12 SEPTEMBRE 2026",
+    hour: "01H10",
     photoCredit: "Annabelle Podgornii",
     spotifyId: "3C8PdQGQy4L36PHv4m3sgs",
     spotifyType: "artist",
@@ -81,6 +84,7 @@ export const artistes2026: Artiste[] = [
     imagePosition: "center top",
     day: "VENDREDI",
     date: "11 SEPTEMBRE 2026",
+    hour: "21H00",
     spotifyId: "37i9dQZF1DZ06evO2Nk3K8",
     spotifyType: "playlist",
     description: [
@@ -95,6 +99,7 @@ export const artistes2026: Artiste[] = [
     imagePosition: "center",
     day: "SAMEDI",
     date: "12 SEPTEMBRE 2026",
+    hour: "23H30",
     spotifyId: "37i9dQZF1DZ06evO3fM3lM",
     spotifyType: "playlist",
     description: [
@@ -110,6 +115,7 @@ export const artistes2026: Artiste[] = [
     imagePosition: "center top",
     day: "SAMEDI",
     date: "12 SEPTEMBRE 2026",
+    hour: "22H00",
     spotifyId: "37i9dQZF1DZ06evO0Uq5SH",
     spotifyType: "playlist",
     description: [
@@ -125,6 +131,7 @@ export const artistes2026: Artiste[] = [
     imagePosition: "center",
     day: "SAMEDI",
     date: "12 SEPTEMBRE 2026",
+    hour: "20H30",
     photoCredit: "Valentin Campagnie",
     spotifyId: "37i9dQZF1DZ06evO03C9AC",
     spotifyType: "playlist",
@@ -142,6 +149,7 @@ export const artistes2026: Artiste[] = [
     imagePosition: "center",
     day: "VENDREDI",
     date: "11 SEPTEMBRE 2026",
+    hour: "00H15",
     photoCredit: "Damien Chamcirkan",
     spotifyId: "5VO3c66sAmJgJIbsHFZXT2",
     spotifyType: "artist",
@@ -158,6 +166,7 @@ export const artistes2026: Artiste[] = [
     imagePosition: "center",
     day: "VENDREDI",
     date: "11 SEPTEMBRE 2026",
+    hour: "20H00",
     spotifyId: "0gpHaqO3cBUzg6II50YUnc",
     spotifyType: "artist",
     description: [
@@ -174,6 +183,7 @@ export const artistes2026: Artiste[] = [
     imagePosition: "center",
     day: "SAMEDI",
     date: "12 SEPTEMBRE 2026",
+    hour: "19H20",
     spotifyId: "7qEqJjJda4YoUM2CapOl5S",
     spotifyType: "artist",
     description: [

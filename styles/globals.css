@@ -396,6 +396,7 @@ h1 {
 .artist-section-header {
   text-align: center;
   margin-bottom: 40px;
+  width: 100%;
 }
 
 .artist-section-tag {
@@ -415,6 +416,85 @@ h1 {
   font-size: clamp(28px, 6vw, 42px);
   color: white;
   margin: 0;
+}
+
+/* Onglets de filtre par soir */
+/* Meme largeur que les cartes artistes (max-width: 800px) */
+.artist-tabs {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 800px;
+  margin: 22px auto 0;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(206, 218, 66, 0.25);
+}
+
+.artist-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.artist-tab:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.artist-tab-active {
+  background: #ceda42;
+  color: #143c32;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(206, 218, 66, 0.25);
+}
+
+.artist-tab-active:hover {
+  color: #143c32;
+}
+
+.artist-tab-day {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.artist-tab-date {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1;
+  opacity: 0.75;
+}
+
+@media (max-width: 480px) {
+  .artist-tabs {
+    gap: 4px;
+  }
+
+  .artist-tab {
+    padding: 9px 6px;
+  }
+
+  .artist-tab-day {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .artist-tab-date {
+    font-size: 10px;
+  }
 }
 
 .artist-cards-list {
@@ -551,19 +631,27 @@ h1 {
 /* Texte LIVE superposé */
 .artist-overlay-text {
   position: absolute;
-  bottom: -15px;
-  right: -20px;
+  bottom: -10px;
+  right: -12px;
   font-family: "Crunold", sans-serif;
-  font-size: 48px;
-  color: #ceda42;
-  text-shadow: 3px 3px 0 #143c32, -1px -1px 0 #143c32, 1px -1px 0 #143c32, -1px 1px 0 #143c32;
+  font-size: 23px;
+  line-height: 1;
+  color: #ffffff;
+  /* Texture violette de la charte 2026 (fond Insta ONF12), recadree hors damier */
+  background-color: #6b5fa8;
+  background-image: url("/images/fond/violet-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 5px 10px 4px;
+  box-shadow: 0 6px 18px rgba(10, 31, 25, 0.35);
   transform: rotate(-5deg);
   z-index: 10;
 }
 
 @media (min-width: 640px) {
   .artist-overlay-text {
-    font-size: 64px;
+    font-size: 42px;
+    padding: 8px 16px 6px;
     bottom: -20px;
     right: -30px;
   }
