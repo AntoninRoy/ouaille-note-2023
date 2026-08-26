@@ -48,6 +48,13 @@ Rose : #D77CAE
 html {
   overflow-x: hidden;
   background-color: #143c32;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -382,6 +389,128 @@ h1 {
     filter: drop-shadow(0 0 50px rgba(206, 218, 66, 0.6))
             drop-shadow(0 0 100px rgba(206, 218, 66, 0.4));
   }
+}
+
+/* ===== RACCOURCIS PLAYLISTS (hero) ===== */
+.playlist-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.playlist-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 22px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(10, 31, 25, 0.45);
+  color: #ffffff;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.playlist-link:hover {
+  transform: translateY(-2px);
+}
+
+.playlist-link-spotify:hover {
+  border-color: #1db954;
+  background: rgba(29, 185, 84, 0.18);
+}
+
+.playlist-link-deezer:hover {
+  border-color: #a238ff;
+  background: rgba(162, 56, 255, 0.18);
+}
+
+.playlist-link-icon {
+  font-size: 20px;
+}
+
+.playlist-link-spotify .playlist-link-icon {
+  color: #1db954;
+}
+
+.playlist-link-deezer .playlist-link-icon {
+  color: #c39bff;
+}
+
+.playlist-link-label {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+/* ===== SECTION PLAYLISTS ===== */
+.playlists-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #0d2a23 0%, #143c32 100%);
+  /* Compense le header fixe lors du scroll vers l'ancre */
+  scroll-margin-top: 80px;
+}
+
+.playlists-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.playlists-subtitle {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 10px 0 0;
+}
+
+/* Mobile : une colonne. Desktop : deux colonnes (voir media query) */
+.playlists-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .playlists-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+.playlist-embed {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.playlist-embed-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #ceda42;
+  margin: 0;
+}
+
+.playlist-embed-icon {
+  font-size: 22px;
+}
+
+.playlist-embed iframe {
+  display: block;
+  width: 100%;
+  border: none;
 }
 
 /* Artist Announcement Section */

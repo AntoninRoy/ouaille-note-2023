@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RiArrowDownSLine, RiCloseLine } from "react-icons/ri";
+import { SiSpotify, SiDeezer } from "react-icons/si";
 import { artistes2026, Artiste } from "../data/programmation2026";
 
 type DayFilter = "VENDREDI" | "SAMEDI" | null;
@@ -184,6 +185,18 @@ export default function Home() {
                 <CountdownBox value={countdown.seconds} label="SEC" />
               </div>
 
+              {/* Raccourcis vers les playlists en bas de page */}
+              <div className="playlist-links">
+                <a className="playlist-link playlist-link-spotify" href="#playlists">
+                  <SiSpotify className="playlist-link-icon" />
+                  <span className="playlist-link-label">SPOTIFY</span>
+                </a>
+                <a className="playlist-link playlist-link-deezer" href="#playlists">
+                  <SiDeezer className="playlist-link-icon" />
+                  <span className="playlist-link-label">DEEZER</span>
+                </a>
+              </div>
+
               {/* Flèche scroll */}
               <div className="double-arrow" style={{ marginTop: "20px" }}>
                 <RiArrowDownSLine />
@@ -221,10 +234,19 @@ export default function Home() {
                 <motion.div
                   key={artiste.id}
                   className="artist-card"
-                  initial={{ y: 50, opacity: 0 }}
+                  initial={{ y: 30, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+                  // Marge basse : l'animation demarre avant que la carte
+                  // n'atteigne le bas de l'ecran.
+                  viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+                  // Decalage borne aux deux premieres cartes : au-dela, les
+                  // cartes entrent une a une dans l'ecran et n'ont pas a
+                  // heriter du retard cumule de celles d'avant.
+                  transition={{
+                    duration: 0.35,
+                    ease: "easeOut",
+                    delay: Math.min(index, 2) * 0.08,
+                  }}
                 >
                   <div className="artist-card-glow" />
                   <div className="artist-card-inner">
@@ -273,6 +295,52 @@ export default function Home() {
                   <div className="artist-card-stripe" />
                 </motion.div>
               ))}
+            </div>
+          </section>
+
+          {/* Playlists du festival */}
+          <section className="playlists-section" id="playlists">
+            <div className="playlists-header">
+              <h2 className="artist-section-title">ECOUTER LA PROGRAMMATION</h2>
+              <p className="playlists-subtitle">
+                Les artistes de l&apos;edition 2026, sur Spotify et Deezer.
+              </p>
+            </div>
+
+            <div className="playlists-grid">
+              <div className="playlist-embed">
+                <h3 className="playlist-embed-title">
+                  <SiSpotify className="playlist-embed-icon" /> SPOTIFY
+                </h3>
+                <iframe
+                  data-testid="embed-iframe"
+                  title="Playlist Spotify du festival"
+                  src="https://open.spotify.com/embed/playlist/52YcHTZthHMjbTEhN9bfMb?utm_source=generator&si=1e61819d647d4188"
+                  width="100%"
+                  height="352"
+                  frameBorder="0"
+                  allowFullScreen
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  style={{ borderRadius: "12px" }}
+                />
+              </div>
+
+              <div className="playlist-embed">
+                <h3 className="playlist-embed-title">
+                  <SiDeezer className="playlist-embed-icon" /> DEEZER
+                </h3>
+                <iframe
+                  title="Playlist Deezer du festival"
+                  src="https://widget.deezer.com/widget/dark/playlist/15575537143"
+                  width="100%"
+                  height="352"
+                  frameBorder="0"
+                  allow="encrypted-media; clipboard-write"
+                  loading="lazy"
+                  style={{ borderRadius: "12px" }}
+                />
+              </div>
             </div>
           </section>
         </div>
