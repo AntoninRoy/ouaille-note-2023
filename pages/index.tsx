@@ -177,11 +177,8 @@ export default function Home() {
               {/* Compte à rebours stylisé */}
               <div className="countdown-container" style={{ marginTop: "25px" }}>
                 <CountdownBox value={countdown.days} label="JOURS" />
-                <span className="countdown-separator">:</span>
                 <CountdownBox value={countdown.hours} label="HEURES" />
-                <span className="countdown-separator">:</span>
                 <CountdownBox value={countdown.minutes} label="MIN" />
-                <span className="countdown-separator">:</span>
                 <CountdownBox value={countdown.seconds} label="SEC" />
               </div>
 
