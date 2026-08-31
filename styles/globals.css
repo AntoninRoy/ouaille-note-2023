@@ -651,6 +651,80 @@ h1 {
   }
 }
 
+/* Ouverture des portes : bandeau sous les onglets, meme largeur que les cartes.
+   Reprend la texture violette de la charte 2026, celle du bloc d'heure pose sur
+   les photos d'artistes (.artist-overlay-text). */
+.doors-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 14px auto 0;
+  padding: 14px 24px;
+  border-radius: 10px;
+  background-color: #6b5fa8;
+  /* Voile en degrade par-dessus la texture : eclairci a gauche, assombri a
+     droite. Pose en premier dans background-image pour passer au-dessus. */
+  background-image: linear-gradient(
+      90deg,
+      rgba(150, 136, 220, 0.3) 0%,
+      rgba(107, 95, 168, 0) 45%,
+      rgba(45, 38, 82, 0.45) 100%
+    ),
+    url("/images/fond/violet-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: 0 6px 20px rgba(10, 31, 25, 0.35);
+}
+
+.doors-banner-label {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: clamp(18px, 3.4vw, 24px);
+  letter-spacing: 2px;
+  line-height: 1.05;
+  text-align: left;
+}
+
+.doors-banner-times {
+  display: flex;
+  gap: 28px;
+}
+
+.doors-banner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.doors-banner-day {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.doors-banner-hour {
+  font-family: "Crunold", sans-serif;
+  font-size: clamp(22px, 4.5vw, 30px);
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .doors-banner {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .doors-banner-times {
+    gap: 16px;
+  }
+}
+
 .artist-cards-list {
   display: flex;
   flex-direction: column;

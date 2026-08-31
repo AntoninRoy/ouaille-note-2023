@@ -14,6 +14,12 @@ const DAY_TABS: { label: string; date: string; value: DayFilter }[] = [
   { label: "SAMEDI", date: "12 SEPT.", value: "SAMEDI" },
 ];
 
+/** Ouverture des portes, par soir. Filtre par l'onglet selectionne. */
+const OUVERTURE_PORTES: { day: Exclude<DayFilter, null>; hour: string }[] = [
+  { day: "VENDREDI", hour: "19H00" },
+  { day: "SAMEDI", hour: "18H45" },
+];
+
 /** Convertit "22H30" en minutes depuis le debut de soiree.
  *  Les heures d'apres minuit (< 06H) sont repoussees en fin de soiree. */
 const heureEnMinutes = (hour?: string): number => {
@@ -62,6 +68,11 @@ export default function Home() {
   useEffect(() => {
     setSelectedDay(ongletDuJour(new Date()));
   }, []);
+
+  // Onglet "TOUT" : les deux ouvertures. Sinon, celle du soir selectionne.
+  const portesAffichees = selectedDay
+    ? OUVERTURE_PORTES.filter((porte) => porte.day === selectedDay)
+    : OUVERTURE_PORTES;
 
   // Filtre par soir + tri chronologique. L'onglet "TOUT" garde l'ordre d'origine.
   const artistesFiltres = selectedDay
@@ -223,6 +234,23 @@ export default function Home() {
                     <span className="artist-tab-date">{tab.date}</span>
                   </button>
                 ))}
+              </div>
+
+              {/* Ouverture des portes : suit l'onglet selectionne */}
+              <div className="doors-banner">
+                <span className="doors-banner-label">
+                  OUVERTURE
+                  <br />
+                  DES PORTES
+                </span>
+                <div className="doors-banner-times">
+                  {portesAffichees.map((porte) => (
+                    <span className="doors-banner-item" key={porte.day}>
+                      <span className="doors-banner-day">{porte.day}</span>
+                      <span className="doors-banner-hour">{porte.hour}</span>
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 
