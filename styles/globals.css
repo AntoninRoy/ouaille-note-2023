@@ -1098,3 +1098,278 @@ h1 {
 .artist-description p:last-child {
   margin-bottom: 0;
 }
+
+/* ===== ESPACE CHILL =====
+   Reprend l'affiche : fond vert texture, colonnes par soir et blocs
+   chartreuse pour les creneaux. */
+.chill-section {
+  padding: 56px 20px;
+  /* Couleur de repli : le vert dominant du fond, le temps qu'il charge */
+  background-color: #2f6a55;
+  /* Fond de la charte 2026 (bande damier retiree du bas de l'image).
+     Le degrade en tete fond le raccord avec le bas du hero. */
+  background-image: linear-gradient(
+      180deg,
+      rgba(20, 60, 50, 1) 0%,
+      rgba(20, 60, 50, 0) 140px
+    ),
+    url("/images/fond/chill-fond.jpg");
+  background-size: 100% 100%, cover;
+  background-position: top center, center center;
+  background-repeat: no-repeat;
+  scroll-margin-top: 80px;
+}
+
+.chill-header {
+  grid-area: header;
+  text-align: center;
+}
+
+.chill-subtitle {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: clamp(13px, 3.2vw, 16px);
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 8px 0 0;
+}
+
+/* Mobile : plan et programme empiles. Desktop : plan a gauche, programme a droite. */
+.chill-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Mobile : le plan, puis le titre, puis le programme */
+  grid-template-areas:
+    "plan"
+    "header"
+    "program"
+    "food";
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+@media (min-width: 1000px) {
+  .chill-split {
+    /* Desktop : titre en tete, plan a gauche, programme a droite */
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    grid-template-areas:
+      "header header"
+      "plan program"
+      "food food";
+    gap: 32px 36px;
+  }
+}
+
+/* Plan du site : affiche posee sur le fond, cliquable vers le PDF */
+.chill-plan {
+  grid-area: plan;
+  margin: 0;
+  min-width: 0;
+}
+
+.chill-plan-link {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(10, 31, 25, 0.4);
+  transition: transform 0.25s ease;
+}
+
+.chill-plan-link:hover {
+  transform: translateY(-3px);
+}
+
+/* Le plan suit le scroll tant que le programme defile a cote */
+@media (min-width: 1000px) {
+  .chill-plan {
+    position: sticky;
+    top: 90px;
+  }
+}
+
+/* Programme : les deux soirs l'un sous l'autre dans la colonne de droite */
+.chill-grid {
+  grid-area: program;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  width: 100%;
+  min-width: 0;
+  align-items: start;
+}
+
+.chill-day {
+  min-width: 0;
+}
+
+.chill-day-title {
+  font-family: "Crunold", sans-serif;
+  font-size: clamp(26px, 5vw, 36px);
+  line-height: 1;
+  color: #ceda42;
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+/* Bloc chartreuse regroupant les creneaux d'un soir */
+.chill-card {
+  background: #ceda42;
+  border-radius: 22px;
+  padding: 4px 20px;
+  box-shadow: 0 8px 24px rgba(10, 31, 25, 0.35);
+}
+
+/* Filet de separation entre creneaux, comme sur l'affiche */
+.chill-slot {
+  padding: 13px 0;
+  overflow-wrap: break-word;
+  border-top: 2px solid rgba(20, 60, 50, 0.35);
+  text-align: center;
+  color: #143c32;
+}
+
+.chill-slot:first-child {
+  border-top: none;
+}
+
+.chill-slot-hour {
+  display: block;
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: clamp(13px, 3.2vw, 15px);
+  letter-spacing: 2px;
+  line-height: 1;
+  color: #1c1c1c;
+}
+
+.chill-slot-title {
+  font-family: "Crunold", sans-serif;
+  font-size: clamp(16px, 4.4vw, 23px);
+  line-height: 1.15;
+  color: #143c32;
+  margin: 5px 0 0;
+}
+
+/* Complement de titre : meme ligne, mais moins appuye */
+.chill-slot-suffix {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+}
+
+.chill-slot-detail {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: clamp(12px, 3vw, 14px);
+  letter-spacing: 0.5px;
+  line-height: 1.35;
+  color: rgba(20, 60, 50, 0.85);
+  margin: 3px 0 0;
+}
+
+/* Logos partenaires et food trucks */
+.chill-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.chill-logos-partners {
+  margin-bottom: 12px;
+}
+
+.chill-logos-food {
+  margin-top: 14px;
+}
+
+/* Pastille claire : les logos sont concus pour un fond blanc */
+.chill-logo {
+  position: relative;
+  width: 120px;
+  height: 62px;
+  padding: 8px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 14px rgba(10, 31, 25, 0.3);
+}
+
+.chill-logo-round {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Bar / restauration, sous la colonne du vendredi */
+.chill-food {
+  grid-area: food;
+  text-align: center;
+  padding-top: 26px;
+  border-top: 2px solid rgba(206, 218, 66, 0.3);
+}
+
+.chill-food-title {
+  font-family: "Crunold", sans-serif;
+  font-size: clamp(24px, 4.5vw, 32px);
+  line-height: 1;
+  color: #ceda42;
+  margin: 0;
+}
+
+.chill-food-drinks {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: clamp(17px, 3.2vw, 21px);
+  letter-spacing: 2px;
+  color: white;
+  margin: 8px 0 0;
+}
+
+.chill-food-names {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: clamp(15px, 3.6vw, 18px);
+  letter-spacing: 2px;
+  color: white;
+  margin: 10px 0 0;
+}
+
+.chill-food-oysters {
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: clamp(13px, 3.2vw, 15px);
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 14px 0 0;
+}
+
+.chill-food-oysters-strong {
+  color: #ceda42;
+}
+
+@media (max-width: 480px) {
+  .chill-section {
+    padding: 44px 14px;
+  }
+
+  .chill-card {
+    padding: 6px 12px;
+  }
+
+  .chill-slot {
+    padding: 11px 0;
+  }
+
+  .chill-logos {
+    gap: 12px;
+  }
+
+  .chill-logo {
+    width: 104px;
+    height: 56px;
+  }
+
+  .chill-logo-round {
+    width: 84px;
+    height: 84px;
+  }
+}

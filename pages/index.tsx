@@ -5,6 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { RiArrowDownSLine, RiCloseLine } from "react-icons/ri";
 import { SiSpotify, SiDeezer } from "react-icons/si";
 import { artistes2026, Artiste } from "../data/programmation2026";
+import {
+  espaceChill,
+  partenairesJeux,
+  foodTrucksChill,
+  barChill,
+} from "../data/espaceChill";
 
 type DayFilter = "VENDREDI" | "SAMEDI" | null;
 
@@ -211,6 +217,117 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Espace Chill : animations, bar et restauration */}
+          <section className="chill-section" id="espace-chill">
+            <div className="chill-split">
+              {/* Colonne de gauche : le plan du site */}
+              <figure className="chill-plan">
+                <a
+                  className="chill-plan-link"
+                  href="/images/plan/plan-onf12.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/images/plan/plan-onf12.png"
+                    alt="Plan du site du festival Ouaille Note 12"
+                    width={1133}
+                    height={1700}
+                    layout="responsive"
+                  />
+                </a>
+              </figure>
+
+              {/* Titre : en tete sur desktop, sous le plan sur mobile */}
+              <div className="chill-header">
+                <h2 className="artist-section-title">ESPACE CHILL</h2>
+                <p className="chill-subtitle">
+                  Le coin detente du festival : animations, jeux, bar et food trucks.
+                </p>
+              </div>
+
+              {/* Colonne de droite : le programme de l'Espace Chill */}
+              <div className="chill-grid">
+              {espaceChill.map((soiree) => (
+                <div className="chill-day" key={soiree.day}>
+                  <h3 className="chill-day-title">{soiree.day}</h3>
+
+                  {/* Partenaires jeux : uniquement sur la colonne du samedi */}
+                  {soiree.day === "SAMEDI" && (
+                    <div className="chill-logos chill-logos-partners">
+                      {partenairesJeux.map((logo) => (
+                        <div className="chill-logo" key={logo.name}>
+                          <Image
+                            src={logo.image}
+                            alt={logo.name}
+                            layout="fill"
+                            objectFit="contain"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="chill-card">
+                    {soiree.creneaux.map((creneau, index) => (
+                      <div className="chill-slot" key={`${soiree.day}-${index}`}>
+                        <span className="chill-slot-hour">{creneau.hour} :</span>
+                        <h4 className="chill-slot-title">
+                          {creneau.title}
+                          {creneau.titleSuffix && (
+                            <span className="chill-slot-suffix">
+                              {" "}
+                              {creneau.titleSuffix}
+                            </span>
+                          )}
+                        </h4>
+                        {creneau.details?.map((detail, i) => (
+                          <p className="chill-slot-detail" key={i}>
+                            {detail}
+                          </p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
+              ))}
+              </div>
+
+              {/* Bar et restauration : en pied de section, sur toute la largeur */}
+              <div className="chill-food">
+                <h3 className="chill-food-title">BAR / RESTAURATION</h3>
+                <p className="chill-food-drinks">{barChill}</p>
+
+                <div className="chill-logos chill-logos-food">
+                  {foodTrucksChill.map((logo) => (
+                    <div
+                      className="chill-logo chill-logo-round"
+                      key={logo.name}
+                      style={logo.background ? { background: logo.background } : undefined}
+                    >
+                      <Image
+                        src={logo.image}
+                        alt={logo.name}
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                <p className="chill-food-names">
+                  {foodTrucksChill.map((logo) => logo.name.toUpperCase()).join(" \u2022 ")}
+                </p>
+
+                <p className="chill-food-oysters">
+                  <span className="chill-food-oysters-strong">BAR A HUITRES</span> : LE SAMEDI
+                  DES 10H30
+                </p>
+              </div>
+            </div>
+          </section>
 
           {/* Section Annonce Artiste */}
           <section className="artist-section">
