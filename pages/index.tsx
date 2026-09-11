@@ -163,6 +163,11 @@ export default function Home() {
                   objectFit="contain"
                   objectPosition="center"
                 />
+
+                {/* Sticker pose de travers sur le mouton */}
+                <a className="hero-cta-programme" href="#programmation">
+                  VOIR LA PROGRAMMATION
+                </a>
               </motion.div>
 
               {/* Lieu et Date */}
@@ -330,7 +335,7 @@ export default function Home() {
           </section>
 
           {/* Section Annonce Artiste */}
-          <section className="artist-section">
+          <section className="artist-section" id="programmation">
             <div className="artist-section-header">
               <h2 className="artist-section-title">PROGRAMMATION 2026</h2>
 

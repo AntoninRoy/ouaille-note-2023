@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 const menuItems = [
   { href: "/", label: "Accueil" },
+  { href: "/#programmation", label: "Programmation" },
   { href: "/billetterie", label: "Billetterie" },
   { href: "/infospratiques", label: "Infos pratiques" },
   { href: "/partenaires", label: "Partenaires" },

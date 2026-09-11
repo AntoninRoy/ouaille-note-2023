@@ -472,6 +472,39 @@ h1 {
   line-height: 1;
 }
 
+/* Bouton vers la programmation, pose de travers sur le logo comme un sticker.
+   Violet de la charte (celui du bandeau d'ouverture des portes) : il tranche
+   sur le mouton comme sur le degrade vert du hero.
+   Le logo est carre et centre dans son conteneur : le decalage vertical suit
+   donc la largeur de l'image, pour tomber au meme endroit a toutes les tailles. */
+.hero-cta-programme {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  margin-top: calc(min(80vw, 400px) * -0.44);
+  transform: translate(-50%, -50%) rotate(-7deg);
+  padding: 17px 34px;
+  border-radius: 999px;
+  background: #6d4bd6;
+  color: white;
+  font-family: "Bebas-Neue", sans-serif;
+  font-size: clamp(19px, 5vw, 25px);
+  letter-spacing: 2px;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(20, 10, 45, 0.55);
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-cta-programme:hover {
+  background: #7d5ce6;
+  transform: translate(-50%, -50%) rotate(-2deg) scale(1.05);
+  box-shadow: 0 11px 30px rgba(20, 10, 45, 0.65);
+}
+
 /* ===== SECTION PLAYLISTS ===== */
 .playlists-section {
   padding: 80px 20px;
@@ -545,6 +578,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(180deg, #143c32 0%, #0d2a23 100%);
+  /* Compense le header fixe lors du scroll vers l'ancre */
+  scroll-margin-top: 80px;
 }
 
 .artist-section-header {
