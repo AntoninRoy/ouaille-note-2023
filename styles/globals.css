@@ -473,8 +473,8 @@ h1 {
 }
 
 /* Bouton vers la programmation, pose de travers sur le logo comme un sticker.
-   Violet de la charte (celui du bandeau d'ouverture des portes) : il tranche
-   sur le mouton comme sur le degrade vert du hero.
+   Texture violette de la charte (celle du bandeau d'ouverture des portes) :
+   elle tranche sur le chapeau du mouton comme sur le degrade vert du hero.
    Le logo est carre et centre dans son conteneur : le decalage vertical suit
    donc la largeur de l'image, pour tomber au meme endroit a toutes les tailles. */
 .hero-cta-programme {
@@ -482,11 +482,15 @@ h1 {
   left: 50%;
   top: 50%;
   z-index: 3;
-  margin-top: calc(min(80vw, 400px) * -0.44);
+  margin-top: calc(min(80vw, 400px) * -0.36);
   transform: translate(-50%, -50%) rotate(-7deg);
   padding: 17px 34px;
   border-radius: 999px;
-  background: #6d4bd6;
+  /* Meme texture violette que le bandeau d'ouverture des portes */
+  background-color: #6b5fa8;
+  background-image: url("/images/fond/violet-texture.jpg");
+  background-size: cover;
+  background-position: center;
   color: white;
   font-family: "Bebas-Neue", sans-serif;
   font-size: clamp(19px, 5vw, 25px);
@@ -500,7 +504,7 @@ h1 {
 }
 
 .hero-cta-programme:hover {
-  background: #7d5ce6;
+  background-color: #7c6ec4;
   transform: translate(-50%, -50%) rotate(-2deg) scale(1.05);
   box-shadow: 0 11px 30px rgba(20, 10, 45, 0.65);
 }
